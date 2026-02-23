@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import type { HomeSection } from "@/lib/types";
+import Image from "next/image";
 
 interface HeroSectionProps {
   data: HomeSection;
@@ -15,8 +16,11 @@ export default function HeroSection({ data }: HeroSectionProps) {
   const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
-    const currentRole = data.roles[roleIndex];
-    let timeout: NodeJS.Timeout;
+    const roles = data.roles ?? [];
+    if (roles.length === 0) return;
+
+    const currentRole = roles[roleIndex % roles.length];
+    let timeout: ReturnType<typeof setTimeout>;
 
     if (!isDeleting) {
       if (charIndex < currentRole.length) {
@@ -34,13 +38,19 @@ export default function HeroSection({ data }: HeroSectionProps) {
           setCharIndex((c) => c - 1);
         }, 40);
       } else {
-        setIsDeleting(false);
-        setRoleIndex((r) => (r + 1) % data.roles.length);
+        // ✅ don’t setState synchronously inside the effect body
+        timeout = setTimeout(() => {
+          setIsDeleting(false);
+          setRoleIndex((r) => (r + 1) % roles.length);
+          // optional: keep state consistent
+          setDisplayed("");
+          setCharIndex(0);
+        }, 50); // can be 0 too, 50 feels natural
       }
     }
 
     return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, roleIndex, data.roles]);
+  }, [charIndex, isDeleting, roleIndex, data.roles]); // OK
 
   return (
     <section
@@ -241,8 +251,10 @@ export default function HeroSection({ data }: HeroSectionProps) {
                 (e.currentTarget as HTMLElement).style.boxShadow = "none";
               }}
             >
-              <img
+              <Image
                 src={social.icon}
+                width={100}
+                height={100}
                 alt={social.label}
                 className="w-5 h-5 object-contain"
                 style={{ filter: "brightness(0) invert(0.7)" }}

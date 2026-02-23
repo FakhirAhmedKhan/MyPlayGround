@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { ProjectItem } from "@/lib/types";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: ProjectItem;
@@ -38,10 +39,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       {/* Image / Placeholder */}
       <div className="relative w-full h-48 overflow-hidden rounded-t-xl flex-shrink-0 bg-slate-900">
         {!imgError ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={project.imageUrl}
             alt={project.title}
+            width={1000}
+            height={1000}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             loading="lazy"
             onError={() => setImgError(true)}
