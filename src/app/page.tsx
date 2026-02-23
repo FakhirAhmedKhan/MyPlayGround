@@ -1,65 +1,173 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import HeroSection from "@/components/HeroSection";
+import SectionHeader from "@/components/SectionHeader";
+import ProjectCard from "@/components/ProjectCard";
+import SkillCard from "@/components/SkillCard";
+import {
+  getHomeData,
+  getProjectsData,
+  getSkillsData,
+  getMetaData,
+} from "@/lib/portfolio";
 
-export default function Home() {
+export async function generateMetadata(): Promise<Metadata> {
+  const meta = getMetaData();
+  return {
+    title: `${meta.name} — Full-Stack Developer`,
+    description: meta.description,
+    openGraph: {
+      title: `${meta.name} — Full-Stack Developer`,
+      description: meta.description,
+    },
+  };
+}
+
+export default function HomePage() {
+  const homeData = getHomeData();
+  const projectsData = getProjectsData();
+  const skillsData = getSkillsData();
+
+  // Show featured projects (first 6)
+  const featuredProjects = projectsData.items.slice(0, 6);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Person",
+                "@id": "https://fakhirahmedkhan.dev/#person",
+                name: "Fakhir Ahmed Khan",
+                url: "https://fakhirahmedkhan.dev",
+                jobTitle: "Full-Stack Developer",
+                description:
+                  "A passionate Web Developer, Frontend Developer, Backend Developer, and Theme Designer.",
+                sameAs: [
+                  "https://github.com/FakhirAhmedKhan",
+                  "https://linkedin.com/in/fakhir-ahmed-3b5537316",
+                  "https://twitter.com/FakhirAhme41220",
+                ],
+                knowsAbout: [
+                  "React.js",
+                  "Next.js",
+                  "Node.js",
+                  "TypeScript",
+                  "MongoDB",
+                  "Tailwind CSS",
+                ],
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://fakhirahmedkhan.dev/#website",
+                url: "https://fakhirahmedkhan.dev",
+                name: "Fakhir Ahmed Khan Portfolio",
+                description: "Personal portfolio website of Fakhir Ahmed Khan",
+                author: { "@id": "https://fakhirahmedkhan.dev/#person" },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* Hero */}
+      <HeroSection data={homeData} />
+
+      {/* Featured Projects Preview */}
+      <section
+        id="featured-projects"
+        className="section-container"
+        aria-labelledby="featured-projects-heading"
+      >
+        <SectionHeader
+          badge="Portfolio Highlights"
+          title="Featured Projects"
+          paragraph={projectsData.paragraph}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          {featuredProjects.map((project, i) => (
+            <ProjectCard key={project.id} project={project} index={i} />
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+        <div className="text-center">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/projects"
+            id="home-view-all-projects"
+            className="btn-secondary inline-flex"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            View All {projectsData.items.length} Projects
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Skills Preview */}
+      <section
+        id="featured-skills"
+        className="section-container pt-0"
+        aria-labelledby="skills-preview-heading"
+      >
+        <div
+          className="rounded-3xl p-8 sm:p-12"
+          style={{
+            background: "rgba(255,255,255,0.02)",
+            border: "1px solid rgba(255,255,255,0.06)",
+          }}
+        >
+          <SectionHeader
+            badge={skillsData.title}
+            title="Technologies I Use"
+            paragraph={skillsData.paragraph}
+          />
+
+          <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 xl:grid-cols-11 gap-3">
+            {skillsData.items.map((skill, i) => (
+              <SkillCard key={skill.name} skill={skill} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section id="home-stats" className="section-container pt-0">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {[
+            { value: "30+", label: "Projects Built", icon: "🚀" },
+            { value: "8+", label: "Certifications", icon: "🏆" },
+            { value: "3+", label: "Years Learning", icon: "📚" },
+            { value: "10+", label: "Technologies", icon: "⚡" },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="glass-card p-6 text-center hover:-translate-y-1 transition-transform duration-300"
+            >
+              <div className="text-3xl mb-2">{stat.icon}</div>
+              <div className="text-3xl font-black mb-1 gradient-text">
+                {stat.value}
+              </div>
+              <div className="text-slate-400 text-sm">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

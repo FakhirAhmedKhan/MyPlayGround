@@ -1,0 +1,470 @@
+{
+  "meta": {
+    "name": "Fakhir Ahmed Khan",
+    "title": "Full-Stack Developer Portfolio",
+    "description": "Portfolio of Fakhir Ahmed Khan — a passionate Web Developer, Frontend Developer, Backend Developer, and Theme Designer building futuristic digital experiences.",
+    "url": "https://fakhirahmedkhan.dev",
+    "twitterHandle": "@FakhirAhme41220"
+  },
+  "navLabels": {
+    "home": "Home",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "certifications": "Certifications"
+  },
+  "badges": {
+    "home": "Welcome to my digital space",
+    "skills": "Always Learning",
+    "projects": "Actively engaged in great projects and ideas creation.",
+    "education": "Exploring how active engagement with programming can enhance AI creativity.",
+    "git": "Total Contributions",
+    "certifications": "Certifications is key to success"
+  },
+  "sections": {
+    "home": {
+      "greeting": "Hello, I'm",
+      "name": "Fakhir Ahmed Khan",
+      "roles": [
+        "Web Developer",
+        "Frontend Developer",
+        "Backend Developer",
+        "Theme Designer"
+      ],
+      "tagline": "A passionate",
+      "description": "about building best experiences that are visually stunning, highly functional, and futuristic.",
+      "cta": "View My Work",
+      "socialLinks": [
+        {
+          "url": "https://github.com/FakhirAhmedKhan",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/github/github-original.svg",
+          "label": "GitHub"
+        },
+        {
+          "url": "https://linkedin.com/in/fakhir-ahmed-3b5537316",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/linkedin/linkedin-original.svg",
+          "label": "LinkedIn"
+        },
+        {
+          "url": "https://twitter.com/FakhirAhme41220",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/twitter/twitter-original.svg",
+          "label": "Twitter"
+        }
+      ]
+    },
+    "education": {
+      "title": "My Journey",
+      "paragraph": "A timeline of my educational milestones and achievements",
+      "items": [
+        {
+          "year": "2026 (Present)",
+          "title": "Grade 12 - Higher Secondary Education",
+          "description": "Advancing to final year of secondary education with focus on STEM subjects while continuing to develop expertise in programming and emerging technologies.",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+          "icon": "GraduationCap",
+          "color": "from-purple-500 to-pink-500"
+        },
+        {
+          "year": "2025",
+          "title": "Grade 11 - Higher Secondary Education",
+          "description": "Currently pursuing higher secondary education with emphasis on advanced coursework while actively enhancing full-stack development skills and modern programming practices.",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+          "icon": "Sparkles",
+          "color": "from-blue-500 to-cyan-500"
+        },
+        {
+          "year": "2024",
+          "title": "Full-Stack Development Bootcamp",
+          "description": "Successfully completed comprehensive 6-month intensive program specializing in full-stack web development, including MERN stack technologies and modern development frameworks.",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "icon": "Code",
+          "color": "from-emerald-500 to-teal-500"
+        },
+        {
+          "year": "2024",
+          "title": "Web Development Specialization",
+          "description": "Completed intensive 6-month bootcamp covering advanced web development concepts, responsive design principles, and industry-standard best practices.",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "icon": "Code",
+          "color": "from-orange-500 to-red-500"
+        },
+        {
+          "year": "2024",
+          "title": "Grade 10 - Secondary Education",
+          "description": "Completed secondary education milestone while simultaneously pursuing technical education in software development and programming fundamentals.",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+          "icon": "GraduationCap",
+          "color": "from-indigo-500 to-purple-500"
+        },
+        {
+          "year": "2023",
+          "title": "Self-Directed Programming Education",
+          "description": "Initiated independent learning journey in web development, mastering foundational technologies including HTML5, CSS3, and JavaScript through structured online courses and documentation.",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/youtubeS.avif",
+          "icon": "BookOpen",
+          "color": "from-amber-500 to-orange-500"
+        },
+        {
+          "year": "2023",
+          "title": "Grade 9 - Secondary Education",
+          "description": "Completed academic year while discovering passion for programming and beginning exploration of core computer science concepts and web technologies.",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+          "icon": "GraduationCap",
+          "color": "from-rose-500 to-pink-500"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills & Toolkit",
+      "paragraph": "Technologies and tools I use to bring ideas to life",
+      "items": [
+        {
+          "name": "HTML",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+        },
+        {
+          "name": "CSS",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+        },
+        {
+          "name": "React.js",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        },
+        {
+          "name": "React Native",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        },
+        {
+          "name": "Next.js",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+        },
+        {
+          "name": "Nest.js",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/nestjs/nestjs-original.svg"
+        },
+        {
+          "name": "Node.js",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+        },
+        {
+          "name": "Tailwind CSS",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/tailwindcss/tailwindcss-original.svg"
+        },
+        {
+          "name": "Vite",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg"
+        },
+        {
+          "name": "Vitest",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/vitest/vitest-original.svg"
+        },
+        {
+          "name": "MySQL",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+        },
+        {
+          "name": "MongoDB",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/mongodb/mongodb-original-wordmark.svg"
+        },
+        {
+          "name": "Python",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+        },
+        {
+          "name": "Git",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+        },
+        {
+          "name": "GitHub",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/github/github-original.svg"
+        },
+        {
+          "name": "VS Code",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/vscode/vscode-original.svg"
+        },
+        {
+          "name": "PyCharm",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/pycharm/pycharm-original.svg"
+        },
+        {
+          "name": "Expo",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/expo/expo-original.svg"
+        },
+        {
+          "name": "Electron",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/electron/electron-original.svg"
+        },
+        {
+          "name": "Docker",
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Did you See",
+      "paragraph": "Explore my latest projects showcasing creativity, innovation, and technical expertise",
+      "items": [
+        {
+          "id": 0,
+          "title": "CVGenerator",
+          "link": "https://cv-generator-second-try.vercel.app/",
+          "description": "A CV generator app that creates ATS-friendly resumes.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/CVGenerator",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/ATS-Calculator.avif",
+          "category": "SAAS"
+        },
+        {
+          "id": 1,
+          "title": "Landing-Page ATS Calculator",
+          "link": "https://fakhirahmedkhan.github.io/Landing-Page--For-ATS-Calculator/",
+          "description": "A simple Landing page for my ATS tools with good UI/UX.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/Landing-Page--For-ATS-Calculator",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Landing-page.avif",
+          "category": "Web"
+        },
+        {
+          "id": 2,
+          "title": "ATS-Calculator",
+          "link": "https://fakhirahmedkhan.github.io/ATS-Calculator/",
+          "description": "An ATS (Applicant Tracking System) calculator that assesses your resume's compatibility.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/ATS-Calculator",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Landing-page.avif",
+          "category": "SAAS"
+        },
+        {
+          "id": 3,
+          "title": "Netflix Clone",
+          "link": "https://netflix-clone-jade-beta.vercel.app/",
+          "description": "The Netflix Clone replicates the core features of the popular streaming platform.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/NetFlix_Clone",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Netflix.avif",
+          "category": "Web"
+        },
+        {
+          "id": 4,
+          "title": "YouTube Clone",
+          "link": "https://youtube-git-main-fakhir-ahmed-khans-projects.vercel.app/",
+          "description": "This YouTube Clone is a responsive web page that replicates the core features.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/YouTube-clone-in-React",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/YouTube.avif",
+          "category": "Web"
+        },
+        {
+          "id": 5,
+          "title": "Twitter Clone",
+          "link": "https://x-clone-three-alpha.vercel.app/",
+          "description": "This X_Clone is a responsive web page that replicates the core features of Twitter/X.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/X_Clone",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/X_Clone.avif",
+          "category": "Web"
+        },
+        {
+          "id": 6,
+          "title": "Unit Converter",
+          "link": "https://temperature-converter-by-using-html-css-and-jave-script.vercel.app/",
+          "description": "Convert between various units for temperature and speed, such as Celsius, Fahrenheit, km/h, and mph.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/Temperature-Converter-by-using-HTML--CSS-and-JaveScript",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/UnitConverter.avif",
+          "category": "Tool"
+        },
+        {
+          "id": 7,
+          "title": "Weather App",
+          "link": "https://weather-app-cyan-one-55.vercel.app/",
+          "description": "Provides real-time weather updates for any global location, including temperature, humidity, and wind speed.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/Weather-App",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Weather.avif",
+          "category": "Tool"
+        },
+        {
+          "id": 8,
+          "title": "Text-to-Speech",
+          "link": "https://text-to-speech-ruby-phi.vercel.app",
+          "description": "Converts written text into natural-sounding audio instantly.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/text-to-speech",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Text-to-Speech.avif",
+          "category": "Tool"
+        },
+        {
+          "id": 9,
+          "title": "Amazon Clone",
+          "link": "https://github.com/FakhirAhmedKhan/retry-amazon-clone",
+          "description": "A simple web app made with JavaScript. It lets users view products.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/retry-amazon-clone",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/ammzon.avif",
+          "category": "Web"
+        },
+        {
+          "id": 10,
+          "title": "Task Tracker",
+          "link": "https://to-do-list-neon-six.vercel.app/",
+          "description": "A simple and easy-to-use task manager that helps you organize your daily tasks.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/ToDOList",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/TaskTracker.avif",
+          "category": "Tool"
+        },
+        {
+          "id": 11,
+          "title": "Python Basic Programs",
+          "link": "https://github.com/FakhirAhmedKhan/Python_Basic_Program-",
+          "description": "A collection of beginner-level Python programs designed to build a foundation in programming concepts.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/Python_Basic_Program-",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
+          "category": "Python"
+        },
+        {
+          "id": 17,
+          "title": "Rock, Paper, Scissors Game",
+          "link": "https://rock-three-umber.vercel.app/",
+          "description": "The classic game allows players to test their luck against the computer.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/rock",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Rock.avif",
+          "category": "Game"
+        },
+        {
+          "id": 18,
+          "title": "QR Code Generator",
+          "link": "https://qr-generator-lilac-beta.vercel.app/",
+          "description": "A simple tool that creates QR codes from any input data instantly.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/QR-Generator",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/qr.avif",
+          "category": "Tool"
+        },
+        {
+          "id": 19,
+          "title": "Calculator in React",
+          "link": "https://calculator-in-react-ten.vercel.app/",
+          "description": "A simple app built with React that performs basic math operations using components and state.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/Calculator-in-React",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Calculator.avif",
+          "category": "React"
+        },
+        {
+          "id": 29,
+          "title": "Inventory Management System",
+          "link": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
+          "description": "A full-featured inventory management system with real-time stock tracking and analytics.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/StockProImage.avif",
+          "category": "SAAS"
+        },
+        {
+          "id": 30,
+          "title": "Event Management System",
+          "link": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
+          "description": "A comprehensive event management platform for planning and organizing events.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
+          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/EMS.avif",
+          "category": "SAAS"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Certifications",
+      "paragraph": "Showcasing my dedication to continuous learning and professional growth through recognized certifications",
+      "items": [
+        {
+          "year": "2025",
+          "title": "SQL (Basic)",
+          "issuer": "HackerRank",
+          "description": "Validated fundamental SQL skills including SELECT queries, filtering, sorting, and basic data manipulation.",
+          "skills": ["SQL", "Databases"],
+          "credentialUrl": "https://www.hackerrank.com/certificates/adc5d0a584b6",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "icon": "Database",
+          "color": "from-green-500 to-emerald-500"
+        },
+        {
+          "year": "2025",
+          "title": "CSS (Basic)",
+          "issuer": "HackerRank",
+          "description": "Demonstrated core CSS knowledge including layouts, colors, typography, and responsive design basics.",
+          "skills": ["CSS", "Web Design"],
+          "credentialUrl": "https://www.hackerrank.com/certificates/08f859ff530",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "icon": "Palette",
+          "color": "from-blue-500 to-cyan-500"
+        },
+        {
+          "year": "2025",
+          "title": "JavaScript (Basic)",
+          "issuer": "HackerRank",
+          "description": "Certified understanding of JavaScript fundamentals such as variables, functions, loops, and basic logic.",
+          "skills": ["JavaScript"],
+          "credentialUrl": "https://www.hackerrank.com/certificates/0908c18d580",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "icon": "Code",
+          "color": "from-yellow-500 to-orange-500"
+        },
+        {
+          "year": "2025",
+          "title": "Python (Basic)",
+          "issuer": "HackerRank",
+          "description": "Covered Python basics including syntax, data types, control flow, and simple problem solving.",
+          "skills": ["Python"],
+          "credentialUrl": "https://www.hackerrank.com/certificates/d597c643113",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "icon": "Terminal",
+          "color": "from-indigo-500 to-purple-500"
+        },
+        {
+          "year": "2025",
+          "title": "JavaScript for Beginners",
+          "issuer": "Simplilearn",
+          "description": "Introductory course focused on JavaScript fundamentals and real-world web development use cases.",
+          "skills": ["JavaScript", "Web Development"],
+          "credentialUrl": "https://simpli.app.link/javascript-beginners-certificate",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
+          "icon": "BookOpen",
+          "color": "from-amber-500 to-orange-500"
+        },
+        {
+          "year": "2025",
+          "title": "Introduction to CSS",
+          "issuer": "Simplilearn",
+          "description": "Learned styling fundamentals including selectors, layouts, and responsive design techniques.",
+          "skills": ["CSS", "Web Development"],
+          "credentialUrl": "https://simpli.app.link/introduction-to-css-certificate",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
+          "icon": "Layout",
+          "color": "from-sky-500 to-blue-500"
+        },
+        {
+          "year": "2025",
+          "title": "Introduction to Front-End Development",
+          "issuer": "Simplilearn",
+          "description": "Overview of front-end development using HTML, CSS, and JavaScript to build modern web interfaces.",
+          "skills": ["HTML", "CSS", "JavaScript"],
+          "credentialUrl": "https://simpli.app.link/frontend-development-certificate",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
+          "icon": "Monitor",
+          "color": "from-pink-500 to-rose-500"
+        },
+        {
+          "year": "2025",
+          "title": "Responsive Web Design",
+          "issuer": "freeCodeCamp",
+          "description": "Built responsive layouts using HTML and CSS with a mobile-first approach and modern design practices.",
+          "skills": ["HTML", "CSS", "Responsive Design"],
+          "credentialUrl": "https://www.freecodecamp.org/certification/fakhirahmed/responsive-web-design",
+          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/freeCodeCamp.avif",
+          "icon": "Smartphone",
+          "color": "from-gray-600 to-gray-800"
+        }
+      ]
+    },
+    "footer": {
+      "title": "GitHub Contributions",
+      "paragraph": "Where ideas turn into code — crafted with React, refined with Tailwind, and powered by creativity.",
+      "githubUsername": "FakhirAhmedKhan"
+    }
+  }
+}
