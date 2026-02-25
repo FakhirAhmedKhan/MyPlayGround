@@ -419,51 +419,7 @@
           "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
           "category": "JavaScript"
         },
-        {
-          "id": 24,
-          "title": "📝 Electron-Learning-Resource",
-          "link": "https://github.com/FakhirAhmedKhan/Electron-Learning-Resource/blob/main/README.md",
-          "description": "A simple Electron learning resource designed for users with basic knowledge of HTML, CSS, and JavaScript or Electron concepts.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Electron-Learning-Resource/blob/main/README.md",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
-          "category": "Doc"
-        },
-        {
-          "id": 25,
-          "title": "📝 React_Hooks_For_Dev",
-          "link": "https://github.com/FakhirAhmedKhan/React_Hooks_For_Dev",
-          "description": "A simple React_Hooks_For_Dev learning resource designed for users with basic knowledge of React.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/React_Hooks_For_Dev",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
-          "category": "Doc"
-        },
-        {
-          "id": 26,
-          "title": "📝MySQL-Learning-Guide-",
-          "link": "https://github.com/FakhirAhmedKhan/MySQL-Learning-Guide-",
-          "description": "A simple MySQL learning resource designed for users with basic knowledge of MySQL.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/MySQL-Learning-Guide-",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
-          "category": "Doc"
-        },
-        {
-          "id": 27,
-          "title": "📝 HTML-CSS-Cheat-Sheet",
-          "link": "https://github.com/FakhirAhmedKhan/HTML-CSS-Cheat-Sheet",
-          "description": "A simple HTML/CSS learning resource designed for users with basic knowledge of HTML/CSS.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/HTML-CSS-Cheat-Sheet",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
-          "category": "Doc"
-        },
-        {
-          "id": 28,
-          "title": "📝 JavaScript-Cheat-Sheet",
-          "link": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
-          "description": "A simple JavaScript learning resource designed for users with basic knowledge of JavaScript.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
-          "category": "Doc"
-        },
+
         {
           "id": 29,
           "title": "🚀 Inventory Management System",
@@ -481,6 +437,87 @@
           "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
           "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/EMS.avif",
           "category": "SAAS"
+        },
+        {
+          "id": 24,
+          "title": "📝 Electron-Learning-Resource",
+          "link": "https://github.com/FakhirAhmedKhan/Electron-Learning-Resource/blob/main/README.md",
+          "description": "A concise Electron guide covering desktop app fundamentals using HTML, CSS, and JavaScript.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/Electron-Learning-Resource/blob/main/README.md",
+          "imageUrl": "https://img.shields.io/badge/Electron-Learning-47848F?style=for-the-badge&logo=electron&logoColor=white",
+          "category": "Doc"
+        },
+        {
+          "id": 25,
+          "title": "📝 React_Hooks_For_Dev",
+          "link": "https://github.com/FakhirAhmedKhan/React_Hooks_For_Dev",
+          "description": "A practical reference for mastering React Hooks with real-world usage patterns.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/React_Hooks_For_Dev",
+          "imageUrl": "https://img.shields.io/badge/React-Hooks-61DAFB?style=for-the-badge&logo=react&logoColor=black",
+          "category": "Doc"
+        },
+        {
+          "id": 26,
+          "title": "📝MySQL-Learning-Guide-",
+          "link": "https://github.com/FakhirAhmedKhan/MySQL-Learning-Guide-",
+          "description": "A structured MySQL guide covering queries, joins, and database fundamentals.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/MySQL-Learning-Guide-",
+          "imageUrl": "https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white",
+          "category": "Doc"
+        },
+        {
+          "id": 27,
+          "title": "📝 HTML-CSS-Cheat-Sheet",
+          "link": "https://github.com/FakhirAhmedKhan/HTML-CSS-Cheat-Sheet",
+          "description": "A quick reference for modern HTML structure and responsive CSS styling.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/HTML-CSS-Cheat-Sheet",
+          "imageUrl": "https://img.shields.io/badge/HTML%20%26%20CSS-Frontend-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+          "category": "Doc"
+        },
+        {
+          "id": 28,
+          "title": "📝 JavaScript-Cheat-Sheet",
+          "link": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
+          "description": "A compact JavaScript reference covering core concepts and modern ES features.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
+          "imageUrl": "https://img.shields.io/badge/JavaScript-Guide-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+          "category": "Doc"
+        },
+        {
+          "id": 31,
+          "title": "📝 Next-Js-Cheat-Sheet",
+          "link": "https://github.com/FakhirAhmedKhan/Next-Js-Learning-Guide-",
+          "description": "A focused Next.js guide covering routing, rendering, and performance basics.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/Next-Js-Learning-Guide-",
+          "imageUrl": "https://img.shields.io/badge/Next.js-Framework-000000?style=for-the-badge&logo=next.js&logoColor=white",
+          "category": "Doc"
+        },
+        {
+          "id": 32,
+          "title": "📝 Nestjs-Cheat-Sheet",
+          "link": "https://github.com/FakhirAhmedKhan/Nestjs-logic-learning/blob/main/README.md",
+          "description": "A clean NestJS reference covering modules, controllers, and scalable backend patterns.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/Nestjs-logic-learning/blob/main/README.md",
+          "imageUrl": "https://img.shields.io/badge/NestJS-Backend-E0234E?style=for-the-badge&logo=nestjs&logoColor=white",
+          "category": "Doc"
+        },
+        {
+          "id": 33,
+          "title": "📝 Python-Cheat-Sheet",
+          "link": "https://github.com/FakhirAhmedKhan/Python-core-logic-learning/blob/main/README.md",
+          "description": "A structured Python guide covering core syntax, OOP, and backend foundations.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/Python-core-logic-learning/blob/main/README.md",
+          "imageUrl": "https://img.shields.io/badge/Python-Core-3776AB?style=for-the-badge&logo=python&logoColor=white",
+          "category": "Doc"
+        },
+        {
+          "id": 34,
+          "title": "📝 Prisma-Cheat-Sheet",
+          "link": "https://github.com/FakhirAhmedKhan/Prisma-Deep-Learning-Resource/blob/main/README.md",
+          "description": "A deep Prisma guide covering schema design, relations, and database logic.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/Prisma-Deep-Learning-Resource/blob/main/README.md",
+          "imageUrl": "https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma&logoColor=white",
+          "category": "Doc"
         }
       ]
     },

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import type { HomeSection } from "@/lib/types";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface HeroSectionProps {
   data: HomeSection;
@@ -14,6 +15,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
   const [displayed, setDisplayed] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
+  const { t, isRTL } = useLanguage();
 
   useEffect(() => {
     const roles = data.roles ?? [];
@@ -38,24 +40,22 @@ export default function HeroSection({ data }: HeroSectionProps) {
           setCharIndex((c) => c - 1);
         }, 40);
       } else {
-        // ✅ don’t setState synchronously inside the effect body
         timeout = setTimeout(() => {
           setIsDeleting(false);
           setRoleIndex((r) => (r + 1) % roles.length);
-          // optional: keep state consistent
           setDisplayed("");
           setCharIndex(0);
-        }, 50); // can be 0 too, 50 feels natural
+        }, 50);
       }
     }
 
     return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, roleIndex, data.roles]); // OK
+  }, [charIndex, isDeleting, roleIndex, data.roles]);
 
   return (
     <section
       id="hero-section"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${isRTL ? "font-urdu" : ""}`}
       aria-label="Hero section"
     >
       {/* Animated background */}
@@ -106,8 +106,10 @@ export default function HeroSection({ data }: HeroSectionProps) {
               animationFillMode: "both",
             }}
           >
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-purple-400 mr-2 animate-pulse" />
-            Welcome to my digital space
+            <span
+              className={`inline-block w-1.5 h-1.5 rounded-full bg-purple-400 ${isRTL ? "ml-2" : "mr-2"} animate-pulse`}
+            />
+            {t.badges.home}
           </span>
         </div>
 
@@ -121,7 +123,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
           </p>
           <h1
             className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-slate-50 leading-none"
-            style={{ letterSpacing: "-0.03em" }}
+            style={{ letterSpacing: isRTL ? "0" : "-0.03em" }}
           >
             <span className="gradient-text">{data.name.split(" ")[0]}</span>{" "}
             <span className="text-slate-100">
@@ -149,7 +151,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
             >
               {displayed}
               <span
-                className="inline-block w-0.5 h-7 ml-1 rounded-full align-middle"
+                className={`inline-block w-0.5 h-7 ${isRTL ? "mr-1" : "ml-1"} rounded-full align-middle`}
                 style={{
                   background: "#a78bfa",
                   animation: "type-cursor 0.8s ease-in-out infinite",
@@ -165,7 +167,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
           className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-in"
           style={{ animationDelay: "0.5s", animationFillMode: "both" }}
         >
-          {data.tagline} {data.description}
+          {data.description}
         </p>
 
         {/* CTAs */}
@@ -180,7 +182,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
           >
             {data.cta}
             <svg
-              className="w-4 h-4"
+              className={`w-4 h-4 ${isRTL ? "rotate-180" : ""}`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -199,7 +201,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
             id="hero-cta-skills"
             className="btn-secondary text-sm"
           >
-            My Skills
+            {isRTL ? "میری مہارتیں" : "My Skills"}
             <svg
               className="w-4 h-4"
               fill="none"

@@ -35,6 +35,14 @@
     overflow-x: hidden;
   }
 
+  .font-urdu {
+    font-family: "Noto Nastaliq Urdu", "Noto Sans Arabic", serif;
+  }
+
+  .font-arabic {
+    font-family: "Noto Sans Arabic", sans-serif;
+  }
+
   ::selection {
     background: rgba(139, 92, 246, 0.35);
     color: #fff;

@@ -1,29 +1,15 @@
-import type { Metadata } from "next";
+"use client";
+
 import SectionHeader from "@/components/SectionHeader";
 import SkillCard from "@/components/SkillCard";
-import { getSkillsData, getMetaData } from "@/lib/portfolio";
-
-export async function generateMetadata(): Promise<Metadata> {
-  const meta = getMetaData();
-  const skills = getSkillsData();
-  return {
-    title: "Skills & Toolkit",
-    description: `${meta.name}'s technical skills and tools: ${skills.items
-      .map((s) => s.name)
-      .slice(0, 8)
-      .join(", ")} and more.`,
-    openGraph: {
-      title: `Skills & Toolkit | ${meta.name}`,
-      description: skills.paragraph,
-    },
-  };
-}
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function SkillsPage() {
-  const skillsData = getSkillsData();
+  const { t, isRTL } = useLanguage();
+  const skillsData = t.sections.skills;
 
   // Group skills by category
-  const categories = {
+  const categories: Record<string, string[]> = {
     Frontend: [
       "HTML",
       "CSS",
@@ -49,12 +35,18 @@ export default function SkillsPage() {
   };
 
   const grouped = Object.entries(categories).map(([category, names]) => ({
-    category,
+    category: isRTL
+      ? category === "Frontend"
+        ? "فرنٹ اینڈ"
+        : category === "Backend"
+          ? "بیک اینڈ"
+          : "ٹولز اور ڈیواوپس"
+      : category,
     skills: skillsData.items.filter((s) => names.includes(s.name)),
   }));
 
   return (
-    <div className="relative min-h-screen pt-24">
+    <div className={`relative min-h-screen pt-24 ${isRTL ? "font-urdu" : ""}`}>
       {/* Background */}
       <div
         className="absolute inset-0 animated-bg pointer-events-none"
@@ -68,14 +60,16 @@ export default function SkillsPage() {
 
       <div className="relative section-container">
         <SectionHeader
-          badge="Always Learning"
+          badge={t.badges.skills}
           title={skillsData.title}
           paragraph={skillsData.paragraph}
         />
 
         {/* All skills at top */}
         <div className="glass-card p-8 mb-16">
-          <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 xl:grid-cols-11 gap-4">
+          <div
+            className={`grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 xl:grid-cols-11 gap-4 ${isRTL ? "text-start" : ""}`}
+          >
             {skillsData.items.map((skill, i) => (
               <SkillCard key={skill.name} skill={skill} index={i} />
             ))}
@@ -94,8 +88,9 @@ export default function SkillsPage() {
                 <div
                   className="h-px flex-1"
                   style={{
-                    background:
-                      "linear-gradient(to right, rgba(139,92,246,0.5), transparent)",
+                    background: isRTL
+                      ? "linear-gradient(to left, rgba(139,92,246,0.5), transparent)"
+                      : "linear-gradient(to right, rgba(139,92,246,0.5), transparent)",
                   }}
                 />
                 <h2
@@ -107,8 +102,9 @@ export default function SkillsPage() {
                 <div
                   className="h-px flex-1"
                   style={{
-                    background:
-                      "linear-gradient(to left, rgba(139,92,246,0.5), transparent)",
+                    background: isRTL
+                      ? "linear-gradient(to right, rgba(139,92,246,0.5), transparent)"
+                      : "linear-gradient(to left, rgba(139,92,246,0.5), transparent)",
                   }}
                 />
               </div>

@@ -1,13 +1,16 @@
-import { getFooterData, getMetaData } from "@/lib/portfolio";
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
-  const footer = getFooterData();
-  const meta = getMetaData();
+  const { t, isRTL } = useLanguage();
+  const footer = t.sections.footer;
+  const meta = t.meta;
   const year = new Date().getFullYear();
 
   return (
     <footer
-      className="relative overflow-hidden"
+      className={`relative overflow-hidden ${isRTL ? "font-urdu" : ""}`}
       style={{
         borderTop: "1px solid rgba(255,255,255,0.06)",
         background: "rgba(6, 6, 12, 0.9)",
@@ -27,7 +30,7 @@ export default function Footer() {
 
       <div className="relative max-w-6xl mx-auto px-6 py-16">
         {/* GitHub Contributions Section */}
-        <div className="text-center mb-12">
+        <div className={`text-center mb-12 ${isRTL ? "text-right" : ""}`}>
           <div
             className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold mb-4 uppercase tracking-widest"
             style={{
@@ -54,10 +57,14 @@ export default function Footer() {
         </div>
 
         {/* Footer Links Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12 ${isRTL ? "text-right" : ""}`}
+        >
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-3">
+            <div
+              className={`flex items-center gap-2 mb-3 ${isRTL ? "flex-row-reverse" : ""}`}
+            >
               <div
                 className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold text-sm"
                 style={{
@@ -69,23 +76,24 @@ export default function Footer() {
               <span className="font-semibold text-slate-100">{meta.name}</span>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed">
-              Building futuristic digital experiences with passion and
-              precision.
+              {isRTL
+                ? "جذبے اور درستگی کے ساتھ مستقبل کے ڈیجیٹل تجربات کی تعمیر۔"
+                : "Building futuristic digital experiences with passion and precision."}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h3 className="text-slate-300 font-semibold text-sm mb-3 uppercase tracking-wider">
-              Navigation
+              {isRTL ? "نیویگیشن" : "Navigation"}
             </h3>
             <ul className="space-y-2" role="list">
               {[
-                { href: "/", label: "Home" },
-                { href: "/projects", label: "Projects" },
-                { href: "/skills", label: "Skills" },
-                { href: "/education", label: "Education" },
-                { href: "/certifications", label: "Certifications" },
+                { href: "/", label: t.navLabels.home },
+                { href: "/projects", label: t.navLabels.projects },
+                { href: "/skills", label: t.navLabels.skills },
+                { href: "/education", label: t.navLabels.education },
+                { href: "/certifications", label: t.navLabels.certifications },
               ].map((link) => (
                 <li key={link.href}>
                   <a
@@ -102,7 +110,7 @@ export default function Footer() {
           {/* Social */}
           <div>
             <h3 className="text-slate-300 font-semibold text-sm mb-3 uppercase tracking-wider">
-              Connect
+              {isRTL ? "رابطہ کریں" : "Connect"}
             </h3>
             <div className="flex flex-col gap-2">
               {[
@@ -132,26 +140,13 @@ export default function Footer() {
                     </svg>
                   ),
                 },
-                {
-                  href: "https://twitter.com/FakhirAhme41220",
-                  label: "Twitter / X",
-                  icon: (
-                    <svg
-                      className="w-4 h-4"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.737-8.836L1.254 2.25H8.08l4.26 5.632L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
-                    </svg>
-                  ),
-                },
               ].map((social) => (
                 <a
                   key={social.href}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-slate-400 hover:text-purple-400 text-sm transition-colors duration-200"
+                  className={`flex items-center gap-2 text-slate-400 hover:text-purple-400 text-sm transition-colors duration-200 ${isRTL ? "flex-row-reverse" : ""}`}
                 >
                   {social.icon}
                   {social.label}
@@ -163,11 +158,12 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8"
+          className={`flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 ${isRTL ? "flex-row-reverse" : ""}`}
           style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
           <p className="text-slate-500 text-sm">
-            © {year} {meta.name}. Crafted with passion.
+            © {year} {meta.name}.{" "}
+            {isRTL ? "جذبے کے ساتھ بنایا گیا۔" : "Crafted with passion."}
           </p>
           <p className="text-slate-600 text-xs">
             Built with Next.js · TypeScript · Tailwind CSS

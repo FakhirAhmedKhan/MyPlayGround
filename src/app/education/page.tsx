@@ -1,26 +1,15 @@
-import type { Metadata } from "next";
+"use client";
+
 import SectionHeader from "@/components/SectionHeader";
 import EducationTimeline from "@/components/EducationTimeline";
-import { getEducationData, getMetaData } from "@/lib/portfolio";
-
-export async function generateMetadata(): Promise<Metadata> {
-  const meta = getMetaData();
-  const edu = getEducationData();
-  return {
-    title: "Education",
-    description: `${meta.name}'s educational journey: ${edu.paragraph}`,
-    openGraph: {
-      title: `Education | ${meta.name}`,
-      description: edu.paragraph,
-    },
-  };
-}
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function EducationPage() {
-  const educationData = getEducationData();
+  const { t, isRTL } = useLanguage();
+  const educationData = t.sections.education;
 
   return (
-    <div className="relative min-h-screen pt-24">
+    <div className={`relative min-h-screen pt-24 ${isRTL ? "font-urdu" : ""}`}>
       {/* Background */}
       <div
         className="absolute inset-0 animated-bg pointer-events-none"
@@ -39,7 +28,7 @@ export default function EducationPage() {
 
       <div className="relative section-container">
         <SectionHeader
-          badge="EduBade"
+          badge={t.badges.education}
           title={educationData.title}
           paragraph={educationData.paragraph}
         />

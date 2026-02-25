@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { EducationItem } from "@/lib/types";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface EducationTimelineProps {
   items: EducationItem[];
@@ -119,11 +120,13 @@ function InstitutionLogo({
 }
 
 export default function EducationTimeline({ items }: EducationTimelineProps) {
+  const { isRTL } = useLanguage();
+
   return (
     <div className="relative" role="list" aria-label="Education timeline">
       {/* Timeline line */}
       <div
-        className="absolute left-8 top-4 bottom-4 w-px hidden sm:block"
+        className={`absolute top-4 bottom-4 w-px hidden sm:block ${isRTL ? "right-8" : "left-8"}`}
         style={{
           background:
             "linear-gradient(to bottom, rgba(139,92,246,0.6), rgba(59,130,246,0.3), transparent)",
@@ -136,7 +139,7 @@ export default function EducationTimeline({ items }: EducationTimelineProps) {
           <div
             key={`${item.year}-${index}`}
             id={`education-item-${index}`}
-            className="group relative flex gap-6 sm:gap-8"
+            className={`group relative flex gap-6 sm:gap-8 ${isRTL ? "flex-row-reverse text-right" : ""}`}
             role="listitem"
           >
             {/* Timeline dot — desktop */}
@@ -172,8 +175,12 @@ export default function EducationTimeline({ items }: EducationTimelineProps) {
                   "rgba(255,255,255,0.07)";
               }}
             >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3">
-                <div className="flex items-start gap-3">
+              <div
+                className={`flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3 ${isRTL ? "sm:flex-row-reverse" : ""}`}
+              >
+                <div
+                  className={`flex items-start gap-3 ${isRTL ? "flex-row-reverse text-right" : ""}`}
+                >
                   {/* Mobile icon */}
                   <div
                     className="sm:hidden w-10 h-10 rounded-xl flex items-center justify-center text-white flex-shrink-0"
@@ -190,7 +197,9 @@ export default function EducationTimeline({ items }: EducationTimelineProps) {
                   </h3>
                 </div>
 
-                <div className="flex items-center gap-2 flex-shrink-0">
+                <div
+                  className={`flex items-center gap-2 flex-shrink-0 ${isRTL ? "flex-row-reverse" : ""}`}
+                >
                   {/* Institution logo — plain img with error fallback */}
                   <div
                     className="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0"

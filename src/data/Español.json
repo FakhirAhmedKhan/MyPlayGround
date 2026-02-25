@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "Portafolio de Desarrollador Full-Stack",
+    "description": "Portafolio de Fakhir Ahmed Khan — desarrollador web apasionado, frontend, backend y diseñador de temas que crea experiencias digitales futuristas."
+  },
+  "navLabels": {
+    "home": "Inicio",
+    "education": "Educación",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "certifications": "Certificaciones"
+  },
+  "badges": {
+    "home": "Bienvenido a mi espacio digital",
+    "skills": "Siempre aprendiendo",
+    "projects": "Trabajando activamente en grandes proyectos e ideas.",
+    "education": "Exploro cómo la participación activa en programación puede potenciar la creatividad en IA.",
+    "git": "Contribuciones Totales",
+    "certifications": "Las certificaciones son clave para el éxito"
+  },
+  "sections": {
+    "home": {
+      "greeting": "Hola, soy",
+      "tagline": "Un apasionado",
+      "description": "por crear experiencias increíbles: visualmente impactantes, muy funcionales y futuristas.",
+      "cta": "Ver mi trabajo"
+    },
+    "education": {
+      "title": "Mi Trayectoria",
+      "paragraph": "Una línea de tiempo de mis hitos y logros educativos",
+      "items": [
+        {
+          "year": "2026 (Present)",
+          "title": "Grado 12 - Educación Secundaria Superior",
+          "description": "Avanzando al último año con enfoque en STEM, mientras sigo fortaleciendo mis habilidades en programación y tecnologías emergentes."
+        },
+        {
+          "year": "2025",
+          "title": "Grado 11 - Educación Secundaria Superior",
+          "description": "Cursando estudios avanzados y mejorando activamente habilidades full-stack y prácticas modernas de desarrollo."
+        },
+        {
+          "year": "2024",
+          "title": "Bootcamp de Desarrollo Full-Stack",
+          "description": "Completé un programa intensivo de 6 meses enfocado en desarrollo web full-stack, incluyendo MERN y frameworks modernos."
+        },
+        {
+          "year": "2024",
+          "title": "Especialización en Desarrollo Web",
+          "description": "Bootcamp intensivo de 6 meses con conceptos avanzados, diseño responsive y buenas prácticas profesionales."
+        },
+        {
+          "year": "2024",
+          "title": "Grado 10 - Educación Secundaria",
+          "description": "Completé este hito académico mientras reforzaba fundamentos de programación y desarrollo de software."
+        },
+        {
+          "year": "2023",
+          "title": "Aprendizaje Autodidacta de Programación",
+          "description": "Inicié mi camino autodidacta dominando HTML5, CSS3 y JavaScript mediante cursos estructurados y documentación."
+        },
+        {
+          "year": "2023",
+          "title": "Grado 9 - Educación Secundaria",
+          "description": "Descubrí mi pasión por la programación y comencé a explorar conceptos base de computación y tecnologías web."
+        }
+      ]
+    },
+    "projects": {
+      "title": "¿Ya viste?",
+      "paragraph": "Explora mis proyectos más recientes que muestran creatividad, innovación y experiencia técnica",
+      "items": [
+        { "id": 0, "description": "Generador de CV que crea currículums compatibles con ATS." },
+        { "id": 1, "description": "Landing page simple para mis herramientas ATS con buen UI/UX." },
+        { "id": 2, "description": "Herramienta para evaluar compatibilidad de un CV con sistemas ATS." },
+        { "id": 3, "description": "Clon de Netflix que replica funciones principales de la plataforma." },
+        { "id": 4, "description": "Clon de YouTube responsive que replica características básicas." },
+        { "id": 5, "description": "Clon de X (Twitter) responsive con las funciones principales." },
+        { "id": 6, "description": "Convierte unidades como temperatura y velocidad (C/F, km/h, mph)." },
+        { "id": 7, "description": "Clima en tiempo real para cualquier lugar: temperatura, humedad y viento." },
+        { "id": 8, "description": "Convierte texto escrito en audio natural al instante." },
+        { "id": 9, "description": "App web simple en JavaScript para ver productos y experiencia de tienda." },
+        { "id": 10, "description": "Gestor de tareas simple para organizar tu día fácilmente." },
+
+        { "id": 11, "description": "Colección de programas básicos en Python para construir fundamentos." },
+        { "id": 12, "description": "Parte extra de Python para practicar más funciones y lógica." },
+        { "id": 13, "description": "Programa en Python para calcular calificaciones con if/else." },
+        { "id": 14, "description": "Juego de terminal: adivina letras para descubrir la palabra oculta." },
+        { "id": 15, "description": "Quiz en terminal sobre HTML/CSS/JS con puntaje final." },
+
+        { "id": 17, "description": "Juego clásico para probar tu suerte contra la computadora." },
+        { "id": 18, "description": "Genera códigos QR a partir de datos y produce un código escaneable." },
+        { "id": 19, "description": "Calculadora en React con state y componentes para actualizar resultados." },
+        { "id": 20, "description": "Programas básicos en JavaScript para reforzar fundamentos." },
+        { "id": 21, "description": "Segunda parte de práctica en JavaScript para principiantes." },
+        { "id": 22, "description": "Parte adicional con más práctica y ejemplos en JavaScript." },
+        { "id": 23, "description": "Quiz en terminal sobre HTML/CSS/JS con resultado final." },
+
+        { "id": 29, "description": "SaaS de inventario — gestiona productos, stock y operaciones." },
+        { "id": 30, "description": "SaaS de eventos — organiza eventos, reservas y detalles." },
+
+        { "id": 24, "description": "Guía breve de Electron para apps de escritorio con HTML/CSS/JS." },
+        { "id": 25, "description": "Referencia práctica para dominar React Hooks con patrones reales." },
+        { "id": 26, "description": "Guía estructurada de MySQL: consultas, joins y fundamentos." },
+        { "id": 27, "description": "Referencia rápida de HTML/CSS moderno y diseño responsive." },
+        { "id": 28, "description": "Referencia compacta de JavaScript: conceptos base y ES moderno." },
+        { "id": 31, "description": "Guía de Next.js: routing, rendering y rendimiento básico." },
+        { "id": 32, "description": "Referencia de NestJS: módulos, controladores y patrones escalables." },
+        { "id": 33, "description": "Guía de Python: sintaxis, OOP y bases de backend." },
+        { "id": 34, "description": "Guía profunda de Prisma: schema, relaciones y lógica de base de datos." }
+      ]
+    },
+    "certifications": {
+      "title": "Certificaciones",
+      "paragraph": "Mostrando mi compromiso con el aprendizaje continuo y crecimiento profesional mediante certificaciones reconocidas",
+      "items": [
+        { "year": "2025", "title": "SQL (Basic)", "description": "Validó habilidades SQL básicas: SELECT, filtros, ordenación y manipulación simple." },
+        { "year": "2025", "title": "CSS (Basic)", "description": "Demostró conocimientos CSS: layouts, colores, tipografía y responsive básico." },
+        { "year": "2025", "title": "JavaScript (Basic)", "description": "Certificó fundamentos: variables, funciones, bucles y lógica básica." },
+        { "year": "2025", "title": "Python (Basic)", "description": "Cubrió bases: sintaxis, tipos, control de flujo y resolución simple." },
+        { "year": "2025", "title": "JavaScript for Beginners", "description": "Curso introductorio con fundamentos y casos reales de desarrollo web." },
+        { "year": "2025", "title": "Introduction to CSS", "description": "Aprendí estilos: selectores, layouts y técnicas responsive." },
+        { "year": "2025", "title": "Introduction to Front-End Development", "description": "Resumen de frontend con HTML, CSS y JavaScript para interfaces modernas." },
+        { "year": "2025", "title": "Responsive Web Design", "description": "Construí diseños responsive con enfoque mobile-first y prácticas modernas." }
+      ]
+    },
+    "footer": {
+      "title": "Contribuciones en GitHub",
+      "paragraph": "Donde las ideas se convierten en código — creado con React, refinado con Tailwind y potenciado por la creatividad."
+    }
+  }
+}

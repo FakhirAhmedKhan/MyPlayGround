@@ -1,3 +1,7 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
+
 interface SectionHeaderProps {
   badge: string;
   title: string;
@@ -11,8 +15,12 @@ export default function SectionHeader({
   paragraph,
   centered = true,
 }: SectionHeaderProps) {
+  const { isRTL } = useLanguage();
+
   return (
-    <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+    <div
+      className={`mb-16 ${centered ? "text-center" : isRTL ? "text-right" : "text-left"}`}
+    >
       <div
         className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-5 uppercase tracking-widest ${centered ? "" : "mb-4"}`}
         style={{
@@ -22,7 +30,7 @@ export default function SectionHeader({
         }}
       >
         <span
-          className="w-1.5 h-1.5 rounded-full animate-pulse-glow"
+          className={`w-1.5 h-1.5 rounded-full animate-pulse-glow ${isRTL ? "ml-2" : ""}`}
           style={{ background: "#a78bfa" }}
         />
         {badge}
@@ -30,7 +38,7 @@ export default function SectionHeader({
 
       <h2
         className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-50 mb-4"
-        style={{ letterSpacing: "-0.02em", lineHeight: "1.15" }}
+        style={{ letterSpacing: isRTL ? "0" : "-0.02em", lineHeight: "1.25" }}
       >
         {title}
       </h2>

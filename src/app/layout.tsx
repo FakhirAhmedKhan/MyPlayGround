@@ -67,6 +67,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { LanguageProvider } from "@/context/LanguageContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -81,9 +83,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://raw.githubusercontent.com" />
       </head>
       <body className="bg-[rgb(10,10,15)] text-slate-50 antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -1,0 +1,266 @@
+{
+  "meta": {
+    "title": "فل اسٹیک ڈویلپر پورٹ فولیو",
+    "description": "فخر احمد خان کا پورٹ فولیو — ایک پُرجوش ویب/فرنٹ اینڈ/بیک اینڈ ڈویلپر اور تھیم ڈیزائنر جو مستقبل نما ڈیجیٹل تجربات بناتا ہے۔"
+  },
+  "navLabels": {
+    "home": "ہوم",
+    "education": "تعلیم",
+    "skills": "مہارتیں",
+    "projects": "پروجیکٹس",
+    "certifications": "سرٹیفیکیشنز"
+  },
+  "badges": {
+    "home": "میری ڈیجیٹل دنیا میں خوش آمدید",
+    "skills": "ہمیشہ سیکھنے کے سفر میں",
+    "projects": "شاندار پروجیکٹس اور آئیڈیاز پر مسلسل کام جاری ہے۔",
+    "education": "یہ جانچ رہا ہوں کہ پروگرامنگ میں سرگرم حصہ داری AI کی تخلیقی صلاحیت کیسے بڑھاتی ہے۔",
+    "git": "کل کنٹریبیوشنز",
+    "certifications": "سرٹیفیکیشن کامیابی کی کنجی ہے"
+  },
+  "sections": {
+    "home": {
+      "greeting": "ہیلو، میں ہوں",
+      "tagline": "ایک پُرجوش",
+      "description": "جو بہترین تجربات بناتا ہے جو خوبصورت، انتہائی کارآمد اور مستقبل نما ہوں۔",
+      "cta": "میرا کام دیکھیں"
+    },
+    "education": {
+      "title": "میرا سفر",
+      "paragraph": "میری تعلیمی کامیابیوں اور سنگِ میل کی ٹائم لائن",
+      "items": [
+        {
+          "year": "2026 (Present)",
+          "title": "گریڈ 12 - ہائر سیکنڈری ایجوکیشن",
+          "description": "ثانوی تعلیم کے آخری سال میں STEM مضامین پر توجہ کے ساتھ، ساتھ ہی پروگرامنگ اور نئی ٹیکنالوجیز میں مہارت بڑھانا۔"
+        },
+        {
+          "year": "2025",
+          "title": "گریڈ 11 - ہائر سیکنڈری ایجوکیشن",
+          "description": "ایڈوانس کورس ورک پر فوکس کے ساتھ ہائر سیکنڈری کی تعلیم جاری، اور فل اسٹیک ڈیولپمنٹ اسکلز کو مسلسل بہتر بنانا۔"
+        },
+        {
+          "year": "2024",
+          "title": "فل اسٹیک ڈیولپمنٹ بوٹ کیمپ",
+          "description": "6 ماہ کا جامع اور انٹینسو پروگرام مکمل کیا جس میں MERN اسٹیک اور جدید فریم ورکس شامل تھے۔"
+        },
+        {
+          "year": "2024",
+          "title": "ویب ڈیولپمنٹ اسپیشلائزیشن",
+          "description": "6 ماہ کی ٹریننگ مکمل کی جس میں ایڈوانس ویب کانسیپٹس، ریسپانسیو ڈیزائن اور انڈسٹری بیسٹ پریکٹسز شامل تھیں۔"
+        },
+        {
+          "year": "2024",
+          "title": "گریڈ 10 - سیکنڈری ایجوکیشن",
+          "description": "سیکنڈری تعلیم مکمل کی اور ساتھ ہی سافٹ ویئر ڈیولپمنٹ اور پروگرامنگ کی بنیاد مضبوط کی۔"
+        },
+        {
+          "year": "2023",
+          "title": "سیلف لرننگ پروگرامنگ",
+          "description": "ویب ڈیولپمنٹ کی خود سیکھنے والی سفر کی شروعات، HTML5، CSS3 اور JavaScript کو کورسز اور ڈاکیومنٹیشن سے سیکھا۔"
+        },
+        {
+          "year": "2023",
+          "title": "گریڈ 9 - سیکنڈری ایجوکیشن",
+          "description": "اکیڈمک سال مکمل کیا اور پروگرامنگ میں دلچسپی پیدا ہوئی، پھر بنیادی CS اور ویب ٹیکنالوجیز ایکسپلور کیں۔"
+        }
+      ]
+    },
+    "projects": {
+      "title": "کیا آپ نے دیکھا",
+      "paragraph": "میری تازہ ترین پروجیکٹس دیکھیں جو تخلیقی صلاحیت، جدت اور تکنیکی مہارت کو ظاہر کرتے ہیں",
+      "items": [
+        {
+          "id": 0,
+          "description": "ATS-friendly ریزیوم بنانے والا CV جنریٹر ایپ۔"
+        },
+        {
+          "id": 1,
+          "description": "ATS ٹولز کے لیے خوبصورت UI/UX والی سادہ لینڈنگ پیج۔"
+        },
+        {
+          "id": 2,
+          "description": "ATS کے مطابق ریزیوم اسکور/کمپیٹیبلٹی چیک کرنے والا ٹول۔"
+        },
+        {
+          "id": 3,
+          "description": "Netflix کی بنیادی فیچرز کو ریپلیکیٹ کرنے والا کلون۔"
+        },
+        {
+          "id": 4,
+          "description": "ریسپانسیو YouTube کلون جو بنیادی فیچرز دکھاتا ہے۔"
+        },
+        {
+          "id": 5,
+          "description": "ریسپانسیو X (Twitter) کلون جو بنیادی فیچرز ریپلیکیٹ کرتا ہے۔"
+        },
+        {
+          "id": 6,
+          "description": "ٹمپریچر اور اسپیڈ جیسے یونٹس میں کنورژن (C/F، km/h، mph وغیرہ)۔"
+        },
+        {
+          "id": 7,
+          "description": "دنیا بھر کے لیے رئیل ٹائم موسم: درجہ حرارت، نمی، اور ہوا کی رفتار۔"
+        },
+        {
+          "id": 8,
+          "description": "تحریر کو فوراً قدرتی آواز میں تبدیل کرتا ہے۔"
+        },
+        {
+          "id": 9,
+          "description": "JavaScript سے بنا سادہ ویب ایپ جو پروڈکٹس دیکھنے دیتی ہے۔"
+        },
+        {
+          "id": 10,
+          "description": "آسان ٹاسک مینیجر جو روزمرہ کے کام منظم کرنے میں مدد دیتا ہے۔"
+        },
+
+        {
+          "id": 11,
+          "description": "Beginner Python پروگرامز کا مجموعہ تاکہ پروگرامنگ کی بنیاد مضبوط ہو۔"
+        },
+        {
+          "id": 12,
+          "description": "Python سیریز کا اگلا حصہ، فنکشنز کی مزید پریکٹس کے لیے۔"
+        },
+        {
+          "id": 13,
+          "description": "if/else سے مارکس کے مطابق گریڈ کیلکولیٹ کرنے والا پروگرام۔"
+        },
+        {
+          "id": 14,
+          "description": "ٹرمینل گیم: حروف guess کر کے چھپا ہوا لفظ تلاش کریں۔"
+        },
+        {
+          "id": 15,
+          "description": "ٹرمینل پر چلنے والا کوئز: HTML/CSS/JS نالج ٹیسٹ اور اسکور۔"
+        },
+
+        {
+          "id": 17,
+          "description": "Rock Paper Scissors کی کلاسک گیم — کمپیوٹر کے خلاف۔"
+        },
+        {
+          "id": 18,
+          "description": "ڈیٹا سے QR کوڈ بناتا ہے جو آسانی سے اسکین ہو جائے۔"
+        },
+        {
+          "id": 19,
+          "description": "React میں سادہ کیلکولیٹر، state اور components سے رزلٹ اپڈیٹ کرتا ہے۔"
+        },
+        {
+          "id": 20,
+          "description": "Beginner JavaScript پروگرامز کا مجموعہ تاکہ منطق مضبوط ہو۔"
+        },
+        {
+          "id": 21,
+          "description": "JavaScript سیریز کا دوسرا حصہ — مزید پریکٹس کے ساتھ۔"
+        },
+        {
+          "id": 22,
+          "description": "JavaScript سیریز کا مزید حصہ — اضافی مشقیں اور مثالیں۔"
+        },
+        {
+          "id": 23,
+          "description": "ٹرمینل پر چلنے والا کوئز: HTML/CSS/JS اور فائنل اسکور۔"
+        },
+
+        {
+          "id": 29,
+          "description": "Inventory Management SaaS — پروڈکٹس، اسٹاک اور آپریشنز کو منظم کریں۔"
+        },
+        {
+          "id": 30,
+          "description": "Event Management SaaS — ایونٹس، بکنگز اور تفصیلات کا نظم۔"
+        },
+
+        {
+          "id": 24,
+          "description": "Electron کی مختصر گائیڈ: HTML/CSS/JS سے ڈیسک ٹاپ ایپس کی بنیاد۔"
+        },
+        {
+          "id": 25,
+          "description": "React Hooks کو ماسٹر کرنے کے لیے عملی ریفرنس اور پیٹرنز۔"
+        },
+        {
+          "id": 26,
+          "description": "MySQL کی منظم گائیڈ: queries، joins اور بنیادی concepts۔"
+        },
+        {
+          "id": 27,
+          "description": "HTML/CSS کا فاسٹ ریفرنس: اسٹرکچر اور ریسپانسیو ڈیزائن۔"
+        },
+        {
+          "id": 28,
+          "description": "JavaScript کا کمپیکٹ ریفرنس: core concepts اور جدید ES فیچرز۔"
+        },
+        {
+          "id": 31,
+          "description": "Next.js گائیڈ: routing، rendering اور performance basics۔"
+        },
+        {
+          "id": 32,
+          "description": "NestJS ریفرنس: modules، controllers اور scalable backend patterns۔"
+        },
+        {
+          "id": 33,
+          "description": "Python گائیڈ: syntax، OOP اور backend foundations۔"
+        },
+        {
+          "id": 34,
+          "description": "Prisma گائیڈ: schema design، relations اور DB logic۔"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "سرٹیفیکیشنز",
+      "paragraph": "تسلیم شدہ سرٹیفیکیشنز کے ذریعے مسلسل سیکھنے اور پروفیشنل گروتھ کا اظہار",
+      "items": [
+        {
+          "year": "2025",
+          "title": "SQL (Basic)",
+          "description": "SQL کی بنیادی مہارتیں: SELECT، filtering، sorting اور basic data manipulation۔"
+        },
+        {
+          "year": "2025",
+          "title": "CSS (Basic)",
+          "description": "CSS بنیادی علم: layouts، colors، typography اور responsive basics۔"
+        },
+        {
+          "year": "2025",
+          "title": "JavaScript (Basic)",
+          "description": "JavaScript fundamentals: variables، functions، loops اور basic logic۔"
+        },
+        {
+          "year": "2025",
+          "title": "Python (Basic)",
+          "description": "Python basics: syntax، data types، control flow اور simple problem solving۔"
+        },
+        {
+          "year": "2025",
+          "title": "JavaScript for Beginners",
+          "description": "Beginners کورس: JavaScript fundamentals اور real-world web use cases۔"
+        },
+        {
+          "year": "2025",
+          "title": "Introduction to CSS",
+          "description": "Styling fundamentals: selectors، layouts اور responsive techniques۔"
+        },
+        {
+          "year": "2025",
+          "title": "Introduction to Front-End Development",
+          "description": "Front-end overview: HTML، CSS، JavaScript سے modern UI بنانا۔"
+        },
+        {
+          "year": "2025",
+          "title": "Responsive Web Design",
+          "description": "HTML/CSS سے mobile-first approach کے ساتھ responsive layouts بنائے۔"
+        }
+      ]
+    },
+    "footer": {
+      "title": "GitHub کنٹریبیوشنز",
+      "paragraph": "جہاں آئیڈیاز کوڈ بنتے ہیں — React سے تیار، Tailwind سے نکھرا، اور تخلیقی سوچ سے طاقتور۔"
+    }
+  }
+}
