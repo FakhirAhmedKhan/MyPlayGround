@@ -6,7 +6,8 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function SkillsPage() {
   const { t, isRTL } = useLanguage();
-  const skillsData = t.sections.skills;
+  const skillIcons = t.SkillIcon.items;
+  const skillsConfig = t.sections.skills;
 
   // Group skills by category
   const categories: Record<string, string[]> = {
@@ -18,6 +19,7 @@ export default function SkillsPage() {
       "React.js",
       "React Native",
       "Next.js",
+      "Electron",
       "Tailwind CSS",
     ],
     Backend: ["Node.js", "Nest.js", "Python", "MySQL", "MongoDB"],
@@ -28,8 +30,10 @@ export default function SkillsPage() {
       "PyCharm",
       "Vite",
       "Vitest",
+      "Prisma",
+      "Postman",
+      "Swagger",
       "Expo",
-      "Electron",
       "Docker",
     ],
   };
@@ -42,7 +46,7 @@ export default function SkillsPage() {
           ? "بیک اینڈ"
           : "ٹولز اور ڈیواوپس"
       : category,
-    skills: skillsData.items.filter((s) => names.includes(s.name)),
+    skills: skillIcons.filter((s) => names.includes(s.name)),
   }));
 
   return (
@@ -61,20 +65,9 @@ export default function SkillsPage() {
       <div className="relative section-container">
         <SectionHeader
           badge={t.badges.skills}
-          title={skillsData.title}
-          paragraph={skillsData.paragraph}
+          title={skillsConfig.title}
+          paragraph={skillsConfig.paragraph}
         />
-
-        {/* All skills at top */}
-        <div className="glass-card p-8 mb-16">
-          <div
-            className={`grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 xl:grid-cols-11 gap-4 ${isRTL ? "text-start" : ""}`}
-          >
-            {skillsData.items.map((skill, i) => (
-              <SkillCard key={skill.name} skill={skill} index={i} />
-            ))}
-          </div>
-        </div>
 
         {/* Grouped by category */}
         <div className="space-y-12">

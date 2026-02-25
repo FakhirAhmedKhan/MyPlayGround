@@ -3,6 +3,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import type { PortfolioData } from "@/lib/types";
 import enData from "@/data/portfolio.json";
+import skillIconData from "@/data/SkillIcon.json";
 import urData from "@/data/Urdu.json";
 import arData from "@/data/Arabic.json";
 import esData from "@/data/Español.json";
@@ -13,6 +14,7 @@ interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: PortfolioData;
+  skillIconData: any;
   isRTL: boolean;
 }
 
@@ -68,7 +70,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         if (base[key] && Array.isArray(base[key])) {
           result[key] = base[key].map((item: any, index: number) => {
             const overrideItem =
-              override[key].find((o: any) => o.id === item.id) ||
+              (item.id !== undefined &&
+                override[key].find((o: any) => o.id === item.id)) ||
               override[key][index];
             return { ...item, ...overrideItem };
           });
@@ -82,7 +85,18 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     return result;
   };
 
-  const currentT = mergeData(enData, translations[language]) as PortfolioData;
+  const mergedBase = mergeData(enData, translations[language]);
+  const currentT = {
+    ...mergedBase,
+    SkillIcon: skillIconData,
+    sections: {
+      ...mergedBase.sections,
+      skills: {
+        ...mergedBase.sections.skills,
+        items: skillIconData.items,
+      },
+    },
+  } as PortfolioData;
 
   return (
     <LanguageContext.Provider
@@ -90,6 +104,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         language,
         setLanguage: handleSetLanguage,
         t: currentT,
+        skillIconData: skillIconData,
         isRTL: language === "ar" || language === "ur",
       }}
     >

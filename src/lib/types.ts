@@ -98,4 +98,7 @@ export interface PortfolioData {
         certifications: CertificationsSection;
         footer: FooterSection;
     };
+    SkillIcon: {
+        items: SkillItem[];
+    };
 }
