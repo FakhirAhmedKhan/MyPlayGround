@@ -5,9 +5,10 @@
   },
   "navLabels": {
     "home": "Inicio",
-    "education": "Educación",
-    "skills": "Habilidades",
+    "blog": "Blog",
     "projects": "Proyectos",
+    "skills": "Habilidades",
+    "education": "Educación",
     "certifications": "Certificaciones"
   },
   "badges": {

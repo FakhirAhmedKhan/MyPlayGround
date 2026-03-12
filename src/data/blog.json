@@ -1,0 +1,1553 @@
+[
+  {
+    "id": "getting-started-with-react",
+    "title": "Getting Started with React: A Complete Guide",
+    "description": "Learn the fundamentals of React and how to build your first component. This guide covers hooks, state management, and best practices.",
+    "date": "March 10, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "React",
+    "tags": ["react", "javascript", "web-development", "beginners"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "React is a powerful JavaScript library for building user interfaces with reusable components. Whether you're building a simple website or a complex web application, React provides the tools and patterns you need to create maintainable, scalable code."
+      },
+      {
+        "type": "paragraph",
+        "content": "In this guide, we'll explore the core concepts of React, starting with functional components and hooks. You'll learn how to manage state, handle side effects, and create interactive user experiences."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "title": "Your First React Component",
+        "code": "import React, { useState } from 'react';\n\nexport default function Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Increment\n      </button>\n    </div>\n  );\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "The example above shows a simple counter component using the useState hook. This demonstrates one of React's most important features: state management. When the button is clicked, the count state is updated, and React automatically re-renders the component to reflect the new value."
+      },
+      {
+        "type": "paragraph",
+        "content": "React Hooks allow you to use state and other React features without writing a class component. The most commonly used hooks are:"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Common React Hooks",
+        "code": "// useState - Manage component state\nconst [value, setValue] = useState(initialValue);\n\n// useEffect - Handle side effects\nuseEffect(() => {\n  // Do something when component mounts or dependencies change\n  return () => {\n    // Cleanup function\n  };\n}, [dependency1, dependency2]);\n\n// useContext - Access context values\nconst value = useContext(MyContext);\n\n// useReducer - Complex state logic\nconst [state, dispatch] = useReducer(reducer, initialState);"
+      },
+      {
+        "type": "paragraph",
+        "content": "Understanding these hooks is crucial for modern React development. They enable you to write functional components that are cleaner, more reusable, and easier to test compared to class components. Start with useState and useEffect, then gradually explore other hooks as your projects become more complex."
+      }
+    ]
+  },
+    {
+      "id": "nextjs-file-based-routing",
+      "title": "Next.js File-Based Routing Explained",
+      "description": "Understand how Next.js uses file-based routing to create pages. Learn about dynamic routes, nested layouts, and best practices.",
+      "date": "March 8, 2026",
+      "author": "Fakhir Ahmed Khan",
+      "category": "Next.js",
+      "tags": ["nextjs", "routing", "web-development", "typescript"],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Next.js introduces an intuitive file-based routing system that automatically generates routes based on your file structure. Unlike traditional React applications, you don't need to manually configure routes with React Router. Instead, files and folders in the app directory automatically become routes."
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "title": "File Structure to Routes",
+          "code": "app/\n├── page.tsx           → / (home page)\n├── about/\n│   └── page.tsx       → /about\n├── blog/\n│   ├── page.tsx       → /blog\n│   └── [slug]/\n│       └── page.tsx   → /blog/:slug (dynamic route)\n└── api/\n    └── users/\n        └── route.ts   → POST /api/users"
+        },
+        {
+          "type": "paragraph",
+          "content": "This file-based routing system makes it easy to understand your application's structure at a glance. The file path directly corresponds to the URL path, reducing the cognitive overhead of route configuration."
+        },
+        {
+          "type": "code",
+          "language": "typescript",
+          "title": "Dynamic Routes in Next.js",
+          "code": "// app/blog/[slug]/page.tsx\nimport { notFound } from 'next/navigation';\n\ninterface BlogPostProps {\n  params: {\n    slug: string;\n  };\n}\n\nexport default function BlogPost({ params }: BlogPostProps) {\n  if (!params.slug) {\n    notFound();\n  }\n\n  return (\n    <article>\n      <h1>Blog Post: {params.slug}</h1>\n      {/* Your content here */}\n    </article>\n  );\n}"
+        },
+        {
+          "type": "paragraph",
+          "content": "Dynamic routes allow you to create flexible URL patterns. By using square brackets in your filename, you can capture dynamic segments. For example, [slug] captures any value and passes it as a parameter to your component."
+        }
+      ]
+    },
+  {
+    "id": "mastering-typescript",
+    "title": "Mastering TypeScript: From Basics to Advanced",
+    "description": "Deep dive into TypeScript and learn how to leverage it for building robust, type-safe applications.",
+    "date": "March 5, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "TypeScript",
+    "tags": ["typescript", "javascript", "type-safety", "advanced"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "TypeScript adds a layer of type safety to JavaScript, helping you catch errors before they reach production. It's become the industry standard for building large-scale applications and provides excellent editor support and documentation."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Basic Type Annotations",
+        "code": "// Primitive types\nconst name: string = 'John';\nconst age: number = 30;\nconst isActive: boolean = true;\nconst value: any = 'anything'; // Avoid using 'any'\nconst nothing: null = null;\nconst undefined_value: undefined = undefined;"
+      },
+      {
+        "type": "paragraph",
+        "content": "Beyond primitive types, TypeScript allows you to create custom interfaces and types. This enables you to define the shape of objects and ensure consistency across your codebase."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Interfaces and Types",
+        "code": "// Interface - for object shapes\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n  isAdmin?: boolean; // Optional property\n}\n\n// Type alias - more flexible\ntype Status = 'active' | 'inactive' | 'pending';\n\n// Combining types\ntype UserWithStatus = User & { status: Status };"
+      },
+      {
+        "type": "paragraph",
+        "content": "Generics are one of TypeScript's most powerful features. They allow you to write reusable code that works with different types while maintaining type safety."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Generics",
+        "code": "// Generic function\nfunction getFirstItem<T>(items: T[]): T {\n  return items[0];\n}\n\n// Generic class\nclass Repository<T> {\n  private items: T[] = [];\n\n  add(item: T): void {\n    this.items.push(item);\n  }\n\n  get(index: number): T {\n    return this.items[index];\n  }\n}"
+      }
+    ]
+  },
+  {
+    "id": "responsive-design-tailwind",
+    "title": "Responsive Design with Tailwind CSS",
+    "description": "Learn how to build responsive layouts efficiently using Tailwind CSS utility-first approach.",
+    "date": "March 1, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "CSS",
+    "tags": ["tailwind", "css", "responsive-design", "frontend"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Tailwind CSS revolutionized the way developers write CSS by providing a comprehensive set of utility classes. Instead of writing custom CSS, you compose your styles directly in your HTML using pre-defined classes."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "title": "Tailwind CSS Basics",
+        "code": "// Traditional CSS approach\n<div className=\"card\">\n  <h2>Hello</h2>\n</div>\n\n// Tailwind CSS approach\n<div className=\"p-6 bg-white rounded-lg shadow-lg\">\n  <h2 className=\"text-2xl font-bold text-gray-900\">Hello</h2>\n</div>"
+      },
+      {
+        "type": "paragraph",
+        "content": "Tailwind makes responsive design simple with breakpoint prefixes. You can specify different styles for different screen sizes without writing media queries."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "title": "Responsive Layout",
+        "code": "// Grid that adapts to screen size\n<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4\">\n  {items.map(item => (\n    <div key={item.id} className=\"p-4 bg-slate-100 rounded\">\n      {item.name}\n    </div>\n  ))}\n</div>\n\n// Text that changes size\n<h1 className=\"text-2xl md:text-3xl lg:text-4xl font-bold\">\n  Responsive Heading\n</h1>"
+      }
+    ]
+  },
+  {
+    "id": "api-design-best-practices",
+    "title": "API Design Best Practices",
+    "description": "Design clean, scalable, and maintainable REST APIs following industry best practices.",
+    "date": "February 28, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "Backend",
+    "tags": ["api", "rest", "backend", "best-practices"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "A well-designed API is crucial for building scalable applications. It's not just about functionality; it's about creating an intuitive interface that developers will enjoy using."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "RESTful API Endpoints",
+        "code": "// Good endpoint design\nGET    /api/v1/users              // Get all users\nGET    /api/v1/users/:id          // Get specific user\nPOST   /api/v1/users              // Create new user\nPUT    /api/v1/users/:id          // Update entire user\nPATCH  /api/v1/users/:id          // Partial update\nDELETE /api/v1/users/:id          // Delete user\n\n// Use query parameters for filtering\nGET    /api/v1/users?role=admin&status=active"
+      },
+      {
+        "type": "paragraph",
+        "content": "Always use appropriate HTTP status codes and consistent response formats. This helps API consumers handle responses correctly."
+      },
+      {
+        "type": "code",
+        "language": "json",
+        "title": "Consistent Response Format",
+        "code": "// Success response\n{\n  \"success\": true,\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\"\n  },\n  \"message\": \"User created successfully\"\n}\n\n// Error response\n{\n  \"success\": false,\n  \"error\": {\n    \"code\": \"VALIDATION_ERROR\",\n    \"message\": \"Invalid email format\",\n    \"details\": [\"Email must be a valid email address\"]\n  }\n}"
+      }
+    ]
+  },
+  {
+    "id": "performance-optimization-tips",
+    "title": "Web Performance Optimization Tips",
+    "description": "Essential techniques to optimize your web application and improve user experience.",
+    "date": "February 25, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "Performance",
+    "tags": ["performance", "optimization", "web", "speed"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Web performance directly impacts user experience and SEO rankings. A slow website frustrates users and increases bounce rates. Let's explore practical techniques to optimize your applications."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Image Optimization",
+        "code": "// Use modern image formats and responsive images\n<picture>\n  <source srcSet=\"image.webp\" type=\"image/webp\" />\n  <source srcSet=\"image.png\" type=\"image/png\" />\n  <img \n    src=\"image.png\" \n    alt=\"Description\"\n    loading=\"lazy\"\n    sizes=\"(max-width: 768px) 100w, 50w\"\n  />\n</picture>"
+      },
+      {
+        "type": "paragraph",
+        "content": "Code splitting and lazy loading reduce initial bundle size. This ensures users only download code they need."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "title": "Code Splitting in React",
+        "code": "import { lazy, Suspense } from 'react';\n\n// Lazy load components\nconst HeavyComponent = lazy(() => import('./HeavyComponent'));\n\nexport default function App() {\n  return (\n    <Suspense fallback={<div>Loading...</div>}>\n      <HeavyComponent />\n    </Suspense>\n  );\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Caching strategies are essential for performance. Implement proper cache headers and use service workers for offline support."
+      }
+    ]
+  },
+  {
+    "id": "state-management-guide",
+    "title": "State Management Strategies in Modern Apps",
+    "description": "Explore different approaches to managing application state and choose the right one for your project.",
+    "date": "February 20, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "React",
+    "tags": ["state-management", "react", "context-api", "redux"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Managing state is one of the biggest challenges in modern applications. Different projects have different needs, and it's important to choose a state management solution that fits your requirements."
+      },
+      {
+        "type": "code",
+        "language": "jsx",
+        "title": "Context API Example",
+        "code": "// Create context\nconst ThemeContext = React.createContext();\n\n// Provider component\nexport function ThemeProvider({ children }) {\n  const [theme, setTheme] = useState('light');\n\n  return (\n    <ThemeContext.Provider value={{ theme, setTheme }}>\n      {children}\n    </ThemeContext.Provider>\n  );\n}\n\n// Use in components\nfunction MyComponent() {\n  const { theme, setTheme } = useContext(ThemeContext);\n  return (\n    <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>\n      Current: {theme}\n    </button>\n  );\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "For complex applications with many state changes, tools like Redux or Zustand provide more structure and debugging capabilities."
+      }
+    ]
+  },
+  {
+    "id": "electron-learning-resource-beginner-to-advanced",
+    "title": "Electron Learning Resource: Beginner to Advanced",
+    "description": "Learn Electron from beginner to advanced, including setup, project structure, core concepts, packaging, security, and useful tools for desktop app development.",
+    "date": "March 11, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "Electron",
+    "tags": ["electron", "desktop-apps", "javascript", "nodejs", "html", "css"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Electron lets you build native desktop apps using JavaScript, HTML, and CSS. It combines Chromium and Node.js into a single runtime. Popular apps built with Electron include VS Code, Slack, Discord, Figma, and Notion."
+      },
+      {
+        "type": "paragraph",
+        "content": "Before learning Electron, you should be comfortable with JavaScript (ES6+), Node.js and npm, HTML/CSS, and basic terminal or CLI usage."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Install Electron",
+        "code": "mkdir electron-app && cd electron-app\nnpm init -y\nnpm install electron --save-dev"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Project Structure",
+        "code": "electron-app/\n├── main.js         // Main process\n├── preload.js      // Secure bridge (optional)\n├── renderer.js     // UI logic (optional)\n├── index.html      // App UI\n├── package.json    // App metadata"
+      },
+      {
+        "type": "paragraph",
+        "content": "A basic Electron project usually includes a main process file, an optional preload script for secure communication, a renderer script for UI logic, an HTML file for the interface, and package.json for metadata and scripts."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "main.js Example",
+        "code": "const { app, BrowserWindow } = require('electron')\nconst path = require('path')\n\nfunction createWindow () {\n  const win = new BrowserWindow({\n    width: 800,\n    height: 600,\n    webPreferences: {\n      preload: path.join(__dirname, 'preload.js'),\n      contextIsolation: true\n    }\n  })\n\n  win.loadFile('index.html')\n}\n\napp.whenReady().then(createWindow)"
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "title": "index.html Example",
+        "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <h1>Hello from Electron</h1>\n    <button onclick=\"window.api.showMsg()\">Click me</button>\n    <script src=\"renderer.js\"></script>\n  </body>\n</html>"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "preload.js Example",
+        "code": "const { contextBridge, ipcRenderer } = require('electron')\n\ncontextBridge.exposeInMainWorld('api', {\n  showMsg: () => ipcRenderer.send('show-msg')\n})"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "IPC in main.js",
+        "code": "const { ipcMain, dialog } = require('electron')\n\nipcMain.on('show-msg', () => {\n  dialog.showMessageBox({ message: 'Hello from Main Process!' })\n})"
+      },
+      {
+        "type": "paragraph",
+        "content": "Important Electron concepts include the Main Process, which controls app lifecycle and native modules, the Renderer Process, which handles the HTML/CSS/JS UI, the Preload Script, which acts as a secure bridge, IPC for communication between processes, and security settings like contextIsolation and disabling nodeIntegration."
+      },
+      {
+        "type": "paragraph",
+        "content": "Intermediate projects for practice include a Hello World app, File Explorer, Markdown Editor, Secure Login App, PDF Generator, and a Tabbed App Interface."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Install electron-builder",
+        "code": "npm install electron-builder --save-dev"
+      },
+      {
+        "type": "code",
+        "language": "json",
+        "title": "package.json Build Example",
+        "code": "\"scripts\": {\n  \"start\": \"electron .\",\n  \"build\": \"electron-builder\"\n},\n\"build\": {\n  \"appId\": \"com.fakhir.electronapp\",\n  \"productName\": \"FakhirElectronApp\",\n  \"win\": {\n    \"target\": \"nsis\"\n  },\n  \"mac\": {\n    \"target\": \"dmg\"\n  }\n}"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Build Command",
+        "code": "npm run build"
+      },
+      {
+        "type": "paragraph",
+        "content": "Useful Electron modules include electron-store for settings and preferences, electron-builder for packaging, electron-updater for automatic updates, sqlite3 for local databases, and node-notifier for desktop notifications."
+      },
+      {
+        "type": "paragraph",
+        "content": "Electron security best practices include enabling contextIsolation, disabling nodeIntegration, exposing only safe APIs through preload.js, validating file paths and user inputs, and using sandbox mode when possible."
+      },
+      {
+        "type": "paragraph",
+        "content": "A good learning progression is: Beginner for setup and basic UI loading, Intermediate for IPC and dialogs, Advanced for native APIs and updates, and Expert for large-scale desktop applications."
+      },
+      {
+        "type": "paragraph",
+        "content": "Advanced Electron topics include custom menus, native file access with fs and path, local storage with SQLite or NeDB, drag and drop from the operating system, login and auth simulation, auto-updates through GitHub releases, and integrating frameworks like React, Vue, or Svelte."
+      }
+    ]
+  },
+  {
+    "id": "react-hooks-guide-with-examples",
+    "title": "React Hooks Guide with Examples",
+    "description": "Explore essential React Hooks including state, effects, refs, context, performance hooks, advanced React 18+ hooks, and custom hook patterns with practical examples.",
+    "date": "March 11, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "React",
+    "tags": ["react", "hooks", "javascript", "frontend", "react18"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "React Hooks let you use state, lifecycle features, refs, context, and other React capabilities inside functional components. They help organize logic and make components more reusable."
+      },
+      {
+        "type": "paragraph",
+        "content": "State management hooks include useState for local component state and useReducer for more complex state transitions."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useState Example",
+        "code": "const [count, setCount] = useState(0);"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useReducer Example",
+        "code": "function reducer(state, action) {\n  return action.type === 'increment' ? state + 1 : state;\n}\nconst [state, dispatch] = useReducer(reducer, 0);"
+      },
+      {
+        "type": "paragraph",
+        "content": "Side effect hooks include useEffect for running code after render, useLayoutEffect for synchronous work before painting, and useInsertionEffect for injecting styles before layout and paint."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useEffect Example",
+        "code": "useEffect(() => {\n  console.log(\"Component mounted\");\n  return () => console.log(\"Component unmounted\");\n}, []);"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useLayoutEffect Example",
+        "code": "useLayoutEffect(() => {\n  console.log(\"Runs before paint\");\n}, []);"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useInsertionEffect Example",
+        "code": "useInsertionEffect(() => {\n  // Inject styles here\n}, []);"
+      },
+      {
+        "type": "paragraph",
+        "content": "Performance optimization hooks include useMemo to cache computed values and useCallback to cache functions between renders."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useMemo Example",
+        "code": "const expensiveValue = useMemo(() => computeHeavy(x), [x]);"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useCallback Example",
+        "code": "const handleClick = useCallback(() => doSomething(), []);"
+      },
+      {
+        "type": "paragraph",
+        "content": "Refs and DOM hooks include useRef to hold mutable values or access DOM nodes, and useImperativeHandle to expose custom methods from child to parent."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useRef Example",
+        "code": "const inputRef = useRef(null);\n<input ref={inputRef} />"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useImperativeHandle Example",
+        "code": "useImperativeHandle(ref, () => ({ focus: () => inputRef.current.focus() }));"
+      },
+      {
+        "type": "paragraph",
+        "content": "The useContext hook allows a component to access shared context values without manually passing props through every level."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useContext Example",
+        "code": "const theme = useContext(ThemeContext);"
+      },
+      {
+        "type": "paragraph",
+        "content": "Advanced React 18+ hooks include useTransition for low-priority updates, useDeferredValue for delayed updates, useId for unique IDs, useSyncExternalStore for store subscriptions, useDebugValue for better DevTools labeling, and useOptimistic for optimistic UI patterns."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useTransition Example",
+        "code": "const [isPending, startTransition] = useTransition();\nstartTransition(() => setValue(newValue));"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useDeferredValue Example",
+        "code": "const deferredSearch = useDeferredValue(search);"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useId Example",
+        "code": "const id = useId();\n<label htmlFor={id}>Name</label>\n<input id={id} />"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useSyncExternalStore Example",
+        "code": "const value = useSyncExternalStore(store.subscribe, store.getSnapshot);"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useDebugValue Example",
+        "code": "useDebugValue(value > 0 ? \"Positive\" : \"Non-positive\");"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useOptimistic Example",
+        "code": "const [state, update] = useOptimistic(initialState);\nupdate(prev => ({ ...prev, loading: true }));"
+      },
+      {
+        "type": "paragraph",
+        "content": "React DOM also provides form-related hooks such as useFormStatus for checking pending form states and useFormState for managing action-driven form state."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useFormStatus Example",
+        "code": "const { pending } = useFormStatus();"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "useFormState Example",
+        "code": "const [formState, formAction] = useFormState(actionFn, initialState);"
+      },
+      {
+        "type": "paragraph",
+        "content": "You can also create custom hooks by starting the function name with the use prefix and combining other hooks internally."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Custom Hook Example",
+        "code": "function useLocalStorage(key, initialValue) {\n  const [value, setValue] = useState(() => {\n    return localStorage.getItem(key) ?? initialValue;\n  });\n\n  useEffect(() => {\n    localStorage.setItem(key, value);\n  }, [key, value]);\n\n  return [value, setValue];\n}"
+      }
+    ]
+  },
+  {
+    "id": "mysql-learning-roadmap",
+    "title": "MySQL Learning Roadmap",
+    "description": "A structured MySQL roadmap covering beginner, intermediate, and advanced topics, along with practice examples, learning resources, and project ideas.",
+    "date": "March 11, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "MySQL",
+    "tags": ["mysql", "sql", "database", "backend", "learning-roadmap"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "This MySQL learning roadmap is divided into beginner, intermediate, and advanced levels so learners can build strong database skills step by step."
+      },
+      {
+        "type": "paragraph",
+        "content": "Beginner topics include understanding MySQL and SQL, installing MySQL with tools like Workbench or XAMPP, learning basic SQL syntax, creating databases and tables, working with common data types, performing CRUD operations, filtering with WHERE, sorting with ORDER BY, and limiting results with LIMIT."
+      },
+      {
+        "type": "code",
+        "language": "sql",
+        "title": "Beginner Practice Example",
+        "code": "CREATE TABLE users (\n  id INT PRIMARY KEY AUTO_INCREMENT,\n  name VARCHAR(100),\n  email VARCHAR(100)\n);\n\nINSERT INTO users (name, email) VALUES ('Fakhir', 'fakhir@example.com');\n\nSELECT * FROM users WHERE name = 'Fakhir';"
+      },
+      {
+        "type": "paragraph",
+        "content": "Recommended beginner resources include W3Schools SQL, SQLBolt, and SQLZOO."
+      },
+      {
+        "type": "paragraph",
+        "content": "Intermediate topics include relationships and foreign keys, JOINs such as INNER, LEFT, RIGHT, and FULL joins, GROUP BY with aggregate functions like COUNT, SUM, AVG, MAX, and MIN, subqueries, aliases with AS, normalization concepts such as 1NF, 2NF, and 3NF, indexing, and basic views."
+      },
+      {
+        "type": "code",
+        "language": "sql",
+        "title": "Intermediate Practice Example",
+        "code": "-- Join example\nSELECT orders.id, users.name\nFROM orders\nJOIN users ON orders.user_id = users.id;\n\n-- Aggregate\nSELECT user_id, COUNT(*) as total_orders\nFROM orders\nGROUP BY user_id;"
+      },
+      {
+        "type": "paragraph",
+        "content": "Recommended intermediate resources include the Khan Academy SQL course, LeetCode SQL problems, and YouTube channels such as Programming with Mosh and BroCode."
+      },
+      {
+        "type": "paragraph",
+        "content": "Advanced topics include stored procedures and functions, triggers, transactions with COMMIT and ROLLBACK, advanced indexing, query performance optimization, user permissions and security, backup and restore strategies, and partitioning."
+      },
+      {
+        "type": "code",
+        "language": "sql",
+        "title": "Advanced Practice Example",
+        "code": "-- Stored procedure\nDELIMITER //\nCREATE PROCEDURE GetUserById(IN uid INT)\nBEGIN\n  SELECT * FROM users WHERE id = uid;\nEND //\nDELIMITER ;\n\nCALL GetUserById(1);"
+      },
+      {
+        "type": "paragraph",
+        "content": "Recommended advanced resources include the MySQL official documentation, the Mode SQL Tutorial, and YouTube channels such as The Net Ninja and Traversy Media."
+      },
+      {
+        "type": "paragraph",
+        "content": "Useful projects to practice MySQL include a Login System using HTML, PHP, and MySQL, a Blog Website using React, Node.js, and MySQL, a Todo List with authentication, an Inventory Management system, and a School or Student Database application."
+      }
+    ]
+  },
+  {
+    "id": "advanced-html-css-learning-guide",
+    "title": "Advanced HTML & CSS Learning Guide",
+    "description": "A modern frontend guide covering semantic HTML5, accessibility, responsive layouts, CSS architecture, grid, flexbox, variables, theming, animations, and performance best practices.",
+    "date": "March 11, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "HTML & CSS",
+    "tags": ["html", "css", "frontend", "responsive-design", "accessibility", "web-development"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "This advanced frontend development guide focuses on HTML5 and CSS3+ practices for building production-ready, accessible, and responsive websites."
+      },
+      {
+        "type": "paragraph",
+        "content": "The guide covers semantic HTML5, advanced form handling, accessibility, responsive layout techniques, CSS architecture, CSS Grid, Flexbox, CSS variables, pseudo-classes, pseudo-elements, transitions, animations, typography, component-based styling, theming, performance optimization, and best practices."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "title": "Semantic HTML5 Example",
+        "code": "<article>\n  <header>\n    <h2>Post Title</h2>\n    <p>By <time datetime=\"2025-06-30\">June 30, 2025</time></p>\n  </header>\n  <section>\n    <p>This is the blog content...</p>\n  </section>\n  <footer>\n    <p>Tags: <a href=\"#\">CSS</a>, <a href=\"#\">HTML</a></p>\n  </footer>\n</article>"
+      },
+      {
+        "type": "paragraph",
+        "content": "Semantic HTML improves structure, SEO, and accessibility. Advanced semantic tags and elements like picture, template, and dialog are also useful in modern interfaces."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "title": "Advanced Form Handling Example",
+        "code": "<form novalidate>\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" required />\n  <input type=\"submit\" value=\"Subscribe\" />\n</form>"
+      },
+      {
+        "type": "paragraph",
+        "content": "Advanced form handling includes using custom validation, autocomplete, aria attributes, and CSS selectors like :invalid and :valid for better user feedback."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "title": "Accessibility Example",
+        "code": "<button aria-label=\"Close\" onclick=\"closeModal()\">✕</button>"
+      },
+      {
+        "type": "paragraph",
+        "content": "Accessibility best practices include using alt text on images, maintaining correct heading order, applying role and aria attributes where necessary, ensuring keyboard navigation, and writing screen-reader-friendly markup. Lighthouse and Axe are useful tools for testing accessibility."
+      },
+      {
+        "type": "code",
+        "language": "css",
+        "title": "Responsive Layout Example",
+        "code": ".card {\n  width: 100%;\n}\n\n@media (min-width: 768px) {\n  .card {\n    width: 50%;\n  }\n}"
+      },
+      {
+        "type": "code",
+        "language": "css",
+        "title": "Fluid Typography with clamp()",
+        "code": "font-size: clamp(1rem, 2.5vw, 2rem);"
+      },
+      {
+        "type": "paragraph",
+        "content": "Responsive design should be mobile-first and use flexible units such as rem, em, percentages, vw, vh, and clamp for scalable typography and layout."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "title": "BEM Example",
+        "code": "<div class=\"card card--highlighted\">\n  <h2 class=\"card__title\">Title</h2>\n</div>"
+      },
+      {
+        "type": "paragraph",
+        "content": "CSS architecture helps keep styles scalable and maintainable. Popular approaches include BEM, SMACSS, OOCSS, and ITCSS."
+      },
+      {
+        "type": "code",
+        "language": "css",
+        "title": "Advanced CSS Grid Example",
+        "code": ".grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n  gap: 1.5rem;\n}"
+      },
+      {
+        "type": "code",
+        "language": "css",
+        "title": "Grid Areas Example",
+        "code": "grid-template-areas:\n  \"header header\"\n  \"sidebar content\";"
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "title": "Grid Layout HTML Example",
+        "code": "<div class=\"layout\">\n  <header class=\"header\">...</header>\n  <aside class=\"sidebar\">...</aside>\n  <main class=\"content\">...</main>\n</div>"
+      },
+      {
+        "type": "paragraph",
+        "content": "CSS Grid is excellent for two-dimensional layouts, while Flexbox is ideal for aligning items along one axis."
+      },
+      {
+        "type": "code",
+        "language": "css",
+        "title": "Flexbox Example",
+        "code": ".flex {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  flex-wrap: wrap;\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Flexbox works well for alignment and distribution. Key properties include flex-basis, flex-grow, and flex-shrink."
+      },
+      {
+        "type": "code",
+        "language": "css",
+        "title": "CSS Variables Example",
+        "code": ":root {\n  --primary: #2c3e50;\n  --accent: #f39c12;\n}\n\nbutton {\n  background: var(--primary);\n  color: var(--accent);\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "CSS variables are useful for theming, maintaining consistency, and supporting dark and light mode variations."
+      },
+      {
+        "type": "code",
+        "language": "css",
+        "title": "Pseudo-classes and Pseudo-elements Example",
+        "code": "a:hover { text-decoration: underline; }\ninput:focus { outline: 2px solid blue; }\n\nh1::after {\n  content: \"🔥\";\n  margin-left: 0.5rem;\n}"
+      },
+      {
+        "type": "code",
+        "language": "css",
+        "title": "Transitions and Animations Example",
+        "code": "button {\n  transition: background-color 0.3s ease;\n}\n\n@keyframes slideIn {\n  from { opacity: 0; transform: translateY(30px); }\n  to { opacity: 1; transform: translateY(0); }\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "For smoother animations, prefer animating transform and opacity instead of width and height, and use will-change carefully for performance hints."
+      },
+      {
+        "type": "code",
+        "language": "html",
+        "title": "Custom Fonts Example",
+        "code": "<link href=\"https://fonts.googleapis.com/css2?family=Poppins&display=swap\" rel=\"stylesheet\">"
+      },
+      {
+        "type": "code",
+        "language": "css",
+        "title": "Typography Example",
+        "code": "body {\n  font-family: 'Poppins', sans-serif;\n}"
+      },
+      {
+        "type": "code",
+        "language": "css",
+        "title": "Component-Based Styling Example",
+        "code": ".button {\n  display: inline-block;\n  padding: 0.5rem 1rem;\n  border-radius: 8px;\n  background-color: var(--primary);\n}"
+      },
+      {
+        "type": "code",
+        "language": "css",
+        "title": "Dark Mode Example",
+        "code": ":root {\n  --bg: #fff;\n  --text: #000;\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    --bg: #000;\n    --text: #fff;\n  }\n}\n\nbody {\n  background-color: var(--bg);\n  color: var(--text);\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Performance optimization includes minifying CSS, reducing unused styles, optimizing fonts and images, using modern formats like webp or avif, and leveraging preload, prefetch, and lazy loading."
+      },
+      {
+        "type": "paragraph",
+        "content": "Project ideas to apply these concepts include a multi-page blog, portfolio website, dashboard UI, modal and tabs UI, and a custom style framework or component library."
+      },
+      {
+        "type": "paragraph",
+        "content": "Once comfortable with advanced HTML and CSS, you can move into tools and frameworks like SCSS, Tailwind CSS, Bootstrap, and frontend libraries such as React or Vue."
+      }
+    ]
+  },
+  {
+    "id": "complete-javascript-learning-material-deep-dive",
+    "title": "Complete JavaScript Learning Material (Deep Dive)",
+    "description": "A deep JavaScript learning guide covering variables, data types, operators, functions, control flow, arrays, objects, DOM manipulation, events, ES6 features, async JavaScript, and project ideas.",
+    "date": "March 11, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "JavaScript",
+    "tags": ["javascript", "web-development", "frontend", "es6", "async", "dom"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "JavaScript is a scripting language for the web. It is interpreted, high-level, dynamically typed, and multi-paradigm. Modern JavaScript also supports modules, classes, promises, and async/await."
+      },
+      {
+        "type": "paragraph",
+        "content": "Variables in JavaScript store values and can change type at runtime. Common declarations include var, let, and const, with let and const being the preferred modern choices."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Variables Example",
+        "code": "let city = \"Dubai\";\nconst country = \"UAE\";"
+      },
+      {
+        "type": "paragraph",
+        "content": "Important JavaScript data types include string, number, boolean, undefined, null, object, array, symbol, and bigint."
+      },
+      {
+        "type": "paragraph",
+        "content": "JavaScript operators include arithmetic, assignment, comparison, and logical operators. It is usually best to use strict equality with === instead of == to avoid unexpected type coercion."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Operators Example",
+        "code": "let score = 80;\nif (score >= 70 && score <= 100) {\n  console.log(\"Good job!\");\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Functions help organize reusable logic. JavaScript supports function declarations, function expressions, arrow functions, default parameters, and first-class functions."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Function Declaration Example",
+        "code": "function add(a, b) {\n  return a + b;\n}"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Function Expression Example",
+        "code": "const add = function (a, b) {\n  return a + b;\n};"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Arrow Function Example",
+        "code": "const add = (a, b) => a + b;"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Default Parameters Example",
+        "code": "function greet(name = \"Guest\") {\n  console.log(`Hello, ${name}!`);\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Control flow in JavaScript includes if/else statements, switch statements, and the ternary operator for concise conditional expressions."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "If Else Example",
+        "code": "let temp = 30;\nif (temp > 35) {\n  console.log(\"Too hot!\");\n} else {\n  console.log(\"Nice weather.\");\n}"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Ternary Operator Example",
+        "code": "let grade = 80;\nlet result = grade >= 60 ? \"pass\" : \"fail\";"
+      },
+      {
+        "type": "paragraph",
+        "content": "Loops include for, while, do...while, for...of for arrays, and for...in for object keys."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Loop Examples",
+        "code": "for (let i = 0; i < 5; i++) {\n  console.log(i);\n}\n\nlet i = 0;\nwhile (i < 3) {\n  console.log(i);\n  i++;\n}\n\ndo {\n  console.log(i);\n  i++;\n} while (i < 3);"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "for...of and for...in Example",
+        "code": "let colors = [\"red\", \"green\", \"blue\"];\nfor (let color of colors) {\n  console.log(color);\n}\n\nlet person = { name: \"Ali\", age: 20 };\nfor (let key in person) {\n  console.log(key, person[key]);\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Arrays are ordered collections and support useful methods like push, pop, shift, unshift, splice, slice, map, filter, and reduce."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Array Example",
+        "code": "let numbers = [1, 2, 3, 4];\nlet squared = numbers.map((n) => n * n); // [1,4,9,16]"
+      },
+      {
+        "type": "paragraph",
+        "content": "Objects group related data and behavior and can include nested objects and methods."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Object Example",
+        "code": "let car = {\n  brand: \"Toyota\",\n  year: 2021,\n  drive: function () {\n    console.log(\"vroom vroom\");\n  },\n};\ncar.drive();"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Nested Object Example",
+        "code": "let user = {\n  name: \"Sara\",\n  address: {\n    city: \"Dubai\",\n    street: \"123 Main St\",\n  },\n};\nconsole.log(user.address.city);"
+      },
+      {
+        "type": "paragraph",
+        "content": "DOM manipulation allows JavaScript to change HTML content dynamically by selecting elements, updating text, modifying styles, creating elements, and removing elements."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "DOM Manipulation Example",
+        "code": "document.getElementById(\"title\");\ndocument.querySelector(\".item\");\ndocument.getElementById(\"title\").textContent = \"New text\";\ndocument.getElementById(\"title\").style.color = \"red\";\n\nlet p = document.createElement(\"p\");\np.textContent = \"Dynamic text\";\ndocument.body.appendChild(p);\n\nlet el = document.getElementById(\"title\");\nel.remove();"
+      },
+      {
+        "type": "paragraph",
+        "content": "Events allow JavaScript to respond to user interactions such as clicks, key presses, submissions, and mouseover actions."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Events Example",
+        "code": "document.getElementById(\"btn\").addEventListener(\"click\", () => {\n  alert(\"Button clicked!\");\n});\n\ndocument.addEventListener(\"keydown\", function (event) {\n  console.log(event.key);\n});"
+      },
+      {
+        "type": "paragraph",
+        "content": "Modern ES6+ features include let and const, arrow functions, template literals, destructuring, the spread operator, classes, and modules."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Destructuring Example",
+        "code": "let person = { name: \"Ali\", age: 22 };\nlet { name, age } = person;"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Spread Operator Example",
+        "code": "let a = [1, 2, 3];\nlet b = [...a, 4, 5];"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Class Example",
+        "code": "class Animal {\n  constructor(name) {\n    this.name = name;\n  }\n  speak() {\n    console.log(`${this.name} says hello`);\n  }\n}"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Modules Example",
+        "code": "// person.js\nexport const name = \"Ali\";\n\n// app.js\nimport { name } from \"./person.js\";"
+      },
+      {
+        "type": "paragraph",
+        "content": "JavaScript is single-threaded but supports asynchronous programming with callbacks, promises, and async/await to handle tasks like timers and network requests."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Callback Example",
+        "code": "setTimeout(() => {\n  console.log(\"2 seconds later\");\n}, 2000);"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "Promise Example",
+        "code": "let promise = new Promise((resolve, reject) => {\n  setTimeout(() => resolve(\"Done\"), 1000);\n});\npromise.then((result) => console.log(result));"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "title": "async/await Example",
+        "code": "async function fetchData() {\n  let response = await fetch(\"https://api.example.com/data\");\n  let data = await response.json();\n  console.log(data);\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Good JavaScript practices include using const by default, preferring strict equality, writing reusable functions, naming variables clearly, avoiding global variables, and using modern syntax."
+      },
+      {
+        "type": "paragraph",
+        "content": "Project ideas to practice JavaScript include a Todo List, Weather App, Calculator, Quiz Game, Memory Card Game, and Stopwatch."
+      }
+    ]
+  },
+  {
+    "id": "nextjs-logic-complete-learning-guide",
+    "title": "Next.js Logic – Complete Learning Guide",
+    "description": "Understand how Next.js works internally, including architecture, App Router structure, rendering strategies, data fetching, routing, API routes, and performance tips.",
+    "date": "March 11, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "Next.js",
+    "tags": ["nextjs", "react", "app-router", "ssr", "ssg", "web-development"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Next.js is a React framework for building full-stack web applications, SEO-optimized sites, static and server-rendered apps, and production-grade dashboards."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Next.js Core Architecture",
+        "code": "Browser → Next.js Server → React Components → Data Layer → Database/API"
+      },
+      {
+        "type": "paragraph",
+        "content": "Next.js combines React for the UI, Node.js for the server environment, file-based routing, server rendering, and API routes in a single framework."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "App Router Project Structure",
+        "code": "app/\n│\n├── layout.tsx\n├── page.tsx\n├── dashboard/\n│   └── page.tsx\n├── api/\n│   └── route.ts"
+      },
+      {
+        "type": "paragraph",
+        "content": "The App Router uses folders and files inside the app directory to define layouts, pages, and API endpoints."
+      },
+      {
+        "type": "paragraph",
+        "content": "One of the most important topics in Next.js is rendering strategy. It supports Static Site Generation, Server-Side Rendering, and Client Components."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Static Rendering Example",
+        "code": "export default function Page() {\n  return <div>Static Page</div>\n}"
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Server-Side Rendering Example",
+        "code": "export default async function Page() {\n  const data = await fetch(\"https://api.com/data\", { cache: \"no-store\" })\n  return <div>{data}</div>\n}"
+      },
+      {
+        "type": "code",
+        "language": "tsx",
+        "title": "Client Component Example",
+        "code": "\"use client\"\nimport { useState } from \"react\"\n\nexport default function Button() {\n  const [count, setCount] = useState(0)\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Data fetching in Next.js depends on caching strategy. force-cache is typically used for static content, while no-store is used for dynamic content that must be fetched on every request."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Server Component Fetching",
+        "code": "await fetch(url, { cache: \"force-cache\" }) // static\nawait fetch(url, { cache: \"no-store\" })    // dynamic"
+      },
+      {
+        "type": "paragraph",
+        "content": "Routing in Next.js is file-based. A file like app/dashboard/page.tsx becomes the /dashboard route, while folders like app/product/[id]/page.tsx create dynamic routes."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Routing Logic",
+        "code": "app/dashboard/page.tsx\n→ /dashboard\n\napp/product/[id]/page.tsx"
+      },
+      {
+        "type": "paragraph",
+        "content": "Next.js also supports API routes through files like app/api/users/route.ts, allowing backend logic to live alongside frontend code."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "API Route Example",
+        "code": "export async function GET() {\n  return Response.json({ message: \"Hello\" })\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Real-world patterns in Next.js include auth middleware and multi-tenant systems based on host or subdomain detection."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Multi-Tenant Host Example",
+        "code": "const tenant = request.headers.get(\"host\")"
+      },
+      {
+        "type": "paragraph",
+        "content": "Common mistakes include using client components unnecessarily, fetching data in useEffect when server components are sufficient, and not optimizing images."
+      },
+      {
+        "type": "paragraph",
+        "content": "Performance tips include using server components by default, using next/image for optimized images, and keeping client-side bundles small."
+      },
+      {
+        "type": "paragraph",
+        "content": "In summary, Next.js can be understood as React plus Node.js, routing, rendering, and optimization in one framework."
+      }
+    ]
+  },
+  {
+    "id": "nestjs-logic-complete-backend-guide",
+    "title": "NestJS Logic – Complete Backend Guide",
+    "description": "Learn NestJS deeply through its modular architecture, controllers, services, dependency injection, guards, clean architecture, and scalable backend patterns.",
+    "date": "March 11, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "NestJS",
+    "tags": ["nestjs", "nodejs", "backend", "typescript", "di", "architecture"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "NestJS is a TypeScript-first Node.js backend framework built on Express or Fastify and inspired by Angular-style architecture."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Core Architecture",
+        "code": "Controller → Service → Repository → Database"
+      },
+      {
+        "type": "paragraph",
+        "content": "NestJS applications are organized into modules, with each module grouping controllers, services, and related providers."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Project Structure",
+        "code": "src/\n│\n├── main.ts\n├── app.module.ts\n├── users/\n│   ├── users.controller.ts\n│   ├── users.service.ts\n│   ├── users.module.ts"
+      },
+      {
+        "type": "paragraph",
+        "content": "Controllers handle incoming HTTP requests and delegate work to services."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Controller Example",
+        "code": "@Controller('users')\nexport class UsersController {\n  constructor(private service: UsersService) {}\n\n  @Get()\n  getUsers() {\n    return this.service.findAll()\n  }\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Services contain business logic and should remain separate from HTTP-layer concerns."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Service Example",
+        "code": "@Injectable()\nexport class UsersService {\n  findAll() {\n    return []\n  }\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Dependency injection is one of the most important NestJS concepts. Nest automatically injects services and providers into classes through the constructor."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Dependency Injection Example",
+        "code": "constructor(private service: UsersService)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Guards are commonly used for authentication and authorization, such as protecting routes with a JWT auth guard."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Guard Example",
+        "code": "@UseGuards(JwtAuthGuard)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Real-world NestJS patterns include DTO validation, role-based access control, global interceptors, multi-tenant middleware, and exception filters."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Clean Architecture",
+        "code": "Controller (HTTP)\n↓\nService (Business Logic)\n↓\nRepository (Data Layer)"
+      },
+      {
+        "type": "paragraph",
+        "content": "A clean NestJS codebase keeps business logic out of controllers, organizes features into modules, and validates data through DTOs."
+      },
+      {
+        "type": "paragraph",
+        "content": "Common mistakes include placing business logic directly in controllers, failing to modularize the application, and skipping DTO validation."
+      },
+      {
+        "type": "paragraph",
+        "content": "In summary, NestJS can be understood as Express plus a dependency injection container, modular architecture, and enterprise-friendly structure."
+      }
+    ]
+  },
+  {
+    "id": "nestjs-logic-complete-backend-guide-duplicate",
+    "title": "NestJS Logic – Complete Backend Guide",
+    "description": "Learn NestJS deeply through its modular architecture, controllers, services, dependency injection, guards, clean architecture, and scalable backend patterns.",
+    "date": "March 11, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "NestJS",
+    "tags": ["nestjs", "nodejs", "backend", "typescript", "di", "architecture"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "NestJS is a TypeScript-first Node.js backend framework built on Express or Fastify and inspired by Angular-style architecture."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Core Architecture",
+        "code": "Controller → Service → Repository → Database"
+      },
+      {
+        "type": "paragraph",
+        "content": "NestJS applications are organized into modules, with each module grouping controllers, services, and related providers."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Project Structure",
+        "code": "src/\n│\n├── main.ts\n├── app.module.ts\n├── users/\n│   ├── users.controller.ts\n│   ├── users.service.ts\n│   ├── users.module.ts"
+      },
+      {
+        "type": "paragraph",
+        "content": "Controllers handle incoming HTTP requests and delegate work to services."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Controller Example",
+        "code": "@Controller('users')\nexport class UsersController {\n  constructor(private service: UsersService) {}\n\n  @Get()\n  getUsers() {\n    return this.service.findAll()\n  }\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Services contain business logic and should remain separate from HTTP-layer concerns."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Service Example",
+        "code": "@Injectable()\nexport class UsersService {\n  findAll() {\n    return []\n  }\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Dependency injection is one of the most important NestJS concepts. Nest automatically injects services and providers into classes through the constructor."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Dependency Injection Example",
+        "code": "constructor(private service: UsersService)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Guards are commonly used for authentication and authorization, such as protecting routes with a JWT auth guard."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Guard Example",
+        "code": "@UseGuards(JwtAuthGuard)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Real-world NestJS patterns include DTO validation, role-based access control, global interceptors, multi-tenant middleware, and exception filters."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Clean Architecture",
+        "code": "Controller (HTTP)\n↓\nService (Business Logic)\n↓\nRepository (Data Layer)"
+      },
+      {
+        "type": "paragraph",
+        "content": "A clean NestJS codebase keeps business logic out of controllers, organizes features into modules, and validates data through DTOs."
+      },
+      {
+        "type": "paragraph",
+        "content": "Common mistakes include placing business logic directly in controllers, failing to modularize the application, and skipping DTO validation."
+      },
+      {
+        "type": "paragraph",
+        "content": "In summary, NestJS can be understood as Express plus a dependency injection container, modular architecture, and enterprise-friendly structure."
+      }
+    ]
+  },
+  {
+    "id": "python-logic-complete-learning-guide",
+    "title": "Python Logic – Complete Learning Guide",
+    "description": "A deep Python learning guide covering fundamentals, internal working, data types, control flow, functions, OOP, error handling, virtual environments, FastAPI basics, and advanced concepts.",
+    "date": "March 11, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "Python",
+    "tags": ["python", "programming", "oop", "fastapi", "backend", "learning-guide"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Python is a high-level, interpreted, dynamically typed, and multi-paradigm programming language widely used in scripting, automation, backend development, data science, and more."
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "title": "How Python Works Internally",
+        "code": ".py → Bytecode → Python Virtual Machine → Output"
+      },
+      {
+        "type": "paragraph",
+        "content": "Python source code is compiled into bytecode and then executed by the Python Virtual Machine."
+      },
+      {
+        "type": "paragraph",
+        "content": "Core Python data types include int, float, str, list, dict, tuple, and set."
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "title": "Core Data Types",
+        "code": "int\nfloat\nstr\nlist\ndict\ntuple\nset"
+      },
+      {
+        "type": "paragraph",
+        "content": "Control flow in Python uses if statements, loops, and indentation-based block structure."
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "title": "Control Flow Example",
+        "code": "if condition:\n    pass\n\nfor i in range(10):\n    print(i)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Functions help organize reusable logic and are defined using the def keyword."
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "title": "Function Example",
+        "code": "def add(a, b):\n    return a + b"
+      },
+      {
+        "type": "paragraph",
+        "content": "Object-oriented programming in Python includes concepts such as encapsulation, inheritance, polymorphism, and abstraction."
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "title": "OOP Example",
+        "code": "class User:\n    def __init__(self, name):\n        self.name = name"
+      },
+      {
+        "type": "paragraph",
+        "content": "Python provides robust error handling through try and except blocks."
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "title": "Error Handling Example",
+        "code": "try:\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print(\"Error\")"
+      },
+      {
+        "type": "paragraph",
+        "content": "Virtual environments help isolate project dependencies and are an important best practice in Python development."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Virtual Environment Command",
+        "code": "python -m venv venv"
+      },
+      {
+        "type": "paragraph",
+        "content": "Python is also commonly used for backend development with frameworks such as FastAPI."
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "title": "FastAPI Example",
+        "code": "from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Advanced Python concepts include decorators, generators, async/await, list comprehensions, and context managers."
+      },
+      {
+        "type": "paragraph",
+        "content": "Common mistakes in Python include using mutable default arguments, not creating virtual environments, and failing to handle exceptions properly."
+      },
+      {
+        "type": "paragraph",
+        "content": "In summary, Python is readable, powerful, flexible, beginner-friendly, and production-ready."
+      }
+    ]
+  },
+  {
+    "id": "prisma-logic-deep-learning-resource",
+    "title": "Prisma Logic – Deep Learning Resource",
+    "description": "A structured Prisma ORM guide covering schema design, relations, client usage, migrations, filtering, nested writes, transactions, performance, and production-grade backend patterns.",
+    "date": "March 11, 2026",
+    "author": "Fakhir Ahmed Khan",
+    "category": "Prisma",
+    "tags": ["prisma", "orm", "database", "typescript", "backend", "sql"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Prisma is a next-generation ORM for Node.js and TypeScript that helps define database schemas declaratively, generate a type-safe client, and write clean, safe database queries."
+      },
+      {
+        "type": "paragraph",
+        "content": "Prisma supports PostgreSQL, MySQL, SQL Server, SQLite, and MongoDB."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Core Prisma Architecture",
+        "code": "schema.prisma  →  Prisma Client Generator  →  Prisma Client  →  Database"
+      },
+      {
+        "type": "paragraph",
+        "content": "The Prisma workflow is simple: define models in schema.prisma, generate the Prisma Client, use client methods in code, and let Prisma translate those calls into SQL queries."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Prisma Project Structure",
+        "code": "project/\n│\n├── prisma/\n│   ├── schema.prisma\n│   └── migrations/\n│\n├── src/\n│   └── main.ts\n│\n├── .env\n└── package.json"
+      },
+      {
+        "type": "paragraph",
+        "content": "The heart of Prisma is schema.prisma, where you define generators, data sources, models, fields, relations, and enums."
+      },
+      {
+        "type": "code",
+        "language": "prisma",
+        "title": "schema.prisma Example",
+        "code": "generator client {\n  provider = \"prisma-client-js\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  id        String   @id @default(uuid())\n  email     String   @unique\n  password  String\n  role      Role\n  posts     Post[]\n  createdAt DateTime @default(now())\n}\n\nmodel Post {\n  id       String @id @default(uuid())\n  title    String\n  content  String?\n  userId   String\n  user     User   @relation(fields: [userId], references: [id])\n}\n\nenum Role {\n  ADMIN\n  USER\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "In Prisma, a model maps to a database table, a field maps to a column, and an enum maps to a database enum."
+      },
+      {
+        "type": "paragraph",
+        "content": "Relations in Prisma are powerful. For example, a one-to-many relation between User and Post uses a foreign key field like userId and a reverse relation like posts."
+      },
+      {
+        "type": "code",
+        "language": "prisma",
+        "title": "One-to-Many Relation Example",
+        "code": "User {\n  posts Post[]\n}\n\nPost {\n  userId String\n  user   User @relation(fields: [userId], references: [id])\n}"
+      },
+      {
+        "type": "paragraph",
+        "content": "Many-to-many relations can also be modeled, and Prisma automatically creates the junction table when configured appropriately."
+      },
+      {
+        "type": "code",
+        "language": "prisma",
+        "title": "Many-to-Many Relation Example",
+        "code": "model User {\n  id    String @id @default(uuid())\n  roles Role[]\n}\n\nmodel Role {\n  id    String @id @default(uuid())\n  users User[]\n}"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Generate Prisma Client",
+        "code": "npx prisma generate"
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Create Prisma Client Instance",
+        "code": "import { PrismaClient } from '@prisma/client'\nconst prisma = new PrismaClient()"
+      },
+      {
+        "type": "paragraph",
+        "content": "Prisma Client provides methods for create, find, update, delete, and relation-aware querying."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Create Example",
+        "code": "await prisma.user.create({\n  data: {\n    email: \"test@mail.com\",\n    password: \"123456\",\n    role: \"USER\"\n  }\n})"
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Find Example",
+        "code": "await prisma.user.findMany()\n\nawait prisma.user.findUnique({\n  where: { email: \"test@mail.com\" }\n})"
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Include Relations Example",
+        "code": "await prisma.user.findMany({\n  include: { posts: true }\n})"
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Update Example",
+        "code": "await prisma.user.update({\n  where: { id: userId },\n  data: { role: \"ADMIN\" }\n})"
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Delete Example",
+        "code": "await prisma.user.delete({\n  where: { id: userId }\n})"
+      },
+      {
+        "type": "paragraph",
+        "content": "Prisma migrations help keep the database schema in sync with the codebase."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Development Migration Command",
+        "code": "npx prisma migrate dev --name init"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "title": "Production Migration Command",
+        "code": "npx prisma migrate deploy"
+      },
+      {
+        "type": "paragraph",
+        "content": "Filtering in Prisma supports field conditions, AND/OR logic, and more advanced query building."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Basic Filter Example",
+        "code": "await prisma.user.findMany({\n  where: {\n    email: {\n      contains: \"gmail\"\n    }\n  }\n})"
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "AND OR Filtering Example",
+        "code": "await prisma.user.findMany({\n  where: {\n    OR: [\n      { role: \"ADMIN\" },\n      { email: { contains: \"test\" } }\n    ]\n  }\n})"
+      },
+      {
+        "type": "paragraph",
+        "content": "Nested writes let you create related records in a single operation, and Prisma automatically manages the transaction."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Nested Writes Example",
+        "code": "await prisma.user.create({\n  data: {\n    email: \"nested@mail.com\",\n    password: \"123\",\n    posts: {\n      create: [\n        { title: \"Post 1\" },\n        { title: \"Post 2\" }\n      ]\n    }\n  }\n})"
+      },
+      {
+        "type": "paragraph",
+        "content": "Transactions are important when multiple database operations must succeed or fail together."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Transaction Example",
+        "code": "await prisma.$transaction([\n  prisma.user.create({ data: {...} }),\n  prisma.post.create({ data: {...} })\n])"
+      },
+      {
+        "type": "paragraph",
+        "content": "Real-world Prisma patterns include multi-tenancy using tenantId filters, soft delete flags like isDeleted, and audit fields such as createdAt and updatedAt."
+      },
+      {
+        "type": "code",
+        "language": "prisma",
+        "title": "Multi-Tenant Example",
+        "code": "model User {\n  id        String @id @default(uuid())\n  tenantId  String\n}"
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Tenant Filtering Example",
+        "code": "where: {\n  tenantId: currentTenantId\n}"
+      },
+      {
+        "type": "code",
+        "language": "prisma",
+        "title": "Soft Delete Example",
+        "code": "isDeleted Boolean @default(false)"
+      },
+      {
+        "type": "code",
+        "language": "prisma",
+        "title": "Auditing Example",
+        "code": "createdAt DateTime @default(now())\nupdatedAt DateTime @updatedAt"
+      },
+      {
+        "type": "paragraph",
+        "content": "Common Prisma mistakes include forgetting include for relations, using findFirst when findUnique is more appropriate, missing indexes on foreign keys, skipping tenant filters, and not using transactions where needed."
+      },
+      {
+        "type": "paragraph",
+        "content": "For better performance, use select to fetch only required fields, avoid N+1 queries with include, add database indexes, and use pagination with take and skip."
+      },
+      {
+        "type": "code",
+        "language": "typescript",
+        "title": "Pagination Example",
+        "code": "take: 10,\nskip: 20"
+      },
+      {
+        "type": "paragraph",
+        "content": "In summary, Prisma is a schema-first, type-safe, migration-driven, relation-aware, and transaction-safe ORM for building scalable backend systems."
+      }
+    ]
+  }
+]

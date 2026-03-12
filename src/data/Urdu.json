@@ -5,9 +5,10 @@
   },
   "navLabels": {
     "home": "ہوم",
-    "education": "تعلیم",
-    "skills": "مہارتیں",
+    "blog": "بلاگ",
     "projects": "پروجیکٹس",
+    "skills": "مہارتیں",
+    "education": "تعلیم",
     "certifications": "سرٹیفیکیشنز"
   },
   "badges": {

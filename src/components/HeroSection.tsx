@@ -217,6 +217,27 @@ export default function HeroSection({ data }: HeroSectionProps) {
               />
             </svg>
           </Link>
+          <Link
+            href="/blog"
+            id="hero-cta-blog"
+            className="btn-secondary text-sm"
+          >
+            {isRTL ? "میرا بلاگ" : "My Blog"}
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+          </Link>
         </div>
 
         {/* Social Links */}
@@ -267,7 +288,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
 
         {/* Scroll indicator */}
         <div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float"
+          className="absolute top-1 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float"
           aria-hidden="true"
         >
           <span className="text-slate-500 text-xs tracking-widest uppercase">

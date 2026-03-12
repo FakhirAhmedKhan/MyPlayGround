@@ -102,3 +102,28 @@ export interface PortfolioData {
         items: SkillItem[];
     };
 }
+
+export interface CodeBlock {
+    type: "code";
+    language: string;
+    code: string;
+    title?: string;
+}
+
+export interface ParagraphBlock {
+    type: "paragraph";
+    content: string;
+}
+
+export type BlogContentItem = ParagraphBlock | CodeBlock;
+
+export interface BlogPost {
+    id: string;
+    title: string;
+    description: string;
+    date: string;
+    author: string;
+    category: string;
+    content: BlogContentItem[];
+    tags?: string[];
+}

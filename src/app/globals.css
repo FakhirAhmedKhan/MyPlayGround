@@ -20,7 +20,39 @@
     margin: 0;
     padding: 0;
   }
+  @keyframes floaty {
+    0%,
+    100% {
+      transform: translate(-50%, 0);
+      opacity: 0.85;
+    }
+    50% {
+      transform: translate(-50%, 6px);
+      opacity: 1;
+    }
+  }
 
+  @keyframes wheel {
+    0% {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, 12px);
+      opacity: 0;
+    }
+  }
+
+  .scroll-indicator {
+    animation: floaty 2.6s ease-in-out infinite;
+  }
+
+  .scroll-wheel {
+    animation: wheel 1.3s ease-in-out infinite;
+  }
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;

@@ -1,352 +1,352 @@
-{
-  "BageName": {
-    "HomeBage": "Welcome to my digital space",
-    "SkillBade": "Always Learning",
-    "ProjectBade": "Actively engaged in great projects and ideas creation.",
-    "EduBade": "Exploring how active engagement with programming can enhance AI creativity.",
-    "GitBade": "Total Contributions",
-    "certificateBade": "Certifications is key to success"
-  }
-}
+// {
+//   "BageName": {
+//     "HomeBage": "Welcome to my digital space",
+//     "SkillBade": "Always Learning",
+//     "ProjectBade": "Actively engaged in great projects and ideas creation.",
+//     "EduBade": "Exploring how active engagement with programming can enhance AI creativity.",
+//     "GitBade": "Total Contributions",
+//     "certificateBade": "Certifications is key to success"
+//   }
+// }
 
 
-{
-  "navLabels": {
-    "home": "Home",
-    "education": "Education",
-    "skills": "Skills",
-    "projects": "Projects",
-    "certifications": "Certifications"
-  }
-}
+// {
+//   "navLabels": {
+//     "home": "Home",
+//     "education": "Education",
+//     "skills": "Skills",
+//     "projects": "Projects",
+//     "certifications": "Certifications"
+//   }
+// }
 
 
-{
-  "Sections"{
-    "HomeSections"{
-     "home": {
-      "part1": "Hello, I'm",
-      "part2": "Fakhir Ahmed Khan",
-      "part3": "A passionate",
-      "part4": [
-        "Web Developer",
-        "Frontend Developer",
-        "Backend Developer",
-        "Theme Designer"
-      ],
-      "part5": "about building",
-      "part6": "best experiences that are visually stunning, highly functional, and futuristic.",
-      "part7": "View My Work"
-    },
- "socialLinks": {
-    {
-      "url": "https://github.com/FakhirAhmedKhan",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/github/github-original.svg",
-      "label": "GitHub"
-    },
-    {
-      "url": "https://linkedin.com/in/fakhir-ahmed-3b5537316",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/linkedin/linkedin-original.svg",
-      "label": "LinkedIn"
-    },
-    {
-      "url": "https://twitter.com/FakhirAhme41220",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/twitter/twitter-original.svg",
-      "label": "Twitter"
-    }
-    }
-    }
-    "EducationSection":{
-      "education": {
-      "title": "My Journey",
-      "paragraph": "A timeline of my educational milestones and achievements"
-    },
-    "educationData": [
-    {
-      "year": "2026 (Present)",
-      "title": "Grade 12 - Higher Secondary Education",
-      "description": "Advancing to final year of secondary education with focus on STEM subjects while continuing to develop expertise in programming and emerging technologies.",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
-      "icon": "GraduationCap",
-      "color": "from-purple-500 to-pink-500"
-    },
-    {
-      "year": "2025",
-      "title": "Grade 11 - Higher Secondary Education",
-      "description": "Currently pursuing higher secondary education with emphasis on advanced coursework while actively enhancing full-stack development skills and modern programming practices.",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
-      "icon": "Sparkles",
-      "color": "from-blue-500 to-cyan-500"
-    },
-    {
-      "year": "2024",
-      "title": "Full-Stack Development Bootcamp",
-      "description": "Successfully completed comprehensive 6-month intensive program specializing in full-stack web development, including MERN stack technologies and modern development frameworks.",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
-      "icon": "Code",
-      "color": "from-emerald-500 to-teal-500"
-    },
-    {
-      "year": "2024",
-      "title": "Web Development Specialization",
-      "description": "Completed intensive 6-month bootcamp covering advanced web development concepts, responsive design principles, and industry-standard best practices.",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
-      "icon": "Code",
-      "color": "from-orange-500 to-red-500"
-    },
-    {
-      "year": "2024",
-      "title": "Grade 10 - Secondary Education",
-      "description": "Completed secondary education milestone while simultaneously pursuing technical education in software development and programming fundamentals.",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
-      "icon": "GraduationCap",
-      "color": "from-indigo-500 to-purple-500"
-    },
-    {
-      "year": "2023",
-      "title": "Self-Directed Programming Education",
-      "description": "Initiated independent learning journey in web development, mastering foundational technologies including HTML5, CSS3, and JavaScript through structured online courses and documentation.",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/youtubeS.avif",
-      "icon": "BookOpen",
-      "color": "from-amber-500 to-orange-500"
-    },
-    {
-      "year": "2023",
-      "title": "Grade 9 - Secondary Education",
-      "description": "Completed academic year while discovering passion for programming and beginning exploration of core computer science concepts and web technologies.",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
-      "icon": "GraduationCap",
-      "color": "from-rose-500 to-pink-500"
-    }
-  ]
-    }
-    {"skillsSection": 
-      {"skillsSection": {
-      "title": "Skills & Toolkit",
-      "paragraph": "Technologies and tools I use to bring ideas to life"}
-    {"skills": [
-    {
-      "name": "HTML",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-    },
-    {
-      "name": "CSS",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-    },
-    {
-      "name": "JavaScript",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-    },
-    {
-      "name": "TypeScript",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-    },
-    {
-      "name": "React.js",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-    },
-    {
-      "name": "React Native",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-    },
-    {
-      "name": "Next.js",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-    },
-    {
-      "name": "Nest.js",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/nestjs/nestjs-original.svg"
-    },
-    {
-      "name": "Node.js",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-    },
-    {
-      "name": "Tailwind CSS",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/tailwindcss/tailwindcss-original.svg"
-    },
-    {
-      "name": "Vite",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg"
-    },
-    {
-      "name": "Vitvitest ",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/vitest/vitest-original.svg"
-    },
-    {
-      "name": "MySQL",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-    },
-    {
-      "name": "MongoDB",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/mongodb/mongodb-original-wordmark.svg"
-    },
-    {
-      "name": "Python",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-    },
-    {
-      "name": "Git",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-    },
-    {
-      "name": "GitHub",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/github/github-original.svg"
-    },
-    {
-      "name": "VS Code",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/vscode/vscode-original.svg"
-    },
-    {
-      "name": "PyCharm",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/pycharm/pycharm-original.svg"
-    },
-    {
-      "name": "Expo",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/expo/expo-original.svg"
-    },
-    {
-      "name": "Electron",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/electron/electron-original.svg"
-    }
-    {
-      "name": "Docker",
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/Docker/Docker-original.svg"
-    }
-  ]
-  }}
- "project": {
-      "title": "Did you See",
-      "paragraph": "Explore my latest projects showcasing creativity, innovation, and technical expertise"
-    },
-    {
+// {
+//   "Sections"{
+//     "HomeSections"{
+//      "home": {
+//       "part1": "Hello, I'm",
+//       "part2": "Fakhir Ahmed Khan",
+//       "part3": "A passionate",
+//       "part4": [
+//         "Web Developer",
+//         "Frontend Developer",
+//         "Backend Developer",
+//         "Theme Designer"
+//       ],
+//       "part5": "about building",
+//       "part6": "best experiences that are visually stunning, highly functional, and futuristic.",
+//       "part7": "View My Work"
+//     },
+//  "socialLinks": {
+//     {
+//       "url": "https://github.com/FakhirAhmedKhan",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/github/github-original.svg",
+//       "label": "GitHub"
+//     },
+//     {
+//       "url": "https://linkedin.com/in/fakhir-ahmed-3b5537316",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/linkedin/linkedin-original.svg",
+//       "label": "LinkedIn"
+//     },
+//     {
+//       "url": "https://twitter.com/FakhirAhme41220",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/twitter/twitter-original.svg",
+//       "label": "Twitter"
+//     }
+//     }
+//     }
+//     "EducationSection":{
+//       "education": {
+//       "title": "My Journey",
+//       "paragraph": "A timeline of my educational milestones and achievements"
+//     },
+//     "educationData": [
+//     {
+//       "year": "2026 (Present)",
+//       "title": "Grade 12 - Higher Secondary Education",
+//       "description": "Advancing to final year of secondary education with focus on STEM subjects while continuing to develop expertise in programming and emerging technologies.",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+//       "icon": "GraduationCap",
+//       "color": "from-purple-500 to-pink-500"
+//     },
+//     {
+//       "year": "2025",
+//       "title": "Grade 11 - Higher Secondary Education",
+//       "description": "Currently pursuing higher secondary education with emphasis on advanced coursework while actively enhancing full-stack development skills and modern programming practices.",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+//       "icon": "Sparkles",
+//       "color": "from-blue-500 to-cyan-500"
+//     },
+//     {
+//       "year": "2024",
+//       "title": "Full-Stack Development Bootcamp",
+//       "description": "Successfully completed comprehensive 6-month intensive program specializing in full-stack web development, including MERN stack technologies and modern development frameworks.",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+//       "icon": "Code",
+//       "color": "from-emerald-500 to-teal-500"
+//     },
+//     {
+//       "year": "2024",
+//       "title": "Web Development Specialization",
+//       "description": "Completed intensive 6-month bootcamp covering advanced web development concepts, responsive design principles, and industry-standard best practices.",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+//       "icon": "Code",
+//       "color": "from-orange-500 to-red-500"
+//     },
+//     {
+//       "year": "2024",
+//       "title": "Grade 10 - Secondary Education",
+//       "description": "Completed secondary education milestone while simultaneously pursuing technical education in software development and programming fundamentals.",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+//       "icon": "GraduationCap",
+//       "color": "from-indigo-500 to-purple-500"
+//     },
+//     {
+//       "year": "2023",
+//       "title": "Self-Directed Programming Education",
+//       "description": "Initiated independent learning journey in web development, mastering foundational technologies including HTML5, CSS3, and JavaScript through structured online courses and documentation.",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/youtubeS.avif",
+//       "icon": "BookOpen",
+//       "color": "from-amber-500 to-orange-500"
+//     },
+//     {
+//       "year": "2023",
+//       "title": "Grade 9 - Secondary Education",
+//       "description": "Completed academic year while discovering passion for programming and beginning exploration of core computer science concepts and web technologies.",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+//       "icon": "GraduationCap",
+//       "color": "from-rose-500 to-pink-500"
+//     }
+//   ]
+//     }
+//     {"skillsSection": 
+//       {"skillsSection": {
+//       "title": "Skills & Toolkit",
+//       "paragraph": "Technologies and tools I use to bring ideas to life"}
+//     {"skills": [
+//     {
+//       "name": "HTML",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+//     },
+//     {
+//       "name": "CSS",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+//     },
+//     {
+//       "name": "JavaScript",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+//     },
+//     {
+//       "name": "TypeScript",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+//     },
+//     {
+//       "name": "React.js",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+//     },
+//     {
+//       "name": "React Native",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+//     },
+//     {
+//       "name": "Next.js",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+//     },
+//     {
+//       "name": "Nest.js",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/nestjs/nestjs-original.svg"
+//     },
+//     {
+//       "name": "Node.js",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+//     },
+//     {
+//       "name": "Tailwind CSS",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/tailwindcss/tailwindcss-original.svg"
+//     },
+//     {
+//       "name": "Vite",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg"
+//     },
+//     {
+//       "name": "Vitvitest ",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/vitest/vitest-original.svg"
+//     },
+//     {
+//       "name": "MySQL",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+//     },
+//     {
+//       "name": "MongoDB",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/mongodb/mongodb-original-wordmark.svg"
+//     },
+//     {
+//       "name": "Python",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+//     },
+//     {
+//       "name": "Git",
+//       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+//     },
+//     {
+//       "name": "GitHub",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/github/github-original.svg"
+//     },
+//     {
+//       "name": "VS Code",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/vscode/vscode-original.svg"
+//     },
+//     {
+//       "name": "PyCharm",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/pycharm/pycharm-original.svg"
+//     },
+//     {
+//       "name": "Expo",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/expo/expo-original.svg"
+//     },
+//     {
+//       "name": "Electron",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/electron/electron-original.svg"
+//     }
+//     {
+//       "name": "Docker",
+//       "icon": "https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.17.0/icons/Docker/Docker-original.svg"
+//     }
+//   ]
+//   }}
+//  "project": {
+//       "title": "Did you See",
+//       "paragraph": "Explore my latest projects showcasing creativity, innovation, and technical expertise"
+//     },
+//     {
   
-}
+// }
 
-    "certificationsSection": {
-      "title": "Certifications",
-      "paragraph": "Showcasing my dedication to continuous learning and professional growth through recognized certifications"
-    }
-    {
-  "certificationsData": [
-    {
-      "year": "2025",
-      "title": "SQL (Basic)",
-      "issuer": "HackerRank",
-      "description": "Validated fundamental SQL skills including SELECT queries, filtering, sorting, and basic data manipulation.",
-      "skills": [
-        "SQL",
-        "Databases"
-      ],
-      "credentialUrl": "https://www.hackerrank.com/certificates/adc5d0a584b6",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
-      "icon": "Database",
-      "color": "from-green-500 to-emerald-500"
-    },
-    {
-      "year": "2025",
-      "title": "CSS (Basic)",
-      "issuer": "HackerRank",
-      "description": "Demonstrated core CSS knowledge including layouts, colors, typography, and responsive design basics.",
-      "skills": [
-        "CSS",
-        "Web Design"
-      ],
-      "credentialUrl": "https://www.hackerrank.com/certificates/08f859ff530",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
-      "icon": "Palette",
-      "color": "from-blue-500 to-cyan-500"
-    },
-    {
-      "year": "2025",
-      "title": "JavaScript (Basic)",
-      "issuer": "HackerRank",
-      "description": "Certified understanding of JavaScript fundamentals such as variables, functions, loops, and basic logic.",
-      "skills": [
-        "JavaScript"
-      ],
-      "credentialUrl": "https://www.hackerrank.com/certificates/0908c18d580",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
-      "icon": "Code",
-      "color": "from-yellow-500 to-orange-500"
-    },
-    {
-      "year": "2025",
-      "title": "Python (Basic)",
-      "issuer": "HackerRank",
-      "description": "Covered Python basics including syntax, data types, control flow, and simple problem solving.",
-      "skills": [
-        "Python"
-      ],
-      "credentialUrl": "https://www.hackerrank.com/certificates/d597c643113",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
-      "icon": "Terminal",
-      "color": "from-indigo-500 to-purple-500"
-    },
-    {
-      "year": "2025",
-      "title": "JavaScript for Beginners",
-      "issuer": "Simplilearn",
-      "description": "Introductory course focused on JavaScript fundamentals and real-world web development use cases.",
-      "skills": [
-        "JavaScript",
-        "Web Development"
-      ],
-      "credentialUrl": "https://simpli.app.link/javascript-beginners-certificate",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
-      "icon": "BookOpen",
-      "color": "from-amber-500 to-orange-500"
-    },
-    {
-      "year": "2025",
-      "title": "Introduction to CSS",
-      "issuer": "Simplilearn",
-      "description": "Learned styling fundamentals including selectors, layouts, and responsive design techniques.",
-      "skills": [
-        "CSS",
-        "Web Development"
-      ],
-      "credentialUrl": "https://simpli.app.link/introduction-to-css-certificate",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
-      "icon": "Layout",
-      "color": "from-sky-500 to-blue-500"
-    },
-    {
-      "year": "2025",
-      "title": "Introduction to Front-End Development",
-      "issuer": "Simplilearn",
-      "description": "Overview of front-end development using HTML, CSS, and JavaScript to build modern web interfaces.",
-      "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ],
-      "credentialUrl": "https://simpli.app.link/frontend-development-certificate",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
-      "icon": "Monitor",
-      "color": "from-pink-500 to-rose-500"
-    },
-    {
-      "year": "2025",
-      "title": "Responsive Web Design",
-      "issuer": "freeCodeCamp",
-      "description": "Built responsive layouts using HTML and CSS with a mobile-first approach and modern design practices.",
-      "skills": [
-        "HTML",
-        "CSS",
-        "Responsive Design"
-      ],
-      "credentialUrl": "https://www.freecodecamp.org/certification/fakhirahmed/responsive-web-design",
-      "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/freeCodeCamp.avif",
-      "icon": "Smartphone",
-      "color": "from-gray-700 to-gray-900"
-    }
-  ]
-}
+//     "certificationsSection": {
+//       "title": "Certifications",
+//       "paragraph": "Showcasing my dedication to continuous learning and professional growth through recognized certifications"
+//     }
+//     {
+//   "certificationsData": [
+//     {
+//       "year": "2025",
+//       "title": "SQL (Basic)",
+//       "issuer": "HackerRank",
+//       "description": "Validated fundamental SQL skills including SELECT queries, filtering, sorting, and basic data manipulation.",
+//       "skills": [
+//         "SQL",
+//         "Databases"
+//       ],
+//       "credentialUrl": "https://www.hackerrank.com/certificates/adc5d0a584b6",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+//       "icon": "Database",
+//       "color": "from-green-500 to-emerald-500"
+//     },
+//     {
+//       "year": "2025",
+//       "title": "CSS (Basic)",
+//       "issuer": "HackerRank",
+//       "description": "Demonstrated core CSS knowledge including layouts, colors, typography, and responsive design basics.",
+//       "skills": [
+//         "CSS",
+//         "Web Design"
+//       ],
+//       "credentialUrl": "https://www.hackerrank.com/certificates/08f859ff530",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+//       "icon": "Palette",
+//       "color": "from-blue-500 to-cyan-500"
+//     },
+//     {
+//       "year": "2025",
+//       "title": "JavaScript (Basic)",
+//       "issuer": "HackerRank",
+//       "description": "Certified understanding of JavaScript fundamentals such as variables, functions, loops, and basic logic.",
+//       "skills": [
+//         "JavaScript"
+//       ],
+//       "credentialUrl": "https://www.hackerrank.com/certificates/0908c18d580",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+//       "icon": "Code",
+//       "color": "from-yellow-500 to-orange-500"
+//     },
+//     {
+//       "year": "2025",
+//       "title": "Python (Basic)",
+//       "issuer": "HackerRank",
+//       "description": "Covered Python basics including syntax, data types, control flow, and simple problem solving.",
+//       "skills": [
+//         "Python"
+//       ],
+//       "credentialUrl": "https://www.hackerrank.com/certificates/d597c643113",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+//       "icon": "Terminal",
+//       "color": "from-indigo-500 to-purple-500"
+//     },
+//     {
+//       "year": "2025",
+//       "title": "JavaScript for Beginners",
+//       "issuer": "Simplilearn",
+//       "description": "Introductory course focused on JavaScript fundamentals and real-world web development use cases.",
+//       "skills": [
+//         "JavaScript",
+//         "Web Development"
+//       ],
+//       "credentialUrl": "https://simpli.app.link/javascript-beginners-certificate",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
+//       "icon": "BookOpen",
+//       "color": "from-amber-500 to-orange-500"
+//     },
+//     {
+//       "year": "2025",
+//       "title": "Introduction to CSS",
+//       "issuer": "Simplilearn",
+//       "description": "Learned styling fundamentals including selectors, layouts, and responsive design techniques.",
+//       "skills": [
+//         "CSS",
+//         "Web Development"
+//       ],
+//       "credentialUrl": "https://simpli.app.link/introduction-to-css-certificate",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
+//       "icon": "Layout",
+//       "color": "from-sky-500 to-blue-500"
+//     },
+//     {
+//       "year": "2025",
+//       "title": "Introduction to Front-End Development",
+//       "issuer": "Simplilearn",
+//       "description": "Overview of front-end development using HTML, CSS, and JavaScript to build modern web interfaces.",
+//       "skills": [
+//         "HTML",
+//         "CSS",
+//         "JavaScript"
+//       ],
+//       "credentialUrl": "https://simpli.app.link/frontend-development-certificate",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
+//       "icon": "Monitor",
+//       "color": "from-pink-500 to-rose-500"
+//     },
+//     {
+//       "year": "2025",
+//       "title": "Responsive Web Design",
+//       "issuer": "freeCodeCamp",
+//       "description": "Built responsive layouts using HTML and CSS with a mobile-first approach and modern design practices.",
+//       "skills": [
+//         "HTML",
+//         "CSS",
+//         "Responsive Design"
+//       ],
+//       "credentialUrl": "https://www.freecodecamp.org/certification/fakhirahmed/responsive-web-design",
+//       "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/freeCodeCamp.avif",
+//       "icon": "Smartphone",
+//       "color": "from-gray-700 to-gray-900"
+//     }
+//   ]
+// }
 
  
-    "footer": {
-      "title": "GitHub Contributions",
-      "paragraph": "Where ideas turn into code — crafted with React, refined with Tailwind, and powered by creativity."
-    },
-}
+//     "footer": {
+//       "title": "GitHub Contributions",
+//       "paragraph": "Where ideas turn into code — crafted with React, refined with Tailwind, and powered by creativity."
+//     },
+// }

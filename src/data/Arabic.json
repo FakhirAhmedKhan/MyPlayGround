@@ -5,9 +5,10 @@
   },
   "navLabels": {
     "home": "الرئيسية",
-    "education": "التعليم",
-    "skills": "المهارات",
+    "blog": "المدونة",
     "projects": "المشاريع",
+    "skills": "المهارات",
+    "education": "التعليم",
     "certifications": "الشهادات"
   },
   "badges": {

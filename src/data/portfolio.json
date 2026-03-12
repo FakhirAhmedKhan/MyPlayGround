@@ -8,9 +8,10 @@
   },
   "navLabels": {
     "home": "Home",
-    "education": "Education",
-    "skills": "Skills",
+    "blog": "Blog",
     "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
     "certifications": "Certifications"
   },
   "badges": {

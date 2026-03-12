@@ -14,6 +14,7 @@ export default function Navbar() {
   const navItems = useMemo(
     () => [
       { href: "/", label: t.navLabels.home },
+      { href: "/blog", label: t.navLabels.blog },
       { href: "/projects", label: t.navLabels.projects },
       { href: "/skills", label: t.navLabels.skills },
       { href: "/education", label: t.navLabels.education },
