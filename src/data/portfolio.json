@@ -61,7 +61,7 @@
           "year": "2026 (Present)",
           "title": "Grade 12 - Higher Secondary Education",
           "description": "Advancing to final year of secondary education with focus on STEM subjects while continuing to develop expertise in programming and emerging technologies.",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+          "logo": "InterSchool.avif",
           "icon": "GraduationCap",
           "color": "from-purple-500 to-pink-500"
         },
@@ -69,7 +69,7 @@
           "year": "2025",
           "title": "Grade 11 - Higher Secondary Education",
           "description": "Currently pursuing higher secondary education with emphasis on advanced coursework while actively enhancing full-stack development skills and modern programming practices.",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+          "logo": "InterSchool.avif",
           "icon": "Sparkles",
           "color": "from-blue-500 to-cyan-500"
         },
@@ -77,7 +77,7 @@
           "year": "2024",
           "title": "Full-Stack Development Bootcamp",
           "description": "Successfully completed comprehensive 6-month intensive program specializing in full-stack web development, including MERN stack technologies and modern development frameworks.",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "logo": "HackerRank.avif",
           "icon": "Code",
           "color": "from-emerald-500 to-teal-500"
         },
@@ -85,7 +85,7 @@
           "year": "2024",
           "title": "Web Development Specialization",
           "description": "Completed intensive 6-month bootcamp covering advanced web development concepts, responsive design principles, and industry-standard best practices.",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "logo": "HackerRank.avif",
           "icon": "Code",
           "color": "from-orange-500 to-red-500"
         },
@@ -93,7 +93,7 @@
           "year": "2024",
           "title": "Grade 10 - Secondary Education",
           "description": "Completed secondary education milestone while simultaneously pursuing technical education in software development and programming fundamentals.",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+          "logo": "InterSchool.avif",
           "icon": "GraduationCap",
           "color": "from-indigo-500 to-purple-500"
         },
@@ -101,7 +101,7 @@
           "year": "2023",
           "title": "Self-Directed Programming Education",
           "description": "Initiated independent learning journey in web development, mastering foundational technologies including HTML5, CSS3, and JavaScript through structured online courses and documentation.",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/youtubeS.avif",
+          "logo": "youtubeS.avif",
           "icon": "BookOpen",
           "color": "from-amber-500 to-orange-500"
         },
@@ -109,7 +109,7 @@
           "year": "2023",
           "title": "Grade 9 - Secondary Education",
           "description": "Completed academic year while discovering passion for programming and beginning exploration of core computer science concepts and web technologies.",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/InterSchool.avif",
+          "logo": "InterSchool.avif",
           "icon": "GraduationCap",
           "color": "from-rose-500 to-pink-500"
         }
@@ -129,7 +129,7 @@
           "link": "https://cv-generator-second-try.vercel.app/",
           "description": "A CV generator app that creates ATS-friendly resumes.",
           "codeLink": "https://github.com/FakhirAhmedKhan/CVGenerator",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/ATS-Calculator.avif",
+          "imageUrl": "/CVGenerator.avif",
           "category": "SAAS"
         },
         {
@@ -138,7 +138,7 @@
           "link": "https://fakhirahmedkhan.github.io/Landing-Page--For-ATS-Calculator/",
           "description": "A simple Landing page for my ATS tools with good UI/UX.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Landing-Page--For-ATS-Calculator",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Landing-page.avif",
+          "imageUrl": "/Landing-page.avif",
           "category": "Web"
         },
         {
@@ -147,7 +147,7 @@
           "link": "https://fakhirahmedkhan.github.io/ATS-Calculator/",
           "description": "An ATS (Applicant Tracking System) calculator is a tool that assesses your resume's",
           "codeLink": "https://github.com/FakhirAhmedKhan/ATS-Calculator",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Landing-page.avif",
+          "imageUrl": "/Landing-page.avif",
           "category": "SAAS"
         },
         {
@@ -156,7 +156,7 @@
           "link": "https://netflix-clone-jade-beta.vercel.app/",
           "description": "The Netflix Clone replicates the core features of the popular streaming platform.",
           "codeLink": "https://github.com/FakhirAhmedKhan/NetFlix_Clone",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Netflix.avif",
+          "imageUrl": "/Netflix.avif",
           "category": "Web"
         },
         {
@@ -165,7 +165,7 @@
           "link": "https://youtube-git-main-fakhir-ahmed-khans-projects.vercel.app/",
           "description": "This YouTube Clone is a responsive web page that replicates the core features.",
           "codeLink": "https://github.com/FakhirAhmedKhan/YouTube-clone-in-React",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/YouTube.avif",
+          "imageUrl": "/YouTube.avif",
           "category": "Web"
         },
         {
@@ -174,7 +174,7 @@
           "link": "https://x-clone-three-alpha.vercel.app/",
           "description": "This X_Clone is a responsive web page that replicates the core features.",
           "codeLink": "https://github.com/FakhirAhmedKhan/X_Clone",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/X_Clone.avif",
+          "imageUrl": "/X_Clone.avif",
           "category": "Web"
         },
         {
@@ -183,7 +183,7 @@
           "link": "https://temperature-converter-by-using-html-css-and-jave-script.vercel.app/",
           "description": "Convert between various units for temperature and speed, such as Celsius, Fahrenheit, km/h, and mph.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Temperature-Converter-by-using-HTML--CSS-and-JaveScript",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/UnitConverter.avif",
+          "imageUrl": "/UnitConverter.avif",
           "category": "Tool"
         },
         {
@@ -192,7 +192,7 @@
           "link": "https://weather-app-cyan-one-55.vercel.app/",
           "description": "Provides real-time weather updates for any global location, including temperature, humidity, and wind speed.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Weather-App",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Weather.avif",
+          "imageUrl": "/Weather.avif",
           "category": "Tool"
         },
         {
@@ -201,7 +201,7 @@
           "link": "https://text-to-speech-ruby-phi.vercel.app",
           "description": "Converts written text into natural-sounding audio instantly.",
           "codeLink": "https://github.com/FakhirAhmedKhan/text-to-speech",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Text-to-Speech.avif",
+          "imageUrl": "/Text-to-Speech.avif",
           "category": "Tool"
         },
         {
@@ -210,7 +210,7 @@
           "link": "https://github.com/FakhirAhmedKhan/retry-amazon-clone",
           "description": "A simple web app made with JavaScript. It lets users view products.",
           "codeLink": "https://github.com/FakhirAhmedKhan/retry-amazon-clone",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/ammzon.avif",
+          "imageUrl": "/ammzon.avif",
           "category": "Web"
         },
         {
@@ -219,7 +219,7 @@
           "link": "https://to-do-list-neon-six.vercel.app/",
           "description": "A simple and easy-to-use task manager that helps you organize your daily tasks.",
           "codeLink": "https://github.com/FakhirAhmedKhan/ToDOList",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/TaskTracker.avif",
+          "imageUrl": "/TaskTracker.avif",
           "category": "Tool"
         },
         {
@@ -228,7 +228,7 @@
           "link": "https://github.com/FakhirAhmedKhan/Python_Basic_Program-",
           "description": "A collection of beginner-level Python programs designed to build a foundation in programming concepts.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Python_Basic_Program-",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
+          "imageUrl": "/jspic.avif",
           "category": "Python"
         },
         {
@@ -237,7 +237,7 @@
           "link": "https://github.com/FakhirAhmedKhan/Basic_Python_Program_Part_2",
           "description": "The second part of the beginner-level Python series focuses on more practice with functions.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Basic_Python_Program_Part_2",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
+          "imageUrl": "/jspic.avif",
           "category": "Python"
         },
         {
@@ -246,7 +246,7 @@
           "link": "https://github.com/FakhirAhmedKhan/Grading_System_in_python",
           "description": "A simple Python program that calculates student grades based on their marks using if/else statements.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Grading_System_in_python",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
+          "imageUrl": "/jspic.avif",
           "category": "Python"
         },
         {
@@ -255,7 +255,7 @@
           "link": "https://github.com/FakhirAhmedKhan/word-guessing-game-in-py",
           "description": "A fun terminal game where players guess letters to find the hidden word.",
           "codeLink": "https://github.com/FakhirAhmedKhan/word-guessing-game-in-py",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
+          "imageUrl": "/jspic.avif",
           "category": "Python"
         },
         {
@@ -264,7 +264,7 @@
           "link": "https://github.com/FakhirAhmedKhan/HTML-or-CSS-Quiz-by-using-python",
           "description": "A simple quiz app that tests knowledge of HTML, CSS, and JS. It runs in the terminal and shows the final score.",
           "codeLink": "https://github.com/FakhirAhmedKhan/HTML-or-CSS-Quiz-by-using-python",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
+          "imageUrl": "/jspic.avif",
           "category": "Python"
         },
         {
@@ -273,7 +273,7 @@
           "link": "https://rock-three-umber.vercel.app/",
           "description": "The classic game allows players to test their luck against the computer.",
           "codeLink": "https://github.com/FakhirAhmedKhan/rock",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Rock.avif",
+          "imageUrl": "/Rock.avif",
           "category": "Game"
         },
         {
@@ -282,7 +282,7 @@
           "link": "https://qr-generator-lilac-beta.vercel.app/",
           "description": "A simple tool that creates QR codes from data. Users enter data, and the app generates a scannable QR code.",
           "codeLink": "https://github.com/FakhirAhmedKhan/QR-Generator",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/qr.avif",
+          "imageUrl": "/qr.avif",
           "category": "Tool"
         },
         {
@@ -291,7 +291,7 @@
           "link": "https://calculator-in-react-ten.vercel.app/",
           "description": "A simple app built with React that performs basic math operations. It uses components and state to update results.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Calculator-in-React",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Calculator.avif",
+          "imageUrl": "/Calculator.avif",
           "category": "React"
         },
         {
@@ -300,7 +300,7 @@
           "link": "https://github.com/FakhirAhmedKhan/Basic-JavaScrip-Program",
           "description": "A collection of beginner-level JavaScript programs to build a foundation in programming concepts.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Basic-JavaScrip-Program",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
+          "imageUrl": "/jspic.avif",
           "category": "JavaScript"
         },
         {
@@ -309,7 +309,7 @@
           "link": "https://github.com/FakhirAhmedKhan/Basic-Javascript-part-2",
           "description": "The second part of the beginner-level JavaScript series, focusing on more practice.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Basic-Javascript-part-2",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
+          "imageUrl": "/jspic.avif",
           "category": "JavaScript"
         },
         {
@@ -318,7 +318,7 @@
           "link": "https://github.com/FakhirAhmedKhan/JavaScript-Basic-Program-Part-4",
           "description": "The second part of the beginner-level JavaScript series, focusing on more practice.",
           "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Basic-Program-Part-4",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
+          "imageUrl": "/jspic.avif",
           "category": "JavaScript"
         },
         {
@@ -327,7 +327,7 @@
           "link": "https://github.com/FakhirAhmedKhan/Quiz-JavaScript",
           "description": "A simple quiz app that tests knowledge of HTML, CSS, and JS. It runs in the terminal and shows the final score.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Quiz-JavaScript",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/jspic.avif",
+          "imageUrl": "/jspic.avif",
           "category": "JavaScript"
         },
 
@@ -337,7 +337,7 @@
           "link": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
           "description": "A simple JavaScript learning resource designed for users with basic knowledge of JavaScript.",
           "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/StockProImage.avif",
+          "imageUrl": "/StockProImage.avif",
           "category": "SAAS"
         },
         {
@@ -346,89 +346,8 @@
           "link": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
           "description": "A simple JavaScript learning resource designed for users with basic knowledge of JavaScript.",
           "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
-          "imageUrl": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/EMS.avif",
+          "imageUrl": "/EMS.avif",
           "category": "SAAS"
-        },
-        {
-          "id": 24,
-          "title": "📝 Electron-Learning-Resource",
-          "link": "https://github.com/FakhirAhmedKhan/Electron-Learning-Resource/blob/main/README.md",
-          "description": "A concise Electron guide covering desktop app fundamentals using HTML, CSS, and JavaScript.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Electron-Learning-Resource/blob/main/README.md",
-          "imageUrl": "https://img.shields.io/badge/Electron-Learning-47848F?style=for-the-badge&logo=electron&logoColor=white",
-          "category": "Doc"
-        },
-        {
-          "id": 25,
-          "title": "📝 React_Hooks_For_Dev",
-          "link": "https://github.com/FakhirAhmedKhan/React_Hooks_For_Dev",
-          "description": "A practical reference for mastering React Hooks with real-world usage patterns.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/React_Hooks_For_Dev",
-          "imageUrl": "https://img.shields.io/badge/React-Hooks-61DAFB?style=for-the-badge&logo=react&logoColor=black",
-          "category": "Doc"
-        },
-        {
-          "id": 26,
-          "title": "📝MySQL-Learning-Guide-",
-          "link": "https://github.com/FakhirAhmedKhan/MySQL-Learning-Guide-",
-          "description": "A structured MySQL guide covering queries, joins, and database fundamentals.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/MySQL-Learning-Guide-",
-          "imageUrl": "https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white",
-          "category": "Doc"
-        },
-        {
-          "id": 27,
-          "title": "📝 HTML-CSS-Cheat-Sheet",
-          "link": "https://github.com/FakhirAhmedKhan/HTML-CSS-Cheat-Sheet",
-          "description": "A quick reference for modern HTML structure and responsive CSS styling.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/HTML-CSS-Cheat-Sheet",
-          "imageUrl": "https://img.shields.io/badge/HTML%20%26%20CSS-Frontend-E34F26?style=for-the-badge&logo=html5&logoColor=white",
-          "category": "Doc"
-        },
-        {
-          "id": 28,
-          "title": "📝 JavaScript-Cheat-Sheet",
-          "link": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
-          "description": "A compact JavaScript reference covering core concepts and modern ES features.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
-          "imageUrl": "https://img.shields.io/badge/JavaScript-Guide-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
-          "category": "Doc"
-        },
-        {
-          "id": 31,
-          "title": "📝 Next-Js-Cheat-Sheet",
-          "link": "https://github.com/FakhirAhmedKhan/Next-Js-Learning-Guide-",
-          "description": "A focused Next.js guide covering routing, rendering, and performance basics.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Next-Js-Learning-Guide-",
-          "imageUrl": "https://img.shields.io/badge/Next.js-Framework-000000?style=for-the-badge&logo=next.js&logoColor=white",
-          "category": "Doc"
-        },
-        {
-          "id": 32,
-          "title": "📝 Nestjs-Cheat-Sheet",
-          "link": "https://github.com/FakhirAhmedKhan/Nestjs-logic-learning/blob/main/README.md",
-          "description": "A clean NestJS reference covering modules, controllers, and scalable backend patterns.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Nestjs-logic-learning/blob/main/README.md",
-          "imageUrl": "https://img.shields.io/badge/NestJS-Backend-E0234E?style=for-the-badge&logo=nestjs&logoColor=white",
-          "category": "Doc"
-        },
-        {
-          "id": 33,
-          "title": "📝 Python-Cheat-Sheet",
-          "link": "https://github.com/FakhirAhmedKhan/Python-core-logic-learning/blob/main/README.md",
-          "description": "A structured Python guide covering core syntax, OOP, and backend foundations.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Python-core-logic-learning/blob/main/README.md",
-          "imageUrl": "https://img.shields.io/badge/Python-Core-3776AB?style=for-the-badge&logo=python&logoColor=white",
-          "category": "Doc"
-        },
-        {
-          "id": 34,
-          "title": "📝 Prisma-Cheat-Sheet",
-          "link": "https://github.com/FakhirAhmedKhan/Prisma-Deep-Learning-Resource/blob/main/README.md",
-          "description": "A deep Prisma guide covering schema design, relations, and database logic.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Prisma-Deep-Learning-Resource/blob/main/README.md",
-          "imageUrl": "https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma&logoColor=white",
-          "category": "Doc"
         }
       ]
     },
@@ -443,7 +362,7 @@
           "description": "Validated fundamental SQL skills including SELECT queries, filtering, sorting, and basic data manipulation.",
           "skills": ["SQL", "Databases"],
           "credentialUrl": "https://www.hackerrank.com/certificates/adc5d0a584b6",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "logo": "HackerRank.avif",
           "icon": "Database",
           "color": "from-green-500 to-emerald-500"
         },
@@ -454,7 +373,7 @@
           "description": "Demonstrated core CSS knowledge including layouts, colors, typography, and responsive design basics.",
           "skills": ["CSS", "Web Design"],
           "credentialUrl": "https://www.hackerrank.com/certificates/08f859ff530",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "logo": "HackerRank.avif",
           "icon": "Palette",
           "color": "from-blue-500 to-cyan-500"
         },
@@ -465,7 +384,7 @@
           "description": "Certified understanding of JavaScript fundamentals such as variables, functions, loops, and basic logic.",
           "skills": ["JavaScript"],
           "credentialUrl": "https://www.hackerrank.com/certificates/0908c18d580",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "logo": "HackerRank.avif",
           "icon": "Code",
           "color": "from-yellow-500 to-orange-500"
         },
@@ -476,7 +395,7 @@
           "description": "Covered Python basics including syntax, data types, control flow, and simple problem solving.",
           "skills": ["Python"],
           "credentialUrl": "https://www.hackerrank.com/certificates/d597c643113",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/HackerRank.avif",
+          "logo": "HackerRank.avif",
           "icon": "Terminal",
           "color": "from-indigo-500 to-purple-500"
         },
@@ -487,7 +406,7 @@
           "description": "Introductory course focused on JavaScript fundamentals and real-world web development use cases.",
           "skills": ["JavaScript", "Web Development"],
           "credentialUrl": "https://simpli.app.link/javascript-beginners-certificate",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
+          "logo": "Simplilearn.avif",
           "icon": "BookOpen",
           "color": "from-amber-500 to-orange-500"
         },
@@ -498,7 +417,7 @@
           "description": "Learned styling fundamentals including selectors, layouts, and responsive design techniques.",
           "skills": ["CSS", "Web Development"],
           "credentialUrl": "https://simpli.app.link/introduction-to-css-certificate",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
+          "logo": "Simplilearn.avif",
           "icon": "Layout",
           "color": "from-sky-500 to-blue-500"
         },
@@ -509,7 +428,7 @@
           "description": "Overview of front-end development using HTML, CSS, and JavaScript to build modern web interfaces.",
           "skills": ["HTML", "CSS", "JavaScript"],
           "credentialUrl": "https://simpli.app.link/frontend-development-certificate",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/Simplilearn.avif",
+          "logo": "Simplilearn.avif",
           "icon": "Monitor",
           "color": "from-pink-500 to-rose-500"
         },
@@ -520,7 +439,7 @@
           "description": "Built responsive layouts using HTML and CSS with a mobile-first approach and modern design practices.",
           "skills": ["HTML", "CSS", "Responsive Design"],
           "credentialUrl": "https://www.freecodecamp.org/certification/fakhirahmed/responsive-web-design",
-          "logo": "https://raw.githubusercontent.com/FakhirAhmedKhan/DataApi-main/refs/heads/main/freeCodeCamp.avif",
+          "logo": "freeCodeCamp.avif",
           "icon": "Smartphone",
           "color": "from-gray-600 to-gray-800"
         }

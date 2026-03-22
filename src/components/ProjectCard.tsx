@@ -42,8 +42,9 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           <Image
             src={project.imageUrl}
             alt={project.title}
-            width={1000}
-            height={1000}
+            width={538}
+            height={240}
+            sizes="(max-width: 768px) 100vw, 538px"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             loading="lazy"
             onError={() => setImgError(true)}
