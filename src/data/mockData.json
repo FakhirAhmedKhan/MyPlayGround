@@ -1,0 +1,74 @@
+[
+  {
+    "id": 3,
+    "title": "🎞️ Netflix_Clone",
+    "link": "https://netflix-clone-jade-beta.vercel.app/",
+    "description": "The Netflix Clone replicates the core features of the popular streaming platform.",
+    "codeLink": "https://github.com/FakhirAhmedKhan/NetFlix_Clone",
+    "imageUrl": "/Netflix.avif",
+    "category": "Web"
+  },
+  {
+    "id": 4,
+    "title": "▶️ YouTube_Clone",
+    "link": "https://youtube-git-main-fakhir-ahmed-khans-projects.vercel.app/",
+    "description": "This YouTube Clone is a responsive web page that replicates the core features.",
+    "codeLink": "https://github.com/FakhirAhmedKhan/YouTube-clone-in-React",
+    "imageUrl": "/YouTube.avif",
+    "category": "Web"
+  },
+  {
+    "id": 5,
+    "title": "✖️ Twitter_Clone",
+    "link": "https://x-clone-three-alpha.vercel.app/",
+    "description": "This X_Clone is a responsive web page that replicates the core features.",
+    "codeLink": "https://github.com/FakhirAhmedKhan/X_Clone",
+    "imageUrl": "/X_Clone.avif",
+    "category": "Web"
+  },
+  {
+    "id": 6,
+    "title": "🧾 Unit Converter",
+    "link": "https://temperature-converter-by-using-html-css-and-jave-script.vercel.app/",
+    "description": "Convert between various units for temperature and speed, such as Celsius, Fahrenheit, km/h, and mph.",
+    "codeLink": "https://github.com/FakhirAhmedKhan/Temperature-Converter-by-using-HTML--CSS-and-JaveScript",
+    "imageUrl": "/UnitConverter.avif",
+    "category": "Tool"
+  },
+  {
+    "id": 7,
+    "title": "⛅ Weather App",
+    "link": "https://weather-app-cyan-one-55.vercel.app/",
+    "description": "Provides real-time weather updates for any global location, including temperature, humidity, and wind speed.",
+    "codeLink": "https://github.com/FakhirAhmedKhan/Weather-App",
+    "imageUrl": "/Weather.avif",
+    "category": "Tool"
+  },
+  {
+    "id": 8,
+    "title": "🗣️ Text-to-Speech",
+    "link": "https://text-to-speech-ruby-phi.vercel.app",
+    "description": "Converts written text into natural-sounding audio instantly.",
+    "codeLink": "https://github.com/FakhirAhmedKhan/text-to-speech",
+    "imageUrl": "/Text-to-Speech.avif",
+    "category": "Tool"
+  },
+  {
+    "id": 17,
+    "title": "🎮 Rock, Paper, Scissors Game",
+    "link": "https://rock-three-umber.vercel.app/",
+    "description": "The classic game allows players to test their luck against the computer.",
+    "codeLink": "https://github.com/FakhirAhmedKhan/rock",
+    "imageUrl": "/Rock.avif",
+    "category": "Game"
+  },
+  {
+    "id": 18,
+    "title": "🔳 QR Code Generator",
+    "link": "https://qr-generator-lilac-beta.vercel.app/",
+    "description": "A simple tool that creates QR codes from data. Users enter data, and the app generates a scannable QR code.",
+    "codeLink": "https://github.com/FakhirAhmedKhan/QR-Generator",
+    "imageUrl": "/qr.avif",
+    "category": "Tool"
+  }
+]

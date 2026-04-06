@@ -10,7 +10,6 @@ export default function ProjectsPage() {
   const { t, isRTL } = useLanguage();
   const projectsData = t.sections.projects;
 
-  // Generate categories dynamically
   const categories = useMemo(() => {
     return [
       "All",
