@@ -81,6 +81,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link rel="preconnect" href="https://raw.githubusercontent.com" />
+        <meta
+          name="google-site-verification"
+          content="MD4saVzc9gGPBrXqc6YtK6TuvH2RDzKlVMo0uqSY8Bo"
+        />
       </head>
       <body className="bg-[rgb(10,10,15)] text-slate-50 antialiased">
         <LanguageProvider>
