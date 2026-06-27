@@ -16,8 +16,18 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "ghchart.rshah.org",
       },
-      { protocol: "https", hostname: "img.shields.io" },
-      { protocol: "https", hostname: "www.python.org" },
+      {
+        protocol: "https",
+        hostname: "img.shields.io",
+      },
+      {
+        protocol: "https",
+        hostname: "www.python.org",
+      },
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+      },
     ],
   },
 };
