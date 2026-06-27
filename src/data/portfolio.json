@@ -17,10 +17,10 @@
   "badges": {
     "home": "Welcome to my digital space",
     "skills": "Always Learning",
-    "projects": "Actively engaged in great projects and ideas creation.",
+    "projects": "Actively building projects across the full stack.",
     "education": "Exploring how active engagement with programming can enhance AI creativity.",
     "git": "Total Contributions",
-    "certifications": "Certifications is key to success"
+    "certifications": "Verified by industry-leading platforms"
   },
   "sections": {
     "home": {
@@ -32,8 +32,8 @@
         "Backend Developer",
         "Theme Designer"
       ],
-      "tagline": "A passionate",
-      "description": "about building best experiences that are visually stunning, highly functional, and futuristic.",
+      "tagline": "I build",
+      "description": "Full-stack applications that are visually stunning, highly functional, and built to last.",
       "cta": "View My Work",
       "socialLinks": [
         {
@@ -120,12 +120,12 @@
       "paragraph": "Technologies and tools I use to bring ideas to life"
     },
     "projects": {
-      "title": "Did you See",
+      "title": "My Projects",
       "paragraph": "Explore my latest projects showcasing creativity, innovation, and technical expertise",
       "items": [
         {
           "id": 0,
-          "title": "💻 CVGenerator",
+          "title": "CV Generator",
           "link": "https://cv-generator-second-try.vercel.app/",
           "description": "A CV generator app that creates ATS-friendly resumes.",
           "codeLink": "https://github.com/FakhirAhmedKhan/CVGenerator",
@@ -134,7 +134,7 @@
         },
         {
           "id": 1,
-          "title": "💻 Landing-Page--For-ATS-Calculator",
+          "title": "ATS Calculator Landing Page",
           "link": "https://fakhirahmedkhan.github.io/Landing-Page--For-ATS-Calculator/",
           "description": "A simple Landing page for my ATS tools with good UI/UX.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Landing-Page--For-ATS-Calculator",
@@ -143,7 +143,7 @@
         },
         {
           "id": 2,
-          "title": "💻 ATS-Calculator",
+          "title": "ATS Calculator",
           "link": "https://fakhirahmedkhan.github.io/ATS-Calculator/",
           "description": "An ATS (Applicant Tracking System) calculator is a tool that assesses your resume's",
           "codeLink": "https://github.com/FakhirAhmedKhan/ATS-Calculator",
@@ -152,7 +152,7 @@
         },
         {
           "id": 19,
-          "title": "⚛️ Calculator-in-React",
+          "title": "Calculator in React",
           "link": "https://calculator-in-react-ten.vercel.app/",
           "description": "A simple app built with React that performs basic math operations. It uses components and state to update results.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Calculator-in-React",
@@ -161,25 +161,25 @@
         },
         {
           "id": 29,
-          "title": "🚀 Inventory Management System",
-          "link": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
-          "description": "A simple JavaScript learning resource designed for users with basic knowledge of JavaScript.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
+          "title": "Inventory Management System",
+          "link": "https://github.com/FakhirAhmedKhan",
+          "description": "A full-featured inventory tracking system with product management, stock alerts, and reporting dashboard.",
+          "codeLink": "https://github.com/FakhirAhmedKhan",
           "imageUrl": "/StockProImage.avif",
           "category": "SAAS"
         },
         {
           "id": 30,
-          "title": "🚀 Event Management System",
-          "link": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
-          "description": "A simple JavaScript learning resource designed for users with basic knowledge of JavaScript.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Cheat-Sheet",
+          "title": "Event Management System",
+          "link": "https://github.com/FakhirAhmedKhan",
+          "description": "An event scheduling and management platform with attendee registration, calendar integration, and notifications.",
+          "codeLink": "https://github.com/FakhirAhmedKhan",
           "imageUrl": "/EMS.avif",
           "category": "SAAS"
         },
         {
           "id": 31,
-          "title": "💻 Smart Reasoning System",
+          "title": "Smart Reasoning System",
           "link": "https://smart-reasoning-system.vercel.app/",
           "description": "Smart Ai Agent Tool it simplefy your Answers",
           "codeLink": "https://github.com/FakhirAhmedKhan/Smart-Reasoning-System",
@@ -188,7 +188,7 @@
         },
         {
           "id": 32,
-          "title": "🚀 Ai Cost Calculator",
+          "title": "AI Cost Calculator",
           "link": "https://ai-cost-calculator-nu.vercel.app/",
           "description": "Ai Cost Calculator is a tool that helps you calculate the cost of using AI models.",
           "codeLink": "https://github.com/FakhirAhmedKhan/ai-cost-calculator",
@@ -197,7 +197,7 @@
         },
         {
           "id": 33,
-          "title": "🚀 Ai Agent Platform",
+          "title": "AI Agent Platform",
           "link": "https://ai-agent-platform-bdsb.vercel.app/",
           "description": "Ai Agent Platform is a tool that helps you create and manage AI agents.",
           "codeLink": "https://github.com/FakhirAhmedKhan/ai-agent-platform",

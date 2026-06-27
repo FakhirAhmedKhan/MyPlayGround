@@ -5,7 +5,6 @@ import type { CertificationItem } from "@/lib/types";
 
 interface CertificationCardProps {
   cert: CertificationItem;
-  index: number;
 }
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -172,13 +171,14 @@ function IssuerLogo({ src, alt }: { src: string; alt: string }) {
 
 export default function CertificationCard({
   cert,
-  index,
 }: CertificationCardProps) {
   const gradientColors = getGradientColors(cert.color);
+  // Stable DOM id derived from the title rather than array index
+  const safeId = cert.title.toLowerCase().replace(/[^a-z0-9]/g, "-");
 
   return (
     <article
-      id={`cert-card-${index}`}
+      id={`cert-card-${safeId}`}
       className="group relative glass-card-hover p-6 flex flex-col gap-4"
     >
       {/* Header */}
@@ -245,45 +245,52 @@ export default function CertificationCard({
         ))}
       </div>
 
-      {/* Credential link */}
-      <a
-        href={cert.credentialUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        id={`cert-credential-${index}`}
-        className="mt-auto flex items-center gap-2 text-xs font-semibold transition-all duration-300 hover:gap-3"
-        style={{ color: "#a78bfa" }}
-      >
-        <svg
-          className="w-3.5 h-3.5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
+      {/* Credential link — only rendered when a URL exists */}
+      {cert.credentialUrl ? (
+        <a
+          href={cert.credentialUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          id={`cert-credential-${safeId}`}
+          aria-label={`View credential for ${cert.title} (opens in new tab)`}
+          className="mt-auto flex items-center gap-2 text-xs font-semibold transition-all duration-300 hover:gap-3"
+          style={{ color: "#a78bfa" }}
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-          />
-        </svg>
-        View Credential
-        <svg
-          className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
-      </a>
+          <svg
+            className="w-3.5 h-3.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+            />
+          </svg>
+          View Credential
+          <svg
+            className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </a>
+      ) : (
+        <span className="mt-auto text-xs text-slate-600 italic select-none">
+          Certificate pending upload
+        </span>
+      )}
     </article>
   );
 }
