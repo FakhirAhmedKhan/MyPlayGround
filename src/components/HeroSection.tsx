@@ -132,12 +132,14 @@ export default function HeroSection({ data }: HeroSectionProps) {
           </h1>
         </div>
 
-        {/* Typewriter */}
+        {/* Typewriter — aria-hidden so screen readers get the static label below */}
         <div
           className="mb-8 animate-slide-in"
           style={{ animationDelay: "0.4s", animationFillMode: "both" }}
         >
-          <p className="text-xl sm:text-2xl lg:text-3xl text-slate-300 font-medium">
+          {/* Visually hidden static label for screen readers */}
+          <p className="sr-only">{data.tagline} {data.roles.join(", ")}</p>
+          <p className="text-xl sm:text-2xl lg:text-3xl text-slate-300 font-medium" aria-hidden="true">
             {data.tagline}{" "}
             <span
               className="font-bold"
@@ -170,11 +172,12 @@ export default function HeroSection({ data }: HeroSectionProps) {
           {data.description}
         </p>
 
-        {/* CTAs */}
+        {/* CTAs — primary action first, secondary actions after */}
         <div
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-slide-in"
           style={{ animationDelay: "0.6s", animationFillMode: "both" }}
         >
+          {/* Primary: see the work */}
           <Link
             href="/projects"
             id="hero-cta-projects"
@@ -196,12 +199,14 @@ export default function HeroSection({ data }: HeroSectionProps) {
               />
             </svg>
           </Link>
-          <Link
-            href="/skills"
-            id="hero-cta-skills"
+
+          {/* Secondary: jump to contact */}
+          <a
+            href="#contact"
+            id="hero-cta-contact"
             className="btn-secondary text-sm"
           >
-            {isRTL ? "میری مہارتیں" : "My Skills"}
+            {isRTL ? "رابطہ کریں" : "Contact Me"}
             <svg
               className="w-4 h-4"
               fill="none"
@@ -213,16 +218,20 @@ export default function HeroSection({ data }: HeroSectionProps) {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M13 10V3L4 14h7v7l9-11h-7z"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
             </svg>
-          </Link>
-          <Link
-            href="/blog"
-            id="hero-cta-blog"
+          </a>
+
+          {/* Tertiary: download resume */}
+          <a
+            href="/resume.pdf"
+            id="hero-cta-resume"
+            download
             className="btn-secondary text-sm"
+            aria-label="Download resume PDF"
           >
-            {isRTL ? "میرا بلاگ" : "My Blog"}
+            {isRTL ? "ریزومے ڈاؤنلوڈ" : "Resume"}
             <svg
               className="w-4 h-4"
               fill="none"
@@ -234,10 +243,10 @@ export default function HeroSection({ data }: HeroSectionProps) {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M13 10V3L4 14h7v7l9-11h-7z"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
               />
             </svg>
-          </Link>
+          </a>
         </div>
 
         {/* Social Links */}
@@ -288,7 +297,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
 
         {/* Scroll indicator */}
         <div
-          className="absolute top-1 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float"
           aria-hidden="true"
         >
           <span className="text-slate-500 text-xs tracking-widest uppercase">

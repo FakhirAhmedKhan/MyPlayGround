@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { inter } from "@/data/font";
+export { metadata } from "@/data/metaData";
 
 export default function RootLayout({
   children,

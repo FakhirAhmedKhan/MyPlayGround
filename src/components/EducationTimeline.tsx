@@ -137,7 +137,7 @@ export default function EducationTimeline({ items }: EducationTimelineProps) {
       <div className="space-y-8">
         {items.map((item, index) => (
           <div
-            key={`${item.year}-${index}`}
+            key={item.title}
             id={`education-item-${index}`}
             className={`group relative flex gap-6 sm:gap-8 ${isRTL ? "flex-row-reverse text-right" : ""}`}
             role="listitem"

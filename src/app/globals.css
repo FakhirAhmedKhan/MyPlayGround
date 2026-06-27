@@ -98,6 +98,22 @@
   }
 }
 
+/* Respect the OS-level "reduce motion" preference. Disables all decorative
+   animations without removing transitions needed for interactive feedback. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
 @layer components {
   /* Glass card effect */
   .glass-card {

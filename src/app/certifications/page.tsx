@@ -12,6 +12,10 @@ export default function CertificationsPage() {
     new Set(certsData.items.map((c) => c.issuer)),
   );
 
+  const latestYear = Math.max(
+    ...certsData.items.map((c) => parseInt(c.year, 10)),
+  ).toString();
+
   return (
     <div className={`relative min-h-screen pt-24 ${isRTL ? "font-urdu" : ""}`}>
       {/* Background */}
@@ -48,7 +52,7 @@ export default function CertificationsPage() {
               value: issuerGroups.length,
               label: isRTL ? "جاری کنندگان" : "Issuers",
             },
-            { value: "2025", label: isRTL ? "تازہ ترین سال" : "Latest Year" },
+            { value: latestYear, label: isRTL ? "تازہ ترین سال" : "Latest Year" },
           ].map((stat) => (
             <div key={stat.label} className="glass-card p-5 text-center">
               <div className="text-3xl font-black gradient-text mb-1">
@@ -61,8 +65,8 @@ export default function CertificationsPage() {
 
         {/* Certifications Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 text-start">
-          {certsData.items.map((cert, i) => (
-            <CertificationCard key={i} cert={cert} index={i} />
+          {certsData.items.map((cert) => (
+            <CertificationCard key={cert.title} cert={cert} />
           ))}
         </div>
       </div>
