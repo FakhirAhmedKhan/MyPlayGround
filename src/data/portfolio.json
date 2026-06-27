@@ -151,69 +151,6 @@
           "category": "SAAS"
         },
         {
-          "id": 9,
-          "title": "🛒 Amazon Clone",
-          "link": "https://github.com/FakhirAhmedKhan/retry-amazon-clone",
-          "description": "A simple web app made with JavaScript. It lets users view products.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/retry-amazon-clone",
-          "imageUrl": "/ammzon.avif",
-          "category": "Web"
-        },
-        {
-          "id": 10,
-          "title": "📝 Task_Tracker",
-          "link": "https://to-do-list-neon-six.vercel.app/",
-          "description": "A simple and easy-to-use task manager that helps you organize your daily tasks.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/ToDOList",
-          "imageUrl": "/TaskTracker.avif",
-          "category": "Tool"
-        },
-        {
-          "id": 11,
-          "title": "🐍 Python Basic Programs",
-          "link": "https://github.com/FakhirAhmedKhan/Python_Basic_Program-",
-          "description": "A collection of beginner-level Python programs designed to build a foundation in programming concepts.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Python_Basic_Program-",
-          "imageUrl": "/jspic.avif",
-          "category": "Python"
-        },
-        {
-          "id": 12,
-          "title": "🐍 Basic Python Programs Part 3",
-          "link": "https://github.com/FakhirAhmedKhan/Basic_Python_Program_Part_2",
-          "description": "The second part of the beginner-level Python series focuses on more practice with functions.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Basic_Python_Program_Part_2",
-          "imageUrl": "/jspic.avif",
-          "category": "Python"
-        },
-        {
-          "id": 13,
-          "title": "🐍 Grading System in Python",
-          "link": "https://github.com/FakhirAhmedKhan/Grading_System_in_python",
-          "description": "A simple Python program that calculates student grades based on their marks using if/else statements.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Grading_System_in_python",
-          "imageUrl": "/jspic.avif",
-          "category": "Python"
-        },
-        {
-          "id": 14,
-          "title": "🐍 Game in Python",
-          "link": "https://github.com/FakhirAhmedKhan/word-guessing-game-in-py",
-          "description": "A fun terminal game where players guess letters to find the hidden word.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/word-guessing-game-in-py",
-          "imageUrl": "/jspic.avif",
-          "category": "Python"
-        },
-        {
-          "id": 15,
-          "title": "🐍 Quiz in Python",
-          "link": "https://github.com/FakhirAhmedKhan/HTML-or-CSS-Quiz-by-using-python",
-          "description": "A simple quiz app that tests knowledge of HTML, CSS, and JS. It runs in the terminal and shows the final score.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/HTML-or-CSS-Quiz-by-using-python",
-          "imageUrl": "/jspic.avif",
-          "category": "Python"
-        },
-        {
           "id": 19,
           "title": "⚛️ Calculator-in-React",
           "link": "https://calculator-in-react-ten.vercel.app/",
@@ -222,43 +159,6 @@
           "imageUrl": "/Calculator.avif",
           "category": "React"
         },
-        {
-          "id": 20,
-          "title": "💻Basic JavaScript Program",
-          "link": "https://github.com/FakhirAhmedKhan/Basic-JavaScrip-Program",
-          "description": "A collection of beginner-level JavaScript programs to build a foundation in programming concepts.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Basic-JavaScrip-Program",
-          "imageUrl": "/jspic.avif",
-          "category": "JavaScript"
-        },
-        {
-          "id": 21,
-          "title": "💻 Basic JavaScript Program part 2",
-          "link": "https://github.com/FakhirAhmedKhan/Basic-Javascript-part-2",
-          "description": "The second part of the beginner-level JavaScript series, focusing on more practice.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Basic-Javascript-part-2",
-          "imageUrl": "/jspic.avif",
-          "category": "JavaScript"
-        },
-        {
-          "id": 22,
-          "title": "💻 Basic JavaScript Program part 3",
-          "link": "https://github.com/FakhirAhmedKhan/JavaScript-Basic-Program-Part-4",
-          "description": "The second part of the beginner-level JavaScript series, focusing on more practice.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/JavaScript-Basic-Program-Part-4",
-          "imageUrl": "/jspic.avif",
-          "category": "JavaScript"
-        },
-        {
-          "id": 23,
-          "title": "💻 Quiz in JavaScript",
-          "link": "https://github.com/FakhirAhmedKhan/Quiz-JavaScript",
-          "description": "A simple quiz app that tests knowledge of HTML, CSS, and JS. It runs in the terminal and shows the final score.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Quiz-JavaScript",
-          "imageUrl": "/jspic.avif",
-          "category": "JavaScript"
-        },
-
         {
           "id": 29,
           "title": "🚀 Inventory Management System",
@@ -308,95 +208,250 @@
     },
     "certifications": {
       "title": "Certifications",
-      "paragraph": "Showcasing my dedication to continuous learning and professional growth through recognized certifications",
+      "paragraph": "A collection of certifications that reflect my commitment to continuous learning across software engineering, web development, backend systems, databases, and artificial intelligence.",
       "items": [
+        {
+          "year": "2026",
+          "title": "Node.js",
+          "issuer": "HackerRank",
+          "description": "Validated backend development skills using Node.js, including asynchronous programming, modules, REST APIs, and package management.",
+          "skills": [
+            "Node.js",
+            "JavaScript",
+            "REST APIs",
+            "Backend Development"
+          ],
+          "credentialUrl": "https://www.hackerrank.com/certificates/iframe/7acbed058a86",
+          "logo": "HackerRank.avif",
+          "icon": "Server",
+          "color": "from-emerald-500 via-green-500 to-lime-500"
+        },
+        {
+          "year": "2026",
+          "title": "AI Foundations",
+          "issuer": "IBM",
+          "description": "Completed foundational AI learning covering machine learning, NLP, computer vision, responsible AI, and real-world applications.",
+          "skills": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "NLP",
+            "Computer Vision"
+          ],
+          "credentialUrl": "",
+          "logo": "ibm_logo.jpg",
+          "icon": "Brain",
+          "color": "from-indigo-600 via-blue-600 to-cyan-500"
+        },
         {
           "year": "2025",
           "title": "SQL (Basic)",
           "issuer": "HackerRank",
-          "description": "Validated fundamental SQL skills including SELECT queries, filtering, sorting, and basic data manipulation.",
-          "skills": ["SQL", "Databases"],
+          "description": "Validated SQL fundamentals including filtering, joins, aggregation, and querying relational databases.",
+          "skills": [
+            "SQL",
+            "Databases",
+            "Joins"
+          ],
           "credentialUrl": "https://www.hackerrank.com/certificates/adc5d0a584b6",
           "logo": "HackerRank.avif",
           "icon": "Database",
-          "color": "from-green-500 to-emerald-500"
+          "color": "from-teal-500 via-emerald-500 to-green-600"
         },
         {
           "year": "2025",
           "title": "CSS (Basic)",
           "issuer": "HackerRank",
-          "description": "Demonstrated core CSS knowledge including layouts, colors, typography, and responsive design basics.",
-          "skills": ["CSS", "Web Design"],
+          "description": "Demonstrated CSS fundamentals including layouts, typography, selectors, positioning, and responsive design.",
+          "skills": [
+            "CSS",
+            "Responsive Design",
+            "Web Design"
+          ],
           "credentialUrl": "https://www.hackerrank.com/certificates/08f859ff530",
           "logo": "HackerRank.avif",
           "icon": "Palette",
-          "color": "from-blue-500 to-cyan-500"
+          "color": "from-sky-500 via-cyan-500 to-blue-600"
         },
         {
           "year": "2025",
           "title": "JavaScript (Basic)",
           "issuer": "HackerRank",
-          "description": "Certified understanding of JavaScript fundamentals such as variables, functions, loops, and basic logic.",
-          "skills": ["JavaScript"],
+          "description": "Certified understanding of JavaScript syntax, functions, arrays, objects, and problem-solving fundamentals.",
+          "skills": [
+            "JavaScript",
+            "Programming",
+            "Logic"
+          ],
           "credentialUrl": "https://www.hackerrank.com/certificates/0908c18d580",
           "logo": "HackerRank.avif",
           "icon": "Code",
-          "color": "from-yellow-500 to-orange-500"
+          "color": "from-yellow-400 via-orange-500 to-red-500"
         },
         {
           "year": "2025",
           "title": "Python (Basic)",
           "issuer": "HackerRank",
-          "description": "Covered Python basics including syntax, data types, control flow, and simple problem solving.",
-          "skills": ["Python"],
+          "description": "Covered Python syntax, data structures, control flow, functions, and introductory programming concepts.",
+          "skills": [
+            "Python",
+            "Programming",
+            "Problem Solving"
+          ],
           "credentialUrl": "https://www.hackerrank.com/certificates/d597c643113",
           "logo": "HackerRank.avif",
           "icon": "Terminal",
-          "color": "from-indigo-500 to-purple-500"
-        },
-        {
-          "year": "2025",
-          "title": "JavaScript for Beginners",
-          "issuer": "Simplilearn",
-          "description": "Introductory course focused on JavaScript fundamentals and real-world web development use cases.",
-          "skills": ["JavaScript", "Web Development"],
-          "credentialUrl": "https://simpli.app.link/javascript-beginners-certificate",
-          "logo": "Simplilearn.avif",
-          "icon": "BookOpen",
-          "color": "from-amber-500 to-orange-500"
-        },
-        {
-          "year": "2025",
-          "title": "Introduction to CSS",
-          "issuer": "Simplilearn",
-          "description": "Learned styling fundamentals including selectors, layouts, and responsive design techniques.",
-          "skills": ["CSS", "Web Development"],
-          "credentialUrl": "https://simpli.app.link/introduction-to-css-certificate",
-          "logo": "Simplilearn.avif",
-          "icon": "Layout",
-          "color": "from-sky-500 to-blue-500"
-        },
-        {
-          "year": "2025",
-          "title": "Introduction to Front-End Development",
-          "issuer": "Simplilearn",
-          "description": "Overview of front-end development using HTML, CSS, and JavaScript to build modern web interfaces.",
-          "skills": ["HTML", "CSS", "JavaScript"],
-          "credentialUrl": "https://simpli.app.link/frontend-development-certificate",
-          "logo": "Simplilearn.avif",
-          "icon": "Monitor",
-          "color": "from-pink-500 to-rose-500"
+          "color": "from-violet-500 via-purple-600 to-fuchsia-600"
         },
         {
           "year": "2025",
           "title": "Responsive Web Design",
           "issuer": "freeCodeCamp",
-          "description": "Built responsive layouts using HTML and CSS with a mobile-first approach and modern design practices.",
-          "skills": ["HTML", "CSS", "Responsive Design"],
+          "description": "Built responsive websites using HTML, CSS, Flexbox, Grid, and mobile-first development practices.",
+          "skills": [
+            "HTML",
+            "CSS",
+            "Responsive Design"
+          ],
           "credentialUrl": "https://www.freecodecamp.org/certification/fakhirahmed/responsive-web-design",
           "logo": "freeCodeCamp.avif",
           "icon": "Smartphone",
-          "color": "from-gray-600 to-gray-800"
+          "color": "from-slate-600 via-gray-700 to-zinc-900"
+        },
+        {
+          "year": "2025",
+          "title": "Introduction to Front-End Development",
+          "issuer": "Simplilearn",
+          "description": "Introduced core front-end technologies including HTML, CSS, JavaScript, browser rendering, and UI fundamentals.",
+          "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
+          "credentialUrl": "https://simpli.app.link/frontend-development-certificate",
+          "logo": "Simplilearn.avif",
+          "icon": "Monitor",
+          "color": "from-pink-500 via-rose-500 to-red-500"
+        },
+        {
+          "year": "2025",
+          "title": "JavaScript for Beginners",
+          "issuer": "Simplilearn",
+          "description": "Learned JavaScript fundamentals including DOM manipulation, events, variables, functions, and browser scripting.",
+          "skills": [
+            "JavaScript",
+            "DOM",
+            "Web Development"
+          ],
+          "credentialUrl": "https://simpli.app.link/javascript-beginners-certificate",
+          "logo": "Simplilearn.avif",
+          "icon": "BookOpen",
+          "color": "from-amber-400 via-orange-500 to-red-600"
+        },
+        {
+          "year": "2025",
+          "title": "Introduction to CSS",
+          "issuer": "Simplilearn",
+          "description": "Learned CSS styling techniques including layouts, spacing, typography, animations, and responsive design.",
+          "skills": [
+            "CSS",
+            "Layouts",
+            "Responsive Design"
+          ],
+          "credentialUrl": "https://simpli.app.link/introduction-to-css-certificate",
+          "logo": "Simplilearn.avif",
+          "icon": "Layout",
+          "color": "from-blue-500 via-sky-500 to-cyan-500"
+        },
+        {
+          "year": "2026",
+          "title": "Problem Solving (Basic)",
+          "issuer": "HackerRank",
+          "description": "Validated logical thinking and problem-solving through coding challenges and algorithmic exercises.",
+          "skills": [
+            "Problem Solving",
+            "Algorithms",
+            "Logic"
+          ],
+          "credentialUrl": "",
+          "logo": "HackerRank.avif",
+          "icon": "Puzzle",
+          "color": "from-purple-500 via-fuchsia-500 to-pink-500"
+        },
+        {
+          "year": "2026",
+          "title": "React (Basic)",
+          "issuer": "HackerRank",
+          "description": "Validated React fundamentals including JSX, components, props, state, and hooks.",
+          "skills": [
+            "React.js",
+            "Hooks",
+            "Components"
+          ],
+          "credentialUrl": "",
+          "logo": "HackerRank.avif",
+          "icon": "Atom",
+          "color": "from-cyan-400 via-sky-500 to-indigo-500"
+        },
+        {
+          "year": "2026",
+          "title": "REST API",
+          "issuer": "HackerRank",
+          "description": "Demonstrated understanding of REST architecture, HTTP methods, endpoints, request handling, and API integration.",
+          "skills": [
+            "REST APIs",
+            "HTTP",
+            "Backend"
+          ],
+          "credentialUrl": "",
+          "logo": "HackerRank.avif",
+          "icon": "Webhook",
+          "color": "from-orange-500 via-red-500 to-rose-600"
+        },
+        {
+          "year": "2026",
+          "title": "JavaScript Algorithms and Data Structures",
+          "issuer": "freeCodeCamp",
+          "description": "Completed JavaScript programming challenges focused on algorithms, data structures, and problem solving.",
+          "skills": [
+            "JavaScript",
+            "Algorithms",
+            "Data Structures"
+          ],
+          "credentialUrl": "",
+          "logo": "freeCodeCamp.avif",
+          "icon": "Braces",
+          "color": "from-yellow-500 via-amber-500 to-orange-600"
+        },
+        {
+          "year": "2026",
+          "title": "Front End Development Libraries",
+          "issuer": "freeCodeCamp",
+          "description": "Worked with React, Redux, Bootstrap, and modern front-end libraries to build interactive user interfaces.",
+          "skills": [
+            "React",
+            "Redux",
+            "Bootstrap"
+          ],
+          "credentialUrl": "",
+          "logo": "freeCodeCamp.avif",
+          "icon": "Layers",
+          "color": "from-blue-600 via-indigo-600 to-violet-600"
+        },
+        {
+          "year": "2026",
+          "title": "Back End Development and APIs",
+          "issuer": "freeCodeCamp",
+          "description": "Covered backend development using Node.js, Express.js, MongoDB, REST APIs, and authentication concepts.",
+          "skills": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "REST APIs"
+          ],
+          "credentialUrl": "",
+          "logo": "freeCodeCamp.avif",
+          "icon": "ServerCog",
+          "color": "from-green-500 via-teal-500 to-cyan-600"
         }
       ]
     },

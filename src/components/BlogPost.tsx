@@ -1,7 +1,7 @@
 "use client";
 
 import type { BlogPost } from "@/lib/types";
-import BlogContent from "./BlogContent";
+import BlogContent from "@/components/BlogContent";
 
 interface BlogPostProps {
   post: BlogPost;
@@ -51,9 +51,9 @@ export default function BlogPostComponent({ post }: BlogPostProps) {
         <>
           <div className="border-b border-slate-800 my-12" />
           <div className="flex flex-wrap gap-2">
-            {post.tags.map((tag, index) => (
+            {post.tags.map((tag) => (
               <span
-                key={index}
+                key={tag}
                 className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm rounded-lg transition-colors cursor-pointer"
               >
                 #{tag}

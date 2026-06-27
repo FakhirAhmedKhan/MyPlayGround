@@ -1,6 +1,20 @@
-import BlogCard from "../../components/BlogCard";
-import SectionHeader from "../../components/SectionHeader";
-import { getBlogPosts } from "../../lib/blog";
+import type { Metadata } from "next";
+import BlogCard from "@/components/BlogCard";
+import SectionHeader from "@/components/SectionHeader";
+import { getBlogPosts } from "@/lib/blog";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Thoughts on web development, React, Next.js, TypeScript, and modern software engineering.",
+  alternates: { canonical: "https://fakhirahmedkhan.dev/blog" },
+  openGraph: {
+    title: "Blog — Fakhir Ahmed Khan",
+    description:
+      "Thoughts on web development, React, Next.js, TypeScript, and modern software engineering.",
+    url: "https://fakhirahmedkhan.dev/blog",
+  },
+};
 
 const blogs = getBlogPosts();
 

@@ -48,9 +48,9 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
         {/* Tags */}
         {post.tags && post.tags.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mt-4 pt-4 border-t border-slate-700/30">
-            {post.tags.slice(0, 3).map((tag, i) => (
+            {post.tags.slice(0, 3).map((tag) => (
               <span
-                key={i}
+                key={tag}
                 className="text-xs text-slate-500 px-2 py-0.5 bg-slate-800/30 rounded"
               >
                 #{tag}

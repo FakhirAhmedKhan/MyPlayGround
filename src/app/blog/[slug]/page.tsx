@@ -1,11 +1,36 @@
+import type { Metadata } from "next";
 import BlogPostComponent from "@/components/BlogPost";
 import { notFound } from "next/navigation";
 import { getBlogPosts, getAllBlogIds } from "@/lib/blog";
+import Link from "next/link";
 
 interface BlogPostPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export async function generateMetadata(
+  { params }: BlogPostPageProps,
+): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogPosts().find((b) => b.id === slug);
+  if (!post) return {};
+
+  const url = `https://fakhirahmedkhan.dev/blog/${slug}`;
+  return {
+    title: post.title,
+    description: post.description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url,
+      type: "article",
+      publishedTime: post.date,
+      tags: post.tags,
+    },
+  };
 }
 
 export async function generateStaticParams() {
@@ -29,13 +54,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Navigation Links */}
         <div className="mt-20 pt-12 border-t border-slate-800">
-          <a
+          <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
           >
             <span>←</span>
             <span>Back to Blog</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

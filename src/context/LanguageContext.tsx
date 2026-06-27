@@ -1,12 +1,15 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useMemo,
+} from "react";
 import type { PortfolioData } from "@/lib/types";
 import enData from "@/data/portfolio.json";
 import skillIconData from "@/data/SkillIcon.json";
-import urData from "@/data/Urdu.json";
-import arData from "@/data/Arabic.json";
-import esData from "@/data/Español.json";
 
 type Language = "en" | "ur" | "ar" | "es";
 
@@ -14,7 +17,6 @@ interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: PortfolioData;
-  skillIconData: any;
   isRTL: boolean;
 }
 
@@ -22,81 +24,104 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined,
 );
 
-const translations: Record<Language, any> = {
-  en: enData,
-  ur: urData,
-  ar: arData,
-  es: esData,
-};
+// Dynamic imports — translation files are NOT in the initial bundle.
+// They are fetched only when the user switches language.
+async function loadTranslation(lang: Language): Promise<Record<string, unknown>> {
+  switch (lang) {
+    case "ur":
+      return (await import("@/data/Urdu.json")).default as Record<string, unknown>;
+    case "ar":
+      return (await import("@/data/Arabic.json")).default as Record<string, unknown>;
+    case "es":
+      return (await import("@/data/Español.json")).default as Record<string, unknown>;
+    default:
+      return {};
+  }
+}
+
+function mergeData(
+  base: Record<string, unknown>,
+  override: Record<string, unknown>,
+): Record<string, unknown> {
+  const result: Record<string, unknown> = { ...base };
+  for (const key in override) {
+    const ov = override[key];
+    const bv = base[key];
+    if (ov && typeof ov === "object" && !Array.isArray(ov)) {
+      result[key] = mergeData(
+        (bv && typeof bv === "object" ? bv : {}) as Record<string, unknown>,
+        ov as Record<string, unknown>,
+      );
+    } else if (Array.isArray(ov) && Array.isArray(bv)) {
+      result[key] = (bv as Record<string, unknown>[]).map((item, index) => {
+        const overrideItem =
+          (item["id"] !== undefined &&
+            (ov as Record<string, unknown>[]).find(
+              (o) => o["id"] === item["id"],
+            )) ||
+          (ov as Record<string, unknown>[])[index];
+        return { ...item, ...(overrideItem ?? {}) };
+      });
+    } else {
+      result[key] = ov;
+    }
+  }
+  return result;
+}
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguageState] = useState<Language>("en");
+  // Holds the loaded translation override; empty object = English (no override).
+  const [translationOverride, setTranslationOverride] = useState<
+    Record<string, unknown>
+  >({});
 
-  // Load language from localStorage
+  // On mount: restore saved language and lazy-load its translation.
   useEffect(() => {
-    const savedLang = localStorage.getItem("language") as Language;
-    if (savedLang && translations[savedLang]) {
-      setLanguage(savedLang);
+    const saved = localStorage.getItem("language") as Language | null;
+    if (saved && saved !== "en") {
+      setLanguageState(saved);
+      loadTranslation(saved).then(setTranslationOverride);
     }
   }, []);
 
-  const handleSetLanguage = (lang: Language) => {
-    setLanguage(lang);
-    localStorage.setItem("language", lang);
-    document.documentElement.dir =
-      lang === "ar" || lang === "ur" ? "rtl" : "ltr";
-    document.documentElement.lang = lang;
-  };
-
+  // Sync dir + lang attribute whenever language changes.
   useEffect(() => {
     document.documentElement.dir =
       language === "ar" || language === "ur" ? "rtl" : "ltr";
     document.documentElement.lang = language;
   }, [language]);
 
-  // Deep merge function to ensure we always have data even if translation is partial
-  const mergeData = (base: any, override: any) => {
-    const result = { ...base };
-    for (const key in override) {
-      if (
-        override[key] &&
-        typeof override[key] === "object" &&
-        !Array.isArray(override[key])
-      ) {
-        result[key] = mergeData(base[key] || {}, override[key]);
-      } else if (Array.isArray(override[key])) {
-        // For arrays like projects items, we need to merge items by id if possible,
-        // or just use the override if it's the right length
-        if (base[key] && Array.isArray(base[key])) {
-          result[key] = base[key].map((item: any, index: number) => {
-            const overrideItem =
-              (item.id !== undefined &&
-                override[key].find((o: any) => o.id === item.id)) ||
-              override[key][index];
-            return { ...item, ...overrideItem };
-          });
-        } else {
-          result[key] = override[key];
-        }
-      } else {
-        result[key] = override[key];
-      }
+  const handleSetLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    localStorage.setItem("language", lang);
+    if (lang === "en") {
+      setTranslationOverride({});
+    } else {
+      loadTranslation(lang).then(setTranslationOverride);
     }
-    return result;
   };
 
-  const mergedBase = mergeData(enData, translations[language]);
-  const currentT = {
-    ...mergedBase,
-    SkillIcon: skillIconData,
-    sections: {
-      ...mergedBase.sections,
-      skills: {
-        ...mergedBase.sections.skills,
-        items: skillIconData.items,
+  // mergeData is only recomputed when translationOverride changes (i.e. on language switch).
+  // English users pay zero cost here after the initial mount.
+  const currentT = useMemo((): PortfolioData => {
+    const merged = mergeData(
+      enData as unknown as Record<string, unknown>,
+      translationOverride,
+    );
+    return {
+      ...merged,
+      sections: {
+        ...(merged["sections"] as Record<string, unknown>),
+        skills: {
+          ...((merged["sections"] as Record<string, Record<string, unknown>>)
+            ?.skills ?? {}),
+          items: skillIconData.items,
+        },
       },
-    },
-  } as PortfolioData;
+      SkillIcon: skillIconData,
+    } as unknown as PortfolioData;
+  }, [translationOverride]);
 
   return (
     <LanguageContext.Provider
@@ -104,7 +129,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         language,
         setLanguage: handleSetLanguage,
         t: currentT,
-        skillIconData: skillIconData,
         isRTL: language === "ar" || language === "ur",
       }}
     >

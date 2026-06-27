@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: meta.name }],
   creator: meta.name,
+  alternates: {
+    canonical: meta.url,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -28,21 +31,12 @@ export const metadata: Metadata = {
     siteName: `${meta.name} Portfolio`,
     title: `${meta.name} — Full-Stack Developer`,
     description: meta.description,
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: `${meta.name} Portfolio`,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${meta.name} — Full-Stack Developer`,
     description: meta.description,
     creator: meta.twitterHandle,
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
