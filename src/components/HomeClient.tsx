@@ -35,7 +35,7 @@ export default function HomeClient() {
       {/* Stats strip */}
       <section id="home-stats" className="section-container pt-0 pb-0" aria-label="Quick stats">
         <div ref={statsRef} className="reveal">
-          <div
+          {/* <div
             className="grid grid-cols-2 sm:grid-cols-4 gap-4 rounded-2xl p-6"
             style={{
               background: "rgba(255,255,255,0.02)",
@@ -58,7 +58,7 @@ export default function HomeClient() {
                 <div className="text-slate-500 text-xs font-medium uppercase tracking-wide">{stat.label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
