@@ -147,55 +147,46 @@
           "description": "A simple Landing page for my ATS tools with good UI/UX.",
           "codeLink": "https://github.com/FakhirAhmedKhan/Landing-Page--For-ATS-Calculator",
           "imageUrl": "/Landing-page.avif",
-          "category": "Web"
-        },
-        {
-          "id": 31,
-          "title": "LinkedIn Analyzer Extension",
-          "link": "https://example.com",
-          "description": "A browser extension that analyzes LinkedIn profiles and provides useful insights to improve profile quality, visibility, and professional presentation.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/linkedin-analyzer-extension",
-          "imageUrl": "https://placehold.co/1200x700/0f172a/ffffff?text=LinkedIn+Analyzer",
-          "category": "SAAS"
-        },
-        {
-          "id": 32,
-          "title": "PriceScout AI",
-          "link": "https://example.com",
-          "description": "A SaaS product price finder that helps users compare product prices, track better deals, and make smarter purchase decisions using AI-assisted product analysis.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/pricescout-frontend",
-          "imageUrl": "https://placehold.co/1200x700/0f172a/ffffff?text=PriceScout+AI",
-          "category": "SAAS"
-        },
-        {
-          "id": 33,
-          "title": "Data Insight Assistant",
-          "link": "https://example.com",
-          "description": "An AI-powered data analysis dashboard that helps users upload datasets, explore insights, view charts, analyze statistics, and understand data more easily.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/DIA-FrontEnd",
-          "imageUrl": "https://placehold.co/1200x700/0f172a/ffffff?text=Data+Insight+Assistant",
-          "category": "SAAS"
-        },
-        {
-          "id": 34,
-          "title": "HackerRank Clone",
-          "link": "https://example.com",
-          "description": "A coding practice and assessment platform inspired by HackerRank, designed for solving programming challenges, viewing problems, and improving coding skills.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/pricescout-frontend",
-          "imageUrl": "https://placehold.co/1200x700/0f172a/ffffff?text=HackerRank+Clone",
-          "category": "SAAS"
-        },
-        {
-          "id": 35,
-          "title": "AI Project Cost Estimator",
-          "link": "https://example.com",
-          "description": "A SaaS-style AI cost calculator that helps estimate project development cost based on features, complexity, timeline, and selected technology requirements.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/AICostCalculator",
-          "imageUrl": "https://placehold.co/1200x700/0f172a/ffffff?text=AI+Project+Cost+Estimator",
           "category": "SAAS"
         },
         {
           "id": 2,
+          "title": "LinkedIn Analyzer Extension",
+          "link": "https://github.com/FakhirAhmedKhan/linkedin-analyzer-extension",
+          "description": "A browser extension that analyzes LinkedIn profiles and provides useful insights to improve profile quality, visibility, and professional presentation.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/linkedin-analyzer-extension",
+          "imageUrl": "/LinkedInAnalyzer.png",
+          "category": "SAAS"
+        },
+        {
+          "id": 3,
+          "title": "PriceScout AI",
+          "link": "https://github.com/FakhirAhmedKhan/pricescout-frontend",
+          "description": "A SaaS product price finder that helps users compare product prices, track better deals, and make smarter purchase decisions using AI-assisted product analysis.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/pricescout-frontend",
+          "imageUrl": "/PriceScoutAI.png",
+          "category": "SAAS"
+        },
+        {
+          "id": 4,
+          "title": "Data Insight Assistant",
+          "link": "https://example.com",
+          "description": "An AI-powered data analysis dashboard that helps users upload datasets, explore insights, view charts, analyze statistics, and understand data more easily.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/DIA-FrontEnd",
+          "imageUrl": "/DIA.png",
+          "category": "SAAS"
+        },
+        {
+          "id": 5,
+          "title": "HackerRank Clone",
+          "link": "https://example.com",
+          "description": "A coding practice and assessment platform inspired by HackerRank, designed for solving programming challenges, viewing problems, and improving coding skills.",
+          "codeLink": "https://github.com/FakhirAhmedKhan/pricescout-frontend",
+          "imageUrl": "/HackerRank.png",
+          "category": "SAAS"
+        },
+        {
+          "id": 6,
           "title": "ATS Calculator",
           "link": "https://fakhirahmedkhan.github.io/ATS-Calculator/",
           "description": "An ATS (Applicant Tracking System) calculator is a tool that assesses your resume's",
@@ -204,16 +195,7 @@
           "category": "SAAS"
         },
         {
-          "id": 19,
-          "title": "Calculator in React",
-          "link": "https://calculator-in-react-ten.vercel.app/",
-          "description": "A simple app built with React that performs basic math operations. It uses components and state to update results.",
-          "codeLink": "https://github.com/FakhirAhmedKhan/Calculator-in-React",
-          "imageUrl": "/Calculator.avif",
-          "category": "React"
-        },
-        {
-          "id": 29,
+          "id": 7,
           "title": "Inventory Management System",
           "link": "https://github.com/FakhirAhmedKhan",
           "description": "A full-featured inventory tracking system with product management, stock alerts, and reporting dashboard.",
@@ -222,7 +204,7 @@
           "category": "SAAS"
         },
         {
-          "id": 30,
+          "id": 8,
           "title": "Event Management System",
           "link": "https://github.com/FakhirAhmedKhan",
           "description": "An event scheduling and management platform with attendee registration, calendar integration, and notifications.",
@@ -231,7 +213,7 @@
           "category": "SAAS"
         },
         {
-          "id": 31,
+          "id": 9,
           "title": "Smart Reasoning System",
           "link": "https://smart-reasoning-system.vercel.app/",
           "description": "Smart Ai Agent Tool it simplefy your Answers",
@@ -240,7 +222,7 @@
           "category": "SAAS"
         },
         {
-          "id": 32,
+          "id": 10,
           "title": "AI Cost Calculator",
           "link": "https://ai-cost-calculator-nu.vercel.app/",
           "description": "Ai Cost Calculator is a tool that helps you calculate the cost of using AI models.",
@@ -249,7 +231,7 @@
           "category": "SAAS"
         },
         {
-          "id": 33,
+          "id": 11,
           "title": "AI Agent Platform",
           "link": "https://ai-agent-platform-bdsb.vercel.app/",
           "description": "Ai Agent Platform is a tool that helps you create and manage AI agents.",

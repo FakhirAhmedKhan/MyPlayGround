@@ -5,23 +5,55 @@ import SectionHeader from "@/components/SectionHeader";
 import ProjectCard from "@/components/ProjectCard";
 import { useLanguage } from "@/context/LanguageContext";
 
+/* Full display labels for each raw category key */
+const categoryLabels: Record<string, string> = {
+  // All: "All",
+  SAAS: "Software as a Service",
+  Web: "Web",
+  Tool: "Tool",
+  Game: "Game",
+  Python: "Python",
+  React: "React",
+  JavaScript: "JavaScript",
+  Doc: "Docs",
+};
+
+/** Renders a label where every letter animates up on hover */
+function AnimatedLabel({ text, isActive }: { text: string; isActive: boolean }) {
+  return (
+    <span className="inline-flex" aria-hidden="true">
+      {text.split("").map((ch, i) => (
+        <span
+          key={i}
+          className="inline-block transition-transform duration-200 group-hover:-translate-y-[3px]"
+          style={{
+            transitionDelay: `${i * 28}ms`,
+            /* already settled when active so no re-animate on repeat click */
+            transform: isActive ? "translateY(-2px)" : undefined,
+          }}
+        >
+          {ch === " " ? " " : ch}
+        </span>
+      ))}
+    </span>
+  );
+}
+
 export default function ProjectsPage() {
-  const [activeCategory, setActiveCategory] = useState("All");
   const { t, isRTL } = useLanguage();
   const projectsData = t.sections.projects;
 
-  const categories = useMemo(() => {
-    return [
-      "All",
-      ...Array.from(new Set(projectsData.items.map((p) => p.category.trim()))),
-    ];
-  }, [projectsData.items]);
+  const categories = useMemo(
+    () => Array.from(new Set(projectsData.items.map((p) => p.category.trim()))),
+    [projectsData.items],
+  );
 
-  // Filter projects
-  const filteredProjects = useMemo(() => {
-    if (activeCategory === "All") return projectsData.items;
-    return projectsData.items.filter((p) => p.category === activeCategory);
-  }, [activeCategory, projectsData.items]);
+  const [activeCategory, setActiveCategory] = useState<string>(() => categories[0] ?? "SAAS");
+
+  const filteredProjects = useMemo(
+    () => projectsData.items.filter((p) => p.category === activeCategory),
+    [activeCategory, projectsData.items],
+  );
 
   return (
     <div
@@ -59,7 +91,7 @@ export default function ProjectsPage() {
         >
           {categories.map((cat) => {
             const count =
-              cat === "All"
+              cat === ""
                 ? projectsData.items.length
                 : projectsData.items.filter((p) => p.category === cat).length;
 
@@ -69,31 +101,29 @@ export default function ProjectsPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`group relative px-5 py-2.5 text-sm font-semibold rounded-2xl transition-all duration-500 overflow-hidden ${
-                  isActive
+                className={`group relative px-5 py-2.5 text-sm font-semibold rounded-2xl transition-all duration-500 overflow-hidden ${isActive
                     ? "text-white shadow-xl shadow-violet-500/20 active:scale-95"
                     : "text-slate-400 hover:text-slate-200 hover:bg-white/5 active:scale-95"
-                }`}
+                  }`}
               >
                 {/* Active Indicator Background */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br from-violet-600 to-blue-600 transition-opacity duration-500 ${
-                    isActive ? "opacity-100" : "opacity-0 invisible"
-                  }`}
+                  className={`absolute inset-0 bg-gradient-to-br from-violet-600 to-blue-600 transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0 invisible"
+                    }`}
                 />
 
                 {/* Border Effect */}
                 <div
-                  className={`absolute inset-0 border transition-colors duration-500 rounded-2xl ${
-                    isActive
+                  className={`absolute inset-0 border transition-colors duration-500 rounded-2xl ${isActive
                       ? "border-violet-400/50"
                       : "border-white/10 group-hover:border-white/20"
-                  }`}
+                    }`}
                 />
 
                 <span className="relative z-10 flex items-center gap-2">
-                  {cat}
-                  <span
+                  {/* <span className="sr-only">{categoryLabels[cat] ?? cat}</span> */}
+                 <AnimatedLabel text={categoryLabels[cat] ?? cat} isActive={isActive} />
+                  {/* <span
                     className={`text-[10px] px-1.5 py-0.5 rounded-md transition-colors duration-500 ${
                       isActive
                         ? "bg-white/20 text-white"
@@ -101,7 +131,7 @@ export default function ProjectsPage() {
                     }`}
                   >
                     {count}
-                  </span>
+                  </span> */}
                 </span>
               </button>
             );
