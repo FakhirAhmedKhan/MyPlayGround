@@ -149,17 +149,6 @@ export default function HomeClient() {
               boxShadow: "inset 0 1px 0 rgba(255,255,255,0.05)",
             }}
           >
-            {/* Orbs */}
-            <div
-              className="absolute -top-24 -right-24 w-72 h-72 rounded-full pointer-events-none"
-              style={{ background: "rgba(109,40,217,0.15)", filter: "blur(70px)" }}
-              aria-hidden="true"
-            />
-            <div
-              className="absolute -bottom-16 -left-16 w-56 h-56 rounded-full pointer-events-none"
-              style={{ background: "rgba(37,99,235,0.1)", filter: "blur(60px)" }}
-              aria-hidden="true"
-            />
 
             {/* Availability badge */}
             <div className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-7 uppercase tracking-[0.1em] reveal-delay-1"

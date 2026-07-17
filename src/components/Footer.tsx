@@ -56,17 +56,6 @@ export default function Footer() {
         aria-hidden="true"
       />
 
-      {/* Background orbs */}
-      <div
-        className="absolute -left-32 -top-32 w-80 h-80 rounded-full opacity-[0.07] pointer-events-none"
-        style={{ background: "rgba(109,40,217,1)", filter: "blur(100px)" }}
-        aria-hidden="true"
-      />
-      <div
-        className="absolute -right-20 bottom-0 w-64 h-64 rounded-full opacity-[0.06] pointer-events-none"
-        style={{ background: "rgba(37,99,235,1)", filter: "blur(80px)" }}
-        aria-hidden="true"
-      />
 
       <div className="relative max-w-[1240px] mx-auto px-6 pt-16 pb-10">
 

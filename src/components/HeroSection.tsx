@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import type { HomeSection } from "@/lib/types";
 import { useLanguage } from "@/context/LanguageContext";
+import HeroName from "./HeroName";
 
 function SocialIcon({ label }: { label: string }) {
   const lower = label.toLowerCase();
@@ -75,27 +76,19 @@ export default function HeroSection({ data }: HeroSectionProps) {
   return (
     <section
       id="hero-section"
-      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${isRTL ? "font-urdu" : ""}`}
+      className={`relative min-h-screen flex items-center justify-center ${isRTL ? "font-urdu" : ""}`}
       aria-label="Hero section"
     >
-      {/* ── Deep layered background ── */}
+      {/* ── Static background — no animated blurs (perf) ── */}
       <div className="absolute inset-0" aria-hidden="true"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(109,40,217,0.18) 0%, transparent 60%)," +
-            "radial-gradient(ellipse 60% 40% at 90% 50%, rgba(37,99,235,0.1) 0%, transparent 55%)," +
-            "radial-gradient(ellipse 50% 50% at 10% 90%, rgba(6,182,212,0.07) 0%, transparent 60%)," +
+            "radial-gradient(ellipse 90% 70% at 20% 30%, rgba(109,40,217,0.22) 0%, transparent 55%)," +
+            "radial-gradient(ellipse 70% 50% at 80% 60%, rgba(37,99,235,0.14) 0%, transparent 50%)," +
+            "radial-gradient(ellipse 60% 60% at 50% 100%, rgba(6,182,212,0.08) 0%, transparent 55%)," +
             "rgb(7,7,13)",
         }}
       />
-
-      {/* Animated orbs */}
-      <div className="absolute -left-40 top-1/4 w-[600px] h-[600px] rounded-full opacity-20 animate-float-slow" aria-hidden="true"
-        style={{ background: "rgba(109,40,217,0.45)", filter: "blur(120px)" }} />
-      <div className="absolute -right-32 bottom-1/4 w-[500px] h-[500px] rounded-full opacity-15 animate-float" aria-hidden="true"
-        style={{ background: "rgba(37,99,235,0.4)", filter: "blur(100px)", animationDelay: "2s" }} />
-      <div className="absolute left-1/2 -top-20 w-[400px] h-[400px] rounded-full opacity-10" aria-hidden="true"
-        style={{ background: "rgba(6,182,212,0.35)", filter: "blur(100px)" }} />
 
       {/* Fine dot grid */}
       <div className="absolute inset-0 opacity-[0.025]" aria-hidden="true"
@@ -148,24 +141,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
         </p>
 
         {/* Name — hero-size with animated gradient */}
-        <div
-          className="mb-8 animate-slide-in"
-          style={{ animationDelay: "0.25s", animationFillMode: "both" }}
-        >
-          <h1
-            className="font-black leading-[0.95] tracking-[-0.04em]"
-            style={{ fontSize: "clamp(3.25rem, 9vw, 7.5rem)" }}
-          >
-            <span className="gradient-text-hero">{data.name.split(" ")[0]}</span>
-            <br />
-            <span
-              className="text-slate-100"
-              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.08)" }}
-            >
-              {data.name.split(" ").slice(1).join(" ")}
-            </span>
-          </h1>
-        </div>
+        <HeroName data={data} />
 
         {/* Typewriter */}
         <div
