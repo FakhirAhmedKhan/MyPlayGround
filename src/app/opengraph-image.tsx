@@ -17,7 +17,7 @@ export default function OgImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #0a0a0f 0%, #13102b 50%, #0a0a0f 100%)",
+          background: "linear-gradient(135deg, #030a05 0%, #051a0a 50%, #030a05 100%)",
           fontFamily: "sans-serif",
         }}
       >
@@ -28,7 +28,7 @@ export default function OgImage() {
             width: 500,
             height: 500,
             borderRadius: "50%",
-            background: "rgba(139,92,246,0.18)",
+            background: "rgba(34,197,94,0.18)",
             filter: "blur(80px)",
             top: -100,
             left: -100,
@@ -54,7 +54,7 @@ export default function OgImage() {
             width: 72,
             height: 72,
             borderRadius: 18,
-            background: "linear-gradient(135deg, #7c3aed, #2563eb)",
+            background: "linear-gradient(135deg, #14532d, #059669)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -101,9 +101,9 @@ export default function OgImage() {
               style={{
                 padding: "8px 20px",
                 borderRadius: 999,
-                background: "rgba(139,92,246,0.15)",
-                border: "1px solid rgba(139,92,246,0.35)",
-                color: "#a78bfa",
+                background: "rgba(20,83,45,0.18)",
+                border: "1px solid rgba(34,197,94,0.35)",
+                color: "#86efac",
                 fontSize: 18,
                 fontWeight: 600,
               }}

@@ -51,7 +51,7 @@ export default function Footer() {
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent 0%, rgba(109,40,217,0.5) 30%, rgba(37,99,235,0.5) 70%, transparent 100%)",
+            "linear-gradient(90deg, transparent 0%, rgba(34,197,94,0.4) 30%, rgba(16,185,129,0.4) 70%, transparent 100%)",
         }}
         aria-hidden="true"
       />
@@ -64,9 +64,9 @@ export default function Footer() {
           <span
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-4 uppercase tracking-[0.1em]"
             style={{
-              background: "rgba(109,40,217,0.1)",
-              border: "1px solid rgba(139,92,246,0.28)",
-              color: "#c4b5fd",
+              background: "rgba(20,83,45,0.12)",
+              border: "1px solid rgba(34,197,94,0.28)",
+              color: "#86efac",
             }}
           >
             <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -88,7 +88,7 @@ export default function Footer() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`https://ghchart.rshah.org/7c3aed/${footer.githubUsername}`}
+            src={`https://ghchart.rshah.org/16a34a/${footer.githubUsername}`}
             alt={`${meta.name} GitHub contribution chart`}
             className="w-full h-auto rounded-lg opacity-80"
             loading="lazy"
@@ -103,8 +103,8 @@ export default function Footer() {
               <div
                 className="w-9 h-9 rounded-xl flex items-center justify-center text-white font-black text-sm"
                 style={{
-                  background: "linear-gradient(135deg, #6d28d9, #2563eb)",
-                  boxShadow: "0 4px 16px rgba(109,40,217,0.4)",
+                  background: "linear-gradient(135deg, #14532d, #059669)",
+                  boxShadow: "0 4px 16px rgba(20,83,45,0.5)",
                 }}
               >
                 FK
@@ -137,9 +137,9 @@ export default function Footer() {
                   }}
                   onMouseEnter={(e) => {
                     const el = e.currentTarget as HTMLElement;
-                    el.style.background = "rgba(139,92,246,0.12)";
-                    el.style.borderColor = "rgba(139,92,246,0.3)";
-                    el.style.color = "#c4b5fd";
+                    el.style.background = "rgba(34,197,94,0.12)";
+                    el.style.borderColor = "rgba(34,197,94,0.3)";
+                    el.style.color = "#86efac";
                   }}
                   onMouseLeave={(e) => {
                     const el = e.currentTarget as HTMLElement;
@@ -168,7 +168,7 @@ export default function Footer() {
                   >
                     <span
                       className="w-1 h-1 rounded-full transition-all duration-200 group-hover:w-3"
-                      style={{ background: "rgba(139,92,246,0.6)" }}
+                      style={{ background: "rgba(34,197,94,0.6)" }}
                       aria-hidden="true"
                     />
                     {link.label}

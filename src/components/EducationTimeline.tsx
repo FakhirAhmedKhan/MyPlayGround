@@ -43,7 +43,7 @@ function getGradientColors(colorClass: string): string {
     "from-amber-500 to-orange-500":  "#f59e0b, #f97316",
     "from-rose-500 to-pink-500":     "#f43f5e, #ec4899",
   };
-  return map[colorClass] ?? "#7c3aed, #2563eb";
+  return map[colorClass] ?? "#15803d, #059669";
 }
 
 function getGlowColor(colorClass: string): string {
@@ -56,7 +56,7 @@ function getGlowColor(colorClass: string): string {
     "from-amber-500 to-orange-500":  "rgba(245,158,11,0.35)",
     "from-rose-500 to-pink-500":     "rgba(244,63,94,0.35)",
   };
-  return map[colorClass] ?? "rgba(139,92,246,0.35)";
+  return map[colorClass] ?? "rgba(34,197,94,0.35)";
 }
 
 function InstitutionLogo({ src, alt, gradient }: { src: string; alt: string; gradient: string }) {
@@ -127,7 +127,7 @@ function TimelineItem({ item, index }: { item: EducationItem; index: number }) {
       <div
         className="flex-1 mb-8 rounded-2xl p-6 transition-all duration-400 cursor-default"
         style={{
-          background: hovered ? "rgba(139,92,246,0.055)" : "rgba(255,255,255,0.026)",
+          background: hovered ? "rgba(34,197,94,0.055)" : "rgba(255,255,255,0.026)",
           border: hovered ? `1px solid ${glow.replace("0.35","0.3")}` : "1px solid rgba(255,255,255,0.07)",
           boxShadow: hovered
             ? `0 20px 50px ${glow.replace("0.35","0.14")}, inset 0 1px 0 rgba(255,255,255,0.07)`
@@ -206,7 +206,7 @@ export default function EducationTimeline({ items }: EducationTimelineProps) {
         className={`absolute top-4 bottom-4 w-px hidden sm:block ${isRTL ? "right-[30px]" : "left-[30px]"}`}
         style={{
           background:
-            "linear-gradient(to bottom, rgba(139,92,246,0.0), rgba(139,92,246,0.35) 15%, rgba(59,130,246,0.25) 70%, transparent)",
+            "linear-gradient(to bottom, rgba(34,197,94,0.0), rgba(34,197,94,0.35) 15%, rgba(16,185,129,0.25) 70%, transparent)",
         }}
         aria-hidden="true"
       />

@@ -7,7 +7,7 @@ export default function NotFound() {
         <div
           className="text-8xl font-black mb-4"
           style={{
-            background: "linear-gradient(135deg, #a78bfa, #60a5fa)",
+            background: "linear-gradient(135deg, #4ade80, #10b981)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",

@@ -5,8 +5,8 @@ export default function Loading() {
         <div
           className="w-10 h-10 rounded-full border-2 border-transparent animate-spin"
           style={{
-            borderTopColor: "#a78bfa",
-            borderRightColor: "#60a5fa",
+            borderTopColor: "#4ade80",
+            borderRightColor: "#10b981",
           }}
         />
         <span className="text-slate-500 text-sm">Loading…</span>

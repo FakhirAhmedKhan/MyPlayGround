@@ -12,8 +12,6 @@ export default function SkillCard({ skill, index }: SkillCardProps) {
   const [imgError, setImgError] = useState(false);
   const [hovered, setHovered] = useState(false);
 
-  const delay = (index % 12) * 30;
-
   return (
     <div
       id={`skill-card-${skill.name.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
@@ -21,16 +19,16 @@ export default function SkillCard({ skill, index }: SkillCardProps) {
       aria-label={skill.name}
       className="group relative flex flex-col items-center gap-2.5 p-3.5 rounded-2xl cursor-default"
       style={{
-        background: hovered ? "rgba(139,92,246,0.07)" : "rgba(255,255,255,0.028)",
+        background: hovered ? "rgba(34,197,94,0.07)" : "rgba(255,255,255,0.028)",
         border: hovered
-          ? "1px solid rgba(139,92,246,0.3)"
+          ? "1px solid rgba(34,197,94,0.3)"
           : "1px solid rgba(255,255,255,0.07)",
         boxShadow: hovered
-          ? "0 16px 40px rgba(139,92,246,0.15), inset 0 1px 0 rgba(255,255,255,0.06)"
+          ? "0 16px 40px rgba(34,197,94,0.15), inset 0 1px 0 rgba(255,255,255,0.06)"
           : "inset 0 1px 0 rgba(255,255,255,0.04)",
         transform: hovered ? "translateY(-5px) scale(1.04)" : "translateY(0) scale(1)",
-        transition: "all 0.3s cubic-bezier(0.4,0,0.2,1)",
-        transitionDelay: `${delay}ms`,
+        /* No transitionDelay on hover — delay only applies at component mount via CSS */
+        transition: "transform 0.25s cubic-bezier(0.4,0,0.2,1), opacity 0.25s cubic-bezier(0.4,0,0.2,1), background 0.2s ease, border-color 0.2s ease",
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -40,7 +38,7 @@ export default function SkillCard({ skill, index }: SkillCardProps) {
         <div
           className="absolute inset-0 rounded-2xl pointer-events-none"
           style={{
-            background: "radial-gradient(circle at 50% 30%, rgba(139,92,246,0.12), transparent 70%)",
+            background: "radial-gradient(circle at 50% 30%, rgba(34,197,94,0.12), transparent 70%)",
           }}
           aria-hidden="true"
         />
@@ -51,10 +49,10 @@ export default function SkillCard({ skill, index }: SkillCardProps) {
         className="relative w-11 h-11 rounded-xl flex items-center justify-center p-2"
         style={{
           background: hovered
-            ? "rgba(139,92,246,0.12)"
+            ? "rgba(34,197,94,0.12)"
             : "rgba(255,255,255,0.05)",
           border: hovered
-            ? "1px solid rgba(139,92,246,0.2)"
+            ? "1px solid rgba(34,197,94,0.2)"
             : "1px solid rgba(255,255,255,0.06)",
           transition: "all 0.3s ease",
         }}
@@ -73,7 +71,7 @@ export default function SkillCard({ skill, index }: SkillCardProps) {
         ) : (
           <span
             className="text-[10px] font-black text-center leading-none"
-            style={{ color: hovered ? "#c4b5fd" : "#94a3b8" }}
+            style={{ color: hovered ? "#86efac" : "#94a3b8" }}
           >
             {skill.name.slice(0, 2).toUpperCase()}
           </span>

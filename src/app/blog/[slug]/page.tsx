@@ -56,7 +56,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="mt-20 pt-12 border-t border-slate-800">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+            className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
           >
             <span>←</span>
             <span>Back to Blog</span>

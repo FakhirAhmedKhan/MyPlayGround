@@ -72,7 +72,7 @@ export default function Navbar() {
       <div
         className="fixed top-0 left-0 right-0 z-[60] h-[2px] origin-left"
         style={{
-          background: "linear-gradient(90deg, #7c3aed, #2563eb, #06b6d4)",
+          background: "linear-gradient(90deg, #15803d, #059669, #34d399)",
           transform: `scaleX(${scrollProgress})`,
           transition: "transform 0.1s linear",
           opacity: scrollProgress > 0.01 ? 1 : 0,
@@ -81,18 +81,18 @@ export default function Navbar() {
       />
 
       <header
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+        className="fixed top-0 left-0 right-0 z-50"
         style={{
           paddingTop: "2px",
-          background: scrolled
-            ? "rgba(7, 7, 13, 0.88)"
-            : "transparent",
+          background: scrolled ? "rgba(7, 7, 13, 0.88)" : "transparent",
           backdropFilter: scrolled ? "blur(28px) saturate(180%)" : "none",
           WebkitBackdropFilter: scrolled ? "blur(28px) saturate(180%)" : "none",
           borderBottom: scrolled
             ? "1px solid rgba(255,255,255,0.06)"
             : "1px solid transparent",
           boxShadow: scrolled ? "0 4px 32px rgba(0,0,0,0.35)" : "none",
+          transition:
+            "background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease",
         }}
       >
         <div className="max-w-[1240px] mx-auto px-6 h-16 flex items-center justify-between">
@@ -106,21 +106,17 @@ export default function Navbar() {
             <div
               className="w-9 h-9 rounded-xl flex items-center justify-center text-white font-black text-sm relative overflow-hidden"
               style={{
-                background: "linear-gradient(135deg, #6d28d9, #2563eb)",
-                boxShadow: "0 4px 16px rgba(109,40,217,0.45)",
+                background: "linear-gradient(135deg, #14532d, #059669)",
+                boxShadow: "0 4px 16px rgba(20,83,45,0.5)",
               }}
             >
-              {/* Shine */}
               <span
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(255,255,255,0.18), transparent)",
-                }}
+                style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.18), transparent)" }}
               />
               FK
             </div>
-            <span className="hidden sm:block text-slate-100 font-semibold text-sm tracking-tight group-hover:text-purple-300 transition-colors duration-200">
+            <span className="hidden sm:block text-slate-100 font-semibold text-sm tracking-tight group-hover:text-green-300 transition-colors duration-200">
               {t.meta.name}
             </span>
           </Link>
@@ -134,22 +130,20 @@ export default function Navbar() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="relative px-3.5 py-2 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center gap-1"
+                      className="nav-link group/link relative px-3.5 py-2 rounded-lg text-sm font-medium flex items-center gap-1"
                       aria-current={isActive ? "page" : undefined}
-                      style={{ color: isActive ? "#c4b5fd" : "#94a3b8" }}
+                      style={{ color: isActive ? "#86efac" : "#94a3b8" }}
                     >
-                      {/* Active dot */}
                       {isActive && (
                         <span
                           className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full"
-                          style={{ background: "#a78bfa" }}
+                          style={{ background: "#4ade80" }}
                           aria-hidden="true"
                         />
                       )}
-                      {/* Hover bg */}
                       <span
-                        className="absolute inset-0 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-200"
-                        style={{ background: isActive ? "rgba(139,92,246,0.1)" : "rgba(255,255,255,0.04)" }}
+                        className="absolute inset-0 rounded-lg opacity-0 group-hover/link:opacity-100 transition-opacity duration-200"
+                        style={{ background: isActive ? "rgba(34,197,94,0.1)" : "rgba(255,255,255,0.04)" }}
                         aria-hidden="true"
                       />
                       <span className="relative">{item.label}</span>
@@ -169,69 +163,59 @@ export default function Navbar() {
                 aria-haspopup="listbox"
                 aria-expanded={langOpen}
                 aria-label={`Language: ${currentLang?.label}. Click to change`}
-                className="h-9 px-3 flex items-center gap-1.5 rounded-xl text-sm transition-all duration-200"
+                className="h-9 px-3 flex items-center gap-1.5 rounded-xl text-sm nav-lang-btn"
                 style={{
-                  background: langOpen
-                    ? "rgba(139,92,246,0.12)"
-                    : "rgba(255,255,255,0.05)",
-                  border: langOpen
-                    ? "1px solid rgba(139,92,246,0.35)"
-                    : "1px solid rgba(255,255,255,0.09)",
+                  background: langOpen ? "rgba(34,197,94,0.12)" : "rgba(255,255,255,0.05)",
+                  border: langOpen ? "1px solid rgba(34,197,94,0.35)" : "1px solid rgba(255,255,255,0.09)",
                   color: "#94a3b8",
                 }}
               >
                 <span className="text-base leading-none">{currentLang?.flag}</span>
                 <svg
                   className={`w-3 h-3 transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
 
-              {langOpen && (
-                <ul
-                  role="listbox"
-                  aria-label="Select language"
-                  className="absolute right-0 mt-2 w-40 rounded-2xl overflow-hidden z-50 py-1.5"
-                  style={{
-                    background: "rgba(14, 14, 26, 0.96)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    boxShadow: "0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(139,92,246,0.08)",
-                    backdropFilter: "blur(24px)",
-                  }}
-                >
-                  {languages.map((lang) => {
-                    const isSelected = language === lang.code;
-                    return (
-                      <li key={lang.code} role="option" aria-selected={isSelected}>
-                        <button
-                          onClick={() => {
-                            setLanguage(lang.code);
-                            setLangOpen(false);
-                          }}
-                          className="w-full px-4 py-2.5 text-sm flex items-center gap-3 transition-colors duration-150"
-                          style={{
-                            color: isSelected ? "#c4b5fd" : "#94a3b8",
-                            background: isSelected ? "rgba(139,92,246,0.1)" : "transparent",
-                          }}
-                        >
-                          <span className="text-base">{lang.flag}</span>
-                          <span className="font-medium">{lang.label}</span>
-                          {isSelected && (
-                            <svg className="w-3.5 h-3.5 ml-auto text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                            </svg>
-                          )}
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
+              <ul
+                role="listbox"
+                aria-label="Select language"
+                aria-hidden={!langOpen}
+                className={`lang-dropdown absolute right-0 mt-2 w-40 rounded-2xl overflow-hidden z-50 py-1.5${langOpen ? " lang-dropdown-open" : ""}`}
+                style={{
+                  background: "rgba(5, 15, 10, 0.96)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  boxShadow: "0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(34,197,94,0.08)",
+                  backdropFilter: "blur(24px)",
+                }}
+              >
+                {languages.map((lang) => {
+                  const isSelected = language === lang.code;
+                  return (
+                    <li key={lang.code} role="option" aria-selected={isSelected}>
+                      <button
+                        onClick={() => { setLanguage(lang.code); setLangOpen(false); }}
+                        tabIndex={langOpen ? 0 : -1}
+                        className="w-full px-4 py-2.5 text-sm flex items-center gap-3 transition-colors duration-150"
+                        style={{
+                          color: isSelected ? "#86efac" : "#94a3b8",
+                          background: isSelected ? "rgba(34,197,94,0.1)" : "transparent",
+                        }}
+                      >
+                        <span className="text-base">{lang.flag}</span>
+                        <span className="font-medium">{lang.label}</span>
+                        {isSelected && (
+                          <svg className="w-3.5 h-3.5 ml-auto text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
 
             {/* GitHub CTA */}
@@ -251,9 +235,9 @@ export default function Navbar() {
 
           {/* ── Mobile hamburger ── */}
           <button
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-xl transition-colors duration-200"
+            className="md:hidden nav-hamburger w-10 h-10 flex items-center justify-center rounded-xl"
             style={{
-              background: menuOpen ? "rgba(139,92,246,0.15)" : "rgba(255,255,255,0.05)",
+              background: menuOpen ? "rgba(34,197,94,0.15)" : "rgba(255,255,255,0.05)",
               border: "1px solid rgba(255,255,255,0.09)",
             }}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -262,7 +246,7 @@ export default function Navbar() {
             aria-controls="mobile-nav"
           >
             {menuOpen ? (
-              <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="w-5 h-5 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
@@ -274,16 +258,14 @@ export default function Navbar() {
         </div>
 
         {/* ── Mobile nav ── */}
-        {menuOpen && (
-          <nav
-            id="mobile-nav"
-            aria-label="Mobile navigation"
-            className="md:hidden"
-            style={{
-              background: "rgba(7, 7, 13, 0.97)",
-              borderTop: "1px solid rgba(255,255,255,0.06)",
-            }}
-          >
+        <nav
+          id="mobile-nav"
+          aria-label="Mobile navigation"
+          aria-hidden={!menuOpen}
+          className={`md:hidden mobile-nav${menuOpen ? " mobile-nav-open" : ""}`}
+          style={{ background: "rgba(5, 10, 7, 0.97)" }}
+        >
+          <div className="mobile-nav-inner">
             <div className="max-w-[1240px] mx-auto px-6 py-4 space-y-1">
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
@@ -291,12 +273,13 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200"
+                    tabIndex={menuOpen ? 0 : -1}
+                    className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors duration-200"
                     aria-current={isActive ? "page" : undefined}
                     style={{
-                      color: isActive ? "#c4b5fd" : "#94a3b8",
-                      background: isActive ? "rgba(139,92,246,0.1)" : "transparent",
-                      borderLeft: isActive ? "2px solid rgba(167,139,250,0.6)" : "2px solid transparent",
+                      color: isActive ? "#86efac" : "#94a3b8",
+                      background: isActive ? "rgba(34,197,94,0.1)" : "transparent",
+                      borderLeft: isActive ? "2px solid rgba(74,222,128,0.6)" : "2px solid transparent",
                     }}
                   >
                     {item.label}
@@ -310,13 +293,14 @@ export default function Navbar() {
                   <button
                     key={lang.code}
                     onClick={() => setLanguage(lang.code)}
+                    tabIndex={menuOpen ? 0 : -1}
                     aria-label={`Switch to ${lang.label}`}
                     aria-pressed={language === lang.code}
-                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium transition-all duration-200"
+                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium transition-colors duration-200"
                     style={{
-                      background: language === lang.code ? "rgba(139,92,246,0.15)" : "rgba(255,255,255,0.04)",
-                      border: language === lang.code ? "1px solid rgba(139,92,246,0.4)" : "1px solid rgba(255,255,255,0.08)",
-                      color: language === lang.code ? "#c4b5fd" : "#64748b",
+                      background: language === lang.code ? "rgba(34,197,94,0.15)" : "rgba(255,255,255,0.04)",
+                      border: language === lang.code ? "1px solid rgba(34,197,94,0.4)" : "1px solid rgba(255,255,255,0.08)",
+                      color: language === lang.code ? "#86efac" : "#64748b",
                     }}
                   >
                     <span>{lang.flag}</span>
@@ -329,13 +313,14 @@ export default function Navbar() {
                 href="https://github.com/FakhirAhmedKhan"
                 target="_blank"
                 rel="noopener noreferrer"
+                tabIndex={menuOpen ? 0 : -1}
                 className="btn-primary w-full justify-center mt-2"
               >
                 GitHub Profile
               </a>
             </div>
-          </nav>
-        )}
+          </div>
+        </nav>
       </header>
     </>
   );

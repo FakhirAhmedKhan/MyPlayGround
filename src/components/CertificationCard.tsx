@@ -196,7 +196,7 @@ export default function CertificationCard({
 
         {/* Title & issuer */}
         <div className="flex-1 min-w-0">
-          <h3 className="text-slate-100 font-semibold text-sm leading-snug group-hover:text-purple-300 transition-colors duration-300">
+          <h3 className="text-slate-100 font-semibold text-sm leading-snug group-hover:text-green-300 transition-colors duration-300">
             {cert.title}
           </h3>
           <div className="flex items-center gap-2 mt-1">
@@ -235,9 +235,9 @@ export default function CertificationCard({
             key={skill}
             className="px-2.5 py-0.5 text-xs rounded-full font-medium"
             style={{
-              background: "rgba(139,92,246,0.1)",
-              border: "1px solid rgba(139,92,246,0.25)",
-              color: "#a78bfa",
+              background: "rgba(20,83,45,0.12)",
+              border: "1px solid rgba(34,197,94,0.25)",
+              color: "#86efac",
             }}
           >
             {skill}
@@ -254,7 +254,7 @@ export default function CertificationCard({
           id={`cert-credential-${safeId}`}
           aria-label={`View credential for ${cert.title} (opens in new tab)`}
           className="mt-auto flex items-center gap-2 text-xs font-semibold transition-all duration-300 hover:gap-3"
-          style={{ color: "#a78bfa" }}
+          style={{ color: "#4ade80" }}
         >
           <svg
             className="w-3.5 h-3.5"

@@ -28,15 +28,15 @@ export default function SectionHeader({
         <span
           className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.1em]"
           style={{
-            background: "rgba(109,92,246,0.1)",
-            border: "1px solid rgba(139,92,246,0.28)",
-            color: "#c4b5fd",
+            background: "rgba(20,83,45,0.12)",
+            border: "1px solid rgba(34,197,94,0.28)",
+            color: "#86efac",
             boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)",
           }}
         >
           <span
             className="w-1.5 h-1.5 rounded-full animate-pulse-glow"
-            style={{ background: "rgba(167,139,250,0.9)" }}
+            style={{ background: "rgba(74,222,128,0.9)" }}
             aria-hidden="true"
           />
           {badge}
@@ -63,11 +63,11 @@ export default function SectionHeader({
       {/* Decorative rule */}
       {centered && (
         <div className="flex items-center justify-center gap-2 mt-8 reveal-delay-4" aria-hidden="true">
-          <div className="h-px w-16 rounded-full" style={{ background: "linear-gradient(to right, transparent, rgba(139,92,246,0.5))" }} />
-          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "rgba(139,92,246,0.6)" }} />
-          <div className="h-px w-32 rounded-full" style={{ background: "linear-gradient(to right, rgba(139,92,246,0.5), rgba(59,130,246,0.4), transparent)" }} />
-          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "rgba(59,130,246,0.6)" }} />
-          <div className="h-px w-16 rounded-full" style={{ background: "linear-gradient(to left, transparent, rgba(59,130,246,0.5))" }} />
+          <div className="h-px w-16 rounded-full" style={{ background: "linear-gradient(to right, transparent, rgba(34,197,94,0.5))" }} />
+          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "rgba(34,197,94,0.6)" }} />
+          <div className="h-px w-32 rounded-full" style={{ background: "linear-gradient(to right, rgba(34,197,94,0.5), rgba(16,185,129,0.4), transparent)" }} />
+          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "rgba(16,185,129,0.6)" }} />
+          <div className="h-px w-16 rounded-full" style={{ background: "linear-gradient(to left, transparent, rgba(16,185,129,0.5))" }} />
         </div>
       )}
     </div>

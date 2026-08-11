@@ -22,7 +22,7 @@ function readingTime(text: string) {
 }
 
 export default function BlogCard({ post, index = 0 }: BlogCardProps) {
-  const accent = categoryAccents[post.category] ?? "rgba(139,92,246,1), rgba(59,130,246,1)";
+  const accent = categoryAccents[post.category] ?? "rgba(34,197,94,1), rgba(16,185,129,1)";
   const mins = readingTime(post.description);
 
   return (
@@ -37,9 +37,9 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
         }}
         onMouseEnter={(e) => {
           const el = e.currentTarget as HTMLElement;
-          el.style.borderColor = "rgba(139,92,246,0.28)";
+          el.style.borderColor = "rgba(34,197,94,0.28)";
           el.style.transform = "translateY(-5px)";
-          el.style.boxShadow = "0 24px 60px rgba(109,40,217,0.15), inset 0 1px 0 rgba(255,255,255,0.07)";
+          el.style.boxShadow = "0 24px 60px rgba(20,83,45,0.18), inset 0 1px 0 rgba(255,255,255,0.07)";
         }}
         onMouseLeave={(e) => {
           const el = e.currentTarget as HTMLElement;
@@ -50,7 +50,7 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
       >
         {/* Gradient top accent bar */}
         <div
-          className="h-[3px] w-full flex-shrink-0"
+          className="h-[3px] w-full shrink-0"
           style={{ background: `linear-gradient(90deg, ${accent})` }}
           aria-hidden="true"
         />
@@ -61,9 +61,9 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
             <span
               className="px-3 py-1 text-xs font-semibold rounded-full"
               style={{
-                background: "rgba(139,92,246,0.1)",
-                border: "1px solid rgba(139,92,246,0.25)",
-                color: "#c4b5fd",
+                background: "rgba(20,83,45,0.12)",
+                border: "1px solid rgba(34,197,94,0.25)",
+                color: "#86efac",
               }}
             >
               {post.category}
@@ -111,10 +111,9 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
               </div>
             </div>
 
-            {/* Read more arrow */}
             <span
               className="flex items-center gap-1 text-xs font-semibold transition-all duration-300 group-hover:gap-2"
-              style={{ color: "#7c3aed" }}
+              style={{ color: "#4ade80" }}
             >
               Read
               <svg
@@ -129,7 +128,6 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
             </span>
           </div>
 
-          {/* Tags */}
           {post.tags && post.tags.length > 0 && (
             <div className="flex flex-wrap gap-1.5 mt-4">
               {post.tags.slice(0, 3).map((tag) => (

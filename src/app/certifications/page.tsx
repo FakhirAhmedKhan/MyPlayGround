@@ -25,7 +25,7 @@ export default function CertificationsPage() {
       />
       <div
         className="orb w-96 h-96 -left-20 top-20 opacity-15"
-        style={{ background: "rgba(139,92,246,0.4)" }}
+        style={{ background: "rgba(34,197,94,0.35)" }}
         aria-hidden="true"
       />
       <div

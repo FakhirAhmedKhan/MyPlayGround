@@ -8,7 +8,7 @@ import { useLanguage } from "@/context/LanguageContext";
 /* Full display labels for each raw category key */
 const categoryLabels: Record<string, string> = {
   // All: "All",
-  SAAS: "Software as a Service",
+  // SAAS: "Software as a Service",
   Web: "Web",
   Tool: "Tool",
   Game: "Game",
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
     [projectsData.items],
   );
 
-  const [activeCategory, setActiveCategory] = useState<string>(() => categories[0] ?? "SAAS");
+  const [activeCategory, setActiveCategory] = useState<string>(() => categories[0] ?? "");
 
   const filteredProjects = useMemo(
     () => projectsData.items.filter((p) => p.category === activeCategory),
@@ -66,12 +66,12 @@ export default function ProjectsPage() {
       />
       <div
         className="absolute orb w-[500px] h-[500px] -right-40 top-20 opacity-10 pointer-events-none -z-20 blur-[100px]"
-        style={{ background: "rgba(59,130,246,0.5)" }}
+        style={{ background: "rgba(16,185,129,0.4)" }}
         aria-hidden="true"
       />
       <div
         className="absolute orb w-[400px] h-[400px] -left-40 bottom-20 opacity-10 pointer-events-none -z-20 blur-[100px]"
-        style={{ background: "rgba(139,92,246,0.5)" }}
+        style={{ background: "rgba(34,197,94,0.4)" }}
         aria-hidden="true"
       />
 
@@ -83,60 +83,6 @@ export default function ProjectsPage() {
           paragraph={projectsData.paragraph}
         />
 
-        {/* Category Filter */}
-        <div
-          className="flex flex-wrap gap-3 justify-center mb-16"
-          role="group"
-          aria-label="Filter projects by category"
-        >
-          {categories.map((cat) => {
-            const count =
-              cat === ""
-                ? projectsData.items.length
-                : projectsData.items.filter((p) => p.category === cat).length;
-
-            const isActive = activeCategory === cat;
-
-            return (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`group relative px-5 py-2.5 text-sm font-semibold rounded-2xl transition-all duration-500 overflow-hidden ${isActive
-                    ? "text-white shadow-xl shadow-violet-500/20 active:scale-95"
-                    : "text-slate-400 hover:text-slate-200 hover:bg-white/5 active:scale-95"
-                  }`}
-              >
-                {/* Active Indicator Background */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br from-violet-600 to-blue-600 transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0 invisible"
-                    }`}
-                />
-
-                {/* Border Effect */}
-                <div
-                  className={`absolute inset-0 border transition-colors duration-500 rounded-2xl ${isActive
-                      ? "border-violet-400/50"
-                      : "border-white/10 group-hover:border-white/20"
-                    }`}
-                />
-
-                <span className="relative z-10 flex items-center gap-2">
-                  {/* <span className="sr-only">{categoryLabels[cat] ?? cat}</span> */}
-                 <AnimatedLabel text={categoryLabels[cat] ?? cat} isActive={isActive} />
-                  {/* <span
-                    className={`text-[10px] px-1.5 py-0.5 rounded-md transition-colors duration-500 ${
-                      isActive
-                        ? "bg-white/20 text-white"
-                        : "bg-white/5 text-slate-500"
-                    }`}
-                  >
-                    {count}
-                  </span> */}
-                </span>
-              </button>
-            );
-          })}
-        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 animate-fade-in text-start">

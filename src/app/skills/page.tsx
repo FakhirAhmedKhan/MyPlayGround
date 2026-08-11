@@ -12,101 +12,116 @@ export default function SkillsPage() {
 
   const categories: Record<string, string[]> = {
     Frontend: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "React.js",
-      "Next.js",
-      "Tailwind CSS",
-      "Vite",
-      "Redux",
-      "React Query",
-      "Zustand",
+      "HTML", "CSS", "JavaScript", "TypeScript",
+      "React.js", "Vue.js", "Angular", "Svelte", "Astro", "Remix", "Gatsby",
+      "Next.js", "Nuxt.js",
+      "Tailwind CSS", "SASS", "Bootstrap", "Material UI",
+      "Redux", "React Query", "Zustand", "Framer Motion",
+      "Three.js", "Storybook", "Vite",
     ],
 
     Mobile: [
-      "React Native",
-      "Expo",
-      "Flutter",
-      "Dart",
-      "Android",
-      "Kotlin",
-      "Java",
-      "Android Studio",
+      "React Native", "Expo",
+      "Flutter", "Dart",
+      "Android", "Android Studio", "Kotlin", "Java",
+      "Swift", "Objective-C", "Xcode",
+      "Ionic", "Capacitor", "Cordova",
     ],
 
     Backend: [
-      "Node.js",
-      "Express.js",
-      "Nest.js",
-      "Python",
-      "FastAPI",
-      "Django",
-      "GraphQL",
-      "Apollo GraphQL",
+      "Node.js", "Express.js", "Nest.js", "Deno", "Bun",
+      "Python", "FastAPI", "Django",
+      "PHP", "Laravel", "Symfony",
+      "Ruby", "Rails",
+      "Go", "Rust",
+      "C#", ".NET",
+      "Java", "Spring Boot", "Hibernate", "Maven", "Gradle", "Tomcat",
+      "Scala", "Elixir",
+      "GraphQL", "Apollo GraphQL", "gRPC", "Socket.io", "WebSocket",
+      "RabbitMQ", "Apache Kafka",
+    ],
+
+    Languages: [
+      "C", "C++", "Lua", "Perl", "R",
+      "Haskell", "Clojure", "Erlang", "Julia", "MATLAB",
+      "Solidity", "Markdown",
     ],
 
     Database: [
-      "MySQL",
-      "PostgreSQL",
-      "MongoDB",
-      "SQLite",
-      "Redis",
-      "SQL Server",
-      "Prisma",
-      "Firebase",
-      "Supabase",
+      "MySQL", "PostgreSQL", "MongoDB", "SQLite",
+      "Redis", "SQL Server", "Prisma",
+      "Firebase", "Supabase",
+      "Cassandra", "CouchDB", "Neo4j",
+      "Elasticsearch", "DynamoDB", "Oracle", "InfluxDB",
     ],
 
     "AI & Data": [
-      "OpenAI",
-      "TensorFlow",
-      "PyTorch",
-      "OpenCV",
-      "Jupyter",
-      "Pandas",
-      "NumPy",
+      "OpenAI", "TensorFlow", "PyTorch", "Keras",
+      "Scikit-learn", "OpenCV", "Hugging Face", "CUDA",
+      "Jupyter", "Pandas", "NumPy", "Matplotlib",
+      "Hadoop", "Spark", "Airflow", "dbt",
     ],
 
-    "Tools & DevOps": [
-      "Git",
-      "GitHub",
-      "GitHub Actions",
-      "GitLab",
-      "Docker",
-      "Linux",
-      "Ubuntu",
-      "Nginx",
-      "Jenkins",
-      "Postman",
-      "Swagger",
+    "Cloud & DevOps": [
+      "Docker", "Kubernetes", "Terraform", "Ansible", "Vagrant",
+      "AWS", "Azure", "Google Cloud", "Vercel", "Netlify", "Heroku",
+      "DigitalOcean", "Cloudflare",
+      "Nginx", "Apache", "Traefik",
+      "Prometheus", "Grafana",
+      "Jenkins", "GitHub Actions", "GitLab",
+      "Linux", "Ubuntu", "Debian", "CentOS", "Fedora", "Arch Linux",
+      "Windows", "macOS",
+      "Bash", "PowerShell",
     ],
 
-    "Testing & Automation": ["Vitest", "Jest", "Playwright", "Selenium"],
-
-    "Desktop & Design": [
-      "Electron",
-      "Figma",
-      "Photoshop",
-      "VS Code",
-      "PyCharm",
-      "IntelliJ IDEA",
+    "Testing & Automation": [
+      "Vitest", "Jest", "Playwright", "Selenium", "Cypress", "Mocha", "Chai",
     ],
 
-    "Package Managers": ["npm", "pnpm", "Yarn", "Webpack", "Babel"],
+    "Tools & Editors": [
+      "Git", "GitHub", "GitLab", "Bitbucket",
+      "VS Code", "PyCharm", "IntelliJ IDEA",
+      "Postman", "Swagger",
+      "JIRA", "Confluence", "Trello", "Slack",
+      "ESLint", "Prettier",
+      "npm", "pnpm", "Yarn", "Webpack", "Rollup", "Babel",
+      "Axios", "JWT",
+    ],
+
+    "Design & Creative": [
+      "Figma", "Photoshop", "Illustrator", "XD", "Sketch",
+      "After Effects", "Premiere Pro", "Blender",
+      "Unity", "Unreal Engine",
+    ],
+
+    "CMS & E-commerce": [
+      "WordPress", "Drupal", "Joomla", "Shopify", "Magento",
+    ],
+
+    "Embedded & Hardware": [
+      "Raspberry Pi", "Arduino",
+      "C", "C++",
+    ],
+
+    "Blockchain & Web3": [
+      "Solidity", "IPFS",
+    ],
   };
 
   const categoryLabels: Record<string, string> = {
     Frontend: "فرنٹ اینڈ",
     Mobile: "موبائل",
     Backend: "بیک اینڈ",
+    Languages: "پروگرامنگ زبانیں",
     Database: "ڈیٹا بیس",
     "AI & Data": "اے آئی اور ڈیٹا",
-    "Tools & DevOps": "ٹولز اور ڈیواوپس",
+    "Cloud & DevOps": "کلاؤڈ اور ڈیواوپس",
     "Testing & Automation": "ٹیسٹنگ اور آٹومیشن",
-    "Desktop & Design": "ڈیسک ٹاپ اور ڈیزائن",
-    "Package Managers": "پیکیج مینیجرز",
+    "Tools & Editors": "ٹولز اور ایڈیٹرز",
+    "Design & Creative": "ڈیزائن اور تخلیق",
+    "CMS & E-commerce": "سی ایم ایس اور ای-کامرس",
+    "Embedded & Hardware": "ایمبیڈڈ اور ہارڈویئر",
+    "Blockchain & Web3": "بلاک چین اور ویب 3",
   };
 
   const grouped = Object.entries(categories)
@@ -126,7 +141,7 @@ export default function SkillsPage() {
 
       <div
         className="orb w-96 h-96 -left-32 top-32 opacity-15"
-        style={{ background: "rgba(139,92,246,0.5)" }}
+        style={{ background: "rgba(34,197,94,0.4)" }}
         aria-hidden="true"
       />
 
@@ -151,8 +166,8 @@ export default function SkillsPage() {
                   className="h-px flex-1"
                   style={{
                     background: isRTL
-                      ? "linear-gradient(to left, rgba(139,92,246,0.5), transparent)"
-                      : "linear-gradient(to right, rgba(139,92,246,0.5), transparent)",
+                      ? "linear-gradient(to left, rgba(34,197,94,0.4), transparent)"
+                      : "linear-gradient(to right, rgba(34,197,94,0.4), transparent)",
                   }}
                 />
 
@@ -169,8 +184,8 @@ export default function SkillsPage() {
                   className="h-px flex-1"
                   style={{
                     background: isRTL
-                      ? "linear-gradient(to right, rgba(139,92,246,0.5), transparent)"
-                      : "linear-gradient(to left, rgba(139,92,246,0.5), transparent)",
+                      ? "linear-gradient(to right, rgba(34,197,94,0.4), transparent)"
+                      : "linear-gradient(to left, rgba(34,197,94,0.4), transparent)",
                   }}
                 />
               </div>

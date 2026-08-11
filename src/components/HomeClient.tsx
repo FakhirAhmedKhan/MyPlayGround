@@ -126,9 +126,30 @@ export default function HomeClient() {
           />
 
           <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 xl:grid-cols-11 gap-3">
-            {skillsData.items.map((skill, i) => (
+            {skillsData.items.slice(0, 22).map((skill, i) => (
               <SkillCard key={skill.name} skill={skill} index={i} />
             ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <a
+              href="/skills"
+              id="home-view-all-skills"
+              className="btn-secondary inline-flex"
+            >
+              {isRTL
+                ? `تمام ${skillsData.items.length} ٹیکنالوجیز دیکھیں`
+                : `View All ${skillsData.items.length} Skills`}
+              <svg
+                className={`w-4 h-4 ${isRTL ? "rotate-180" : ""}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -144,8 +165,8 @@ export default function HomeClient() {
             className="relative rounded-3xl p-10 sm:p-16 text-center overflow-hidden"
             style={{
               background:
-                "linear-gradient(135deg, rgba(109,40,217,0.09) 0%, rgba(37,99,235,0.06) 50%, rgba(6,182,212,0.04) 100%)",
-              border: "1px solid rgba(109,40,217,0.22)",
+                "linear-gradient(135deg, rgba(20,83,45,0.12) 0%, rgba(5,150,105,0.07) 50%, rgba(52,211,153,0.04) 100%)",
+              border: "1px solid rgba(34,197,94,0.22)",
               boxShadow: "inset 0 1px 0 rgba(255,255,255,0.05)",
             }}
           >
@@ -153,14 +174,14 @@ export default function HomeClient() {
             {/* Availability badge */}
             <div className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-7 uppercase tracking-[0.1em] reveal-delay-1"
               style={{
-                background: "rgba(109,40,217,0.12)",
-                border: "1px solid rgba(139,92,246,0.3)",
-                color: "#c4b5fd",
+                background: "rgba(20,83,45,0.15)",
+                border: "1px solid rgba(34,197,94,0.3)",
+                color: "#86efac",
               }}
             >
               <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-60" aria-hidden="true" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-400" aria-hidden="true" />
+                <span className="ping-finite absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-70" aria-hidden="true" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" aria-hidden="true" />
               </span>
               {isRTL ? "دستیاب ہے" : "Available for Work"}
             </div>

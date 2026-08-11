@@ -13,7 +13,7 @@ export default function BlogPostComponent({ post }: BlogPostProps) {
       {/* Header Section */}
       <div className="mb-12 space-y-4">
         <div className="flex items-center gap-3 flex-wrap">
-          <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs font-semibold rounded-full">
+          <span className="px-3 py-1 bg-linear-to-r from-green-600 to-emerald-500 text-white text-xs font-semibold rounded-full">
             {post.category}
           </span>
           <span className="text-slate-400 text-sm">{post.date}</span>
@@ -28,7 +28,7 @@ export default function BlogPostComponent({ post }: BlogPostProps) {
         </p>
 
         <div className="flex items-center gap-2 pt-2">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-full bg-linear-to-r from-green-600 to-emerald-500 flex items-center justify-center">
             <span className="text-white font-semibold text-sm">
               {post.author.charAt(0).toUpperCase()}
             </span>
