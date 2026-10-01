@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import BlogCard from "@/components/BlogCard";
 import SectionHeader from "@/components/SectionHeader";
+import PageBackground from "@/components/PageBackground";
 import { getBlogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -20,8 +21,9 @@ const blogs = getBlogPosts();
 
 export default function BlogPage() {
   return (
-    <section className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative isolate min-h-screen py-20">
+      <PageBackground variant="blog" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           title="Blog"
           paragraph="Thoughts on web development, programming, and technology"

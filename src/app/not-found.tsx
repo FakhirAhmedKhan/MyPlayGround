@@ -1,9 +1,11 @@
 import Link from "next/link";
+import PageBackground from "@/components/PageBackground";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6">
-      <div className="text-center">
+    <div className="relative isolate min-h-screen flex items-center justify-center px-6">
+      <PageBackground variant="center" />
+      <div className="relative text-center">
         <div
           className="text-8xl font-black mb-4"
           style={{

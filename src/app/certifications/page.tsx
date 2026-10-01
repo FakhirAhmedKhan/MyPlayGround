@@ -3,6 +3,7 @@
 import SectionHeader from "@/components/SectionHeader";
 import CertificationCard from "@/components/CertificationCard";
 import { useLanguage } from "@/context/LanguageContext";
+import PageBackground from "@/components/PageBackground";
 
 export default function CertificationsPage() {
   const { t, isRTL } = useLanguage();
@@ -17,22 +18,8 @@ export default function CertificationsPage() {
   ).toString();
 
   return (
-    <div className={`relative min-h-screen pt-24 ${isRTL ? "font-urdu" : ""}`}>
-      {/* Background */}
-      <div
-        className="absolute inset-0 animated-bg pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="orb w-96 h-96 -left-20 top-20 opacity-15"
-        style={{ background: "rgba(34,197,94,0.35)" }}
-        aria-hidden="true"
-      />
-      <div
-        className="orb w-64 h-64 right-10 bottom-20 opacity-10"
-        style={{ background: "rgba(34,211,238,0.3)" }}
-        aria-hidden="true"
-      />
+    <div className={`relative isolate min-h-screen pt-24 ${isRTL ? "font-urdu" : ""}`}>
+      <PageBackground variant="certifications" />
 
       <div className="relative section-container">
         <SectionHeader

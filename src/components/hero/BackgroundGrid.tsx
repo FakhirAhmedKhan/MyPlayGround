@@ -1,4 +1,5 @@
 import type { CSSVars } from "./cssVars";
+import "./dot-grid.css";
 
 type Anchor = "tl" | "tr" | "bl" | "br";
 
@@ -8,6 +9,10 @@ interface BackgroundGridProps {
   seed: number;
   /** Corner the cluster is densest in; it thins out towards the opposite corner. */
   anchor?: Anchor;
+  /** >1 fills more of the cluster (default 1 = the hero's sparse look). */
+  density?: number;
+  /** false → every cell is static (used on content-heavy pages). */
+  animated?: boolean;
   className?: string;
 }
 
@@ -35,7 +40,7 @@ function mulberry32(seed: number) {
   };
 }
 
-function buildCells({ cols, rows, seed, anchor = "tl" }: Required<Omit<BackgroundGridProps, "className">>): Cell[] {
+function buildCells({ cols, rows, seed, anchor, animated, density }: Required<Omit<BackgroundGridProps, "className">>): Cell[] {
   const rand = mulberry32(seed);
   const focusX = anchor.endsWith("r") ? 1 : 0;
   const focusY = anchor.startsWith("b") ? 1 : 0;
@@ -55,10 +60,10 @@ function buildCells({ cols, rows, seed, anchor = "tl" }: Required<Omit<Backgroun
       // 0 at the anchor corner → 1 at the far corner.
       const distance = Math.sqrt(dx * dx + dy * dy) / Math.SQRT2;
 
-      if (presenceRoll > 0.95 - distance * 0.85) continue;
+      if (presenceRoll > 0.97 - distance * (0.85 / density)) continue;
 
       // ~80% static, ~15% slow breathing, ~5% brighter pulse.
-      const kind = kindRoll < 0.8 ? "still" : kindRoll < 0.95 ? "breathe" : "pulse";
+      const kind = !animated || kindRoll < 0.8 ? "still" : kindRoll < 0.95 ? "breathe" : "pulse";
       cells.push({
         row,
         col,
@@ -76,11 +81,11 @@ function buildCells({ cols, rows, seed, anchor = "tl" }: Required<Omit<Backgroun
  * Layered "digital matrix" of small squares. Most cells are static; a few breathe slowly
  * and fewer still pulse, each on its own period and phase so nothing moves in sync.
  */
-export default function BackgroundGrid({ cols, rows, seed, anchor = "tl", className = "" }: BackgroundGridProps) {
-  const cells = buildCells({ cols, rows, seed, anchor });
+export default function BackgroundGrid({ cols, rows, seed, anchor = "tl", density = 1, animated = true, className = "" }: BackgroundGridProps) {
+  const cells = buildCells({ cols, rows, seed, anchor, animated, density });
 
   return (
-    <div className={`hero-grid ${className}`} style={{ "--cols": cols } as CSSVars} aria-hidden="true">
+    <div className={`dot-grid ${className}`} style={{ "--cols": cols } as CSSVars} aria-hidden="true">
       {cells.map((cell) => {
         const style: CSSVars = {
           "--r": cell.row + 1,
@@ -94,7 +99,7 @@ export default function BackgroundGrid({ cols, rows, seed, anchor = "tl", classN
         return (
           <span
             key={`${cell.row}-${cell.col}`}
-            className={cell.kind === "still" ? "hero-cell" : `hero-cell hero-cell--${cell.kind}`}
+            className={cell.kind === "still" ? "dot-cell" : `dot-cell dot-cell--${cell.kind}`}
             style={style}
           />
         );

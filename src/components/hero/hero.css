@@ -230,48 +230,7 @@
   background: linear-gradient(to bottom, transparent 0%, var(--hero-bottom) 100%);
 }
 
-/* ── Digital square matrix ────────────────────────────────────────────────── */
-
-.hero-grid {
-  --cell: 8px;
-  --gap: 14px;
-
-  position: absolute;
-  display: grid;
-  grid-template-columns: repeat(var(--cols), var(--cell));
-  grid-auto-rows: var(--cell);
-  gap: var(--gap);
-  pointer-events: none;
-}
-
-.hero-cell {
-  grid-row: var(--r);
-  grid-column: var(--c);
-  border-radius: 2px;
-  background: rgb(34 197 94 / var(--o));
-}
-
-/* ~15% of cells breathe slowly… */
-.hero-cell--breathe {
-  animation: hero-cell-breathe var(--dur) ease-in-out var(--delay) infinite alternate;
-}
-
-/* …and ~5% pulse a little brighter. Each has its own period and phase. */
-.hero-cell--pulse {
-  background: rgb(74 222 128 / 0.9);
-  box-shadow: 0 0 9px rgb(74 222 128 / 0.55);
-  animation: hero-cell-pulse var(--dur) ease-in-out var(--delay) infinite;
-}
-
-@keyframes hero-cell-breathe {
-  from { opacity: 1; }
-  to   { opacity: 0.3; }
-}
-
-@keyframes hero-cell-pulse {
-  0%, 100% { opacity: 0.45; scale: 1; }
-  50%      { opacity: 1; scale: 1.2; }
-}
+/* ── Digital square matrix (base styles live in dot-grid.css) ────────────── */
 
 .hero-grid--page {
   --cell: 7px;
@@ -1213,7 +1172,7 @@
     display: none;
   }
 
-  .hero-cell--breathe {
+  .dot-cell--breathe {
     animation: none;
   }
 

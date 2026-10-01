@@ -3,6 +3,7 @@ import BlogPostComponent from "@/components/BlogPost";
 import { notFound } from "next/navigation";
 import { getBlogPosts, getAllBlogIds } from "@/lib/blog";
 import Link from "next/link";
+import PageBackground from "@/components/PageBackground";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -48,8 +49,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <section className="min-h-screen py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative isolate min-h-screen py-20">
+      <PageBackground variant="article" />
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <BlogPostComponent post={post} />
 
         {/* Navigation Links */}

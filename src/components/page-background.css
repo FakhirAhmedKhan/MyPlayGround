@@ -1,0 +1,168 @@
+/* ==========================================================================
+   PageBackground — shared backdrop for every page except the hero itself
+   (which has its own, richer one in hero/hero.css).
+
+   Everything is static. Light pools are px-sized ellipses pinned to a corner or edge, so
+   they keep their shape on both short pages and the very tall ones (skills, blog).
+   All colours stay inside the emerald palette; the base is the page's own near-black
+   (<body> rgb(10 10 15)), which is also what the hero fades into.
+   ========================================================================== */
+
+.page-bg {
+  --lights: none;
+  --lines-mask: radial-gradient(ellipse 75% 560px at 50% 0%, #000 0%, transparent 100%);
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.page-bg__lighting {
+  position: absolute;
+  inset: 0;
+  background: var(--lights);
+}
+
+/* Faint technical line grid that dissolves away from the top of the page */
+.page-bg__lines {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  background-image:
+    linear-gradient(rgb(74 222 128 / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(74 222 128 / 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: var(--lines-mask);
+  mask-image: var(--lines-mask);
+}
+
+/* ~3% white noise from a tiny tiled SVG (same texture as the hero). It brightens the base by
+   a couple of levels, so the home variant fades it in below the hero (see that variant). */
+.page-bg__noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n' x='0' y='0' width='100%25' height='100%25'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  1.4 0 0 0 -0.3'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+  background-size: 160px 160px;
+}
+
+/* ── Dot-grid cluster ─────────────────────────────────────────────────────── */
+
+.page-grid {
+  --cell: 7px;
+  --gap: 15px;
+
+  opacity: 0.85;
+}
+
+.page-grid--tl,
+.page-grid--tr { top: 6rem; }
+.page-grid--bl,
+.page-grid--br { bottom: 6rem; }
+
+.page-grid--tl,
+.page-grid--bl { left: 2%; }
+.page-grid--tr,
+.page-grid--br { right: 2%; }
+
+/* fade towards the page centre so the squares never sit behind headings or body text */
+.page-grid--tl,
+.page-grid--bl {
+  -webkit-mask-image: linear-gradient(to right, #000 35%, transparent 92%);
+  mask-image: linear-gradient(to right, #000 35%, transparent 92%);
+}
+
+.page-grid--tr,
+.page-grid--br {
+  -webkit-mask-image: linear-gradient(to left, #000 35%, transparent 92%);
+  mask-image: linear-gradient(to left, #000 35%, transparent 92%);
+}
+
+@media (max-width: 767.98px) {
+  .page-grid {
+    display: none;
+  }
+
+  .page-bg__lines {
+    opacity: 0.35;
+  }
+}
+
+/* ── Variants: where the light pools sit ──────────────────────────────────── */
+
+/* Home sections sit directly under the hero, which fades into rgb(10 10 15): the first
+   layer fades back to that exact colour so there is no seam where the two meet. */
+.page-bg--home {
+  --lines-mask: radial-gradient(ellipse 70% 520px at 50% 22%, transparent 0%, #000 45%, transparent 100%);
+  --lights:
+    linear-gradient(to bottom, rgb(10 10 15) 0, transparent 220px),
+    radial-gradient(ellipse 760px 620px at 0% 16%, rgb(22 163 74 / 0.1), transparent 70%),
+    radial-gradient(ellipse 800px 660px at 100% 50%, rgb(16 185 129 / 0.09), transparent 70%),
+    radial-gradient(ellipse 960px 540px at 30% 100%, rgb(20 83 45 / 0.24), transparent 75%);
+}
+
+/* …and the same for the noise, which would otherwise lift the base a few levels above the
+   hero's bottom edge and leave a faint line. */
+.page-bg--home .page-bg__noise {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, transparent 40px, #000 300px);
+  mask-image: linear-gradient(to bottom, transparent 0, transparent 40px, #000 300px);
+}
+
+.page-bg--projects {
+  --lights:
+    radial-gradient(ellipse 1100px 380px at 50% 0%, rgb(20 83 45 / 0.32), transparent 75%),
+    radial-gradient(ellipse 900px 560px at 100% 0%, rgb(16 185 129 / 0.14), transparent 70%),
+    radial-gradient(ellipse 760px 600px at 0% 38%, rgb(34 197 94 / 0.08), transparent 70%),
+    radial-gradient(ellipse 840px 520px at 0% 100%, rgb(34 197 94 / 0.1), transparent 70%);
+}
+
+.page-bg--skills {
+  --lights:
+    radial-gradient(ellipse 1100px 380px at 50% 0%, rgb(20 83 45 / 0.32), transparent 75%),
+    radial-gradient(ellipse 900px 560px at 0% 0%, rgb(34 197 94 / 0.14), transparent 70%),
+    radial-gradient(ellipse 800px 640px at 100% 30%, rgb(16 185 129 / 0.08), transparent 70%),
+    radial-gradient(ellipse 800px 640px at 0% 62%, rgb(34 197 94 / 0.07), transparent 70%),
+    radial-gradient(ellipse 900px 520px at 100% 100%, rgb(16 185 129 / 0.1), transparent 70%);
+}
+
+.page-bg--education {
+  --lights:
+    radial-gradient(ellipse 1100px 380px at 50% 0%, rgb(20 83 45 / 0.32), transparent 75%),
+    radial-gradient(ellipse 900px 560px at 100% 0%, rgb(16 185 129 / 0.14), transparent 70%),
+    radial-gradient(ellipse 760px 600px at 0% 55%, rgb(34 197 94 / 0.08), transparent 70%),
+    radial-gradient(ellipse 860px 500px at 100% 100%, rgb(52 211 153 / 0.08), transparent 70%);
+}
+
+.page-bg--certifications {
+  --lights:
+    radial-gradient(ellipse 1100px 380px at 50% 0%, rgb(20 83 45 / 0.32), transparent 75%),
+    radial-gradient(ellipse 900px 560px at 0% 0%, rgb(34 197 94 / 0.14), transparent 70%),
+    radial-gradient(ellipse 760px 600px at 100% 45%, rgb(16 185 129 / 0.08), transparent 70%),
+    radial-gradient(ellipse 860px 500px at 0% 100%, rgb(52 211 153 / 0.08), transparent 70%);
+}
+
+.page-bg--blog {
+  --lights:
+    radial-gradient(ellipse 1200px 420px at 50% 0%, rgb(20 83 45 / 0.34), transparent 75%),
+    radial-gradient(ellipse 900px 560px at 100% 12%, rgb(16 185 129 / 0.12), transparent 70%),
+    radial-gradient(ellipse 760px 520px at 0% 55%, rgb(34 197 94 / 0.07), transparent 70%),
+    radial-gradient(ellipse 860px 500px at 100% 100%, rgb(34 197 94 / 0.09), transparent 70%);
+}
+
+/* Reading page: calmer, one soft light overhead so long text stays easy on the eyes */
+.page-bg--article {
+  --lines-mask: radial-gradient(ellipse 60% 420px at 50% 0%, #000 0%, transparent 100%);
+  --lights:
+    radial-gradient(ellipse 1000px 420px at 50% 0%, rgb(20 83 45 / 0.3), transparent 75%),
+    radial-gradient(ellipse 700px 500px at 100% 100%, rgb(16 185 129 / 0.06), transparent 70%);
+}
+
+/* 404 and similar single-message pages */
+.page-bg--center {
+  --lines-mask: radial-gradient(ellipse 60% 55% at 50% 45%, #000 0%, transparent 100%);
+  --lights:
+    radial-gradient(ellipse 820px 620px at 50% 45%, rgb(22 163 74 / 0.16), transparent 70%),
+    radial-gradient(ellipse 1100px 380px at 50% 0%, rgb(20 83 45 / 0.28), transparent 75%);
+}

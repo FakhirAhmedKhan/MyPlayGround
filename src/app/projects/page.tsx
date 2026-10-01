@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import SectionHeader from "@/components/SectionHeader";
 import ProjectCard from "@/components/ProjectCard";
+import PageBackground from "@/components/PageBackground";
 import { useLanguage } from "@/context/LanguageContext";
 
 const categoryLabels: Record<string, string> = {
@@ -37,19 +38,8 @@ export default function ProjectsPage() {
   );
 
   return (
-    <div className={`relative min-h-screen pt-24 pb-20 ${isRTL ? "font-urdu" : ""}`}>
-      {/* Background */}
-      <div className="absolute inset-0 animated-bg pointer-events-none -z-20" aria-hidden="true" />
-      <div
-        className="absolute w-[500px] h-[500px] -right-40 top-20 opacity-10 pointer-events-none -z-20 blur-[100px] rounded-full"
-        style={{ background: "rgba(16,185,129,0.4)" }}
-        aria-hidden="true"
-      />
-      <div
-        className="absolute w-[400px] h-[400px] -left-40 bottom-20 opacity-10 pointer-events-none -z-20 blur-[100px] rounded-full"
-        style={{ background: "rgba(34,197,94,0.4)" }}
-        aria-hidden="true"
-      />
+    <div className={`relative isolate min-h-screen pt-24 pb-20 ${isRTL ? "font-urdu" : ""}`}>
+      <PageBackground variant="projects" />
 
       <div className="relative z-10 section-container">
         <SectionHeader

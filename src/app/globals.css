@@ -246,28 +246,6 @@
   }
 
   /* ───────────────────────────────────────────
-     BACKGROUND
-  ─────────────────────────────────────────── */
-  .animated-bg {
-    background:
-      radial-gradient(
-        ellipse 70% 50% at 15% 40%,
-        rgba(22, 163, 74, 0.09) 0%,
-        transparent 60%
-      ),
-      radial-gradient(
-        ellipse 60% 40% at 85% 15%,
-        rgba(5, 150, 105, 0.08) 0%,
-        transparent 55%
-      ),
-      radial-gradient(
-        ellipse 50% 60% at 55% 85%,
-        rgba(52, 211, 153, 0.05) 0%,
-        transparent 60%
-      );
-  }
-
-  /* ───────────────────────────────────────────
      BUTTONS
   ─────────────────────────────────────────── */
   .btn-primary {
@@ -389,17 +367,6 @@
 
   .skill-hover:hover {
     transform: translateY(-6px) scale(1.05);
-  }
-
-  /* ───────────────────────────────────────────
-     ORB BACKGROUNDS
-  ─────────────────────────────────────────── */
-  .orb {
-    position: absolute;
-    border-radius: 9999px;
-    filter: blur(90px);
-    pointer-events: none;
-    animation: pulse-glow 6s ease-in-out infinite;
   }
 
   /* ───────────────────────────────────────────
