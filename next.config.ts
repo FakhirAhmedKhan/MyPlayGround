@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactCompiler: true,
   images: {
+    // 75 is the default; 90 is used by the hero portrait so its alpha edges stay clean.
+    qualities: [75, 90],
     remotePatterns: [
       {
         protocol: "https",
